@@ -6,7 +6,7 @@
 	<body>
 		<style>
 			.head {
-				height: 250px;
+				height: 200px;
 				position: relative;
 				background: radial-gradient(
 					farthest-corner at 20% 100%,
@@ -31,8 +31,8 @@
 				margin-left: 2%;
 			}
 			.bodybg {
-				height: 800px;
-				background: linear-gradient(
+				height: auto;
+				background: radial-gradient(
 					farthest-corner at 50% 10%,
 					white 80%,
 					rgb(149, 149, 149)
@@ -83,14 +83,48 @@
 			}
 
 			.divtextp {
-				clear: both;
+				width: auto;
 			}
 			.divtext {
+				display: table-cell;
 				padding: 2%;
 				font-family: "Lucida Sans", "Lucida Sans Regular",
 					"Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana,
 					sans-serif;
-				width: 27%;
+				width: 30%;
+			}
+
+			.boxes {
+				font-family: "Lucida Sans", "Lucida Sans Regular",
+					"Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana,
+					sans-serif;
+				display: flex;
+				justify-content: center;
+			}
+			.box1 {
+				border: 5px solid rgb(255, 40, 201);
+				width: 200px;
+				height: 200px;
+				position: relative;
+			}
+			.box1top {
+				background: linear-gradient(to right, white, rgb(255, 40, 201));
+				color: white;
+				font-size: 120%;
+				text-align: center;
+				position: absolute;
+				width: 100%;
+				font-weight: bold;
+				height: 50%;
+				line-height: 60%;
+				padding-top: 10px;
+			}
+			.box1bottom {
+				padding: 3%;
+				font-size: 95%;
+				position: absolute;
+				bottom: 10px;
+				line-height: 100%;
 			}
 		</style>
 
@@ -123,12 +157,45 @@
 				<div class="divtext">
 					<h2>De quoi s'agit-il ?</h2>
 					<p>
-						D'une opportunité : celle qu'un engagement quelqu'il
-						soit puisse être considérer à sa juste valeur ! Toute
-						expérience est source d'enrichissement et doit d'être
-						reconnu largement. Elle révèle un potentiel,
-						l'expression d'un savoir-être à concrétiser.
+						A vous, jeunes entre 16 et 30 ans, qui vous êtes
+						investis spontanément dans une association ou dans tout
+						type d'action formelle ou informelle, et qui avez
+						partagé de votre temps, de votre énergie, pour apporter
+						un soutien, une aide, une compétence. A vous,
+						responsables de structures ou référents d'un jour, qui
+						avez croisé la route de ces jeunes et avez bénéficié
+						même ponctuellement de cette implication citoyenne !
+						C'est l'occasion de vous engager à votre tour pour ces
+						jeunes en confirmant leur richesse pour en avoir été un
+						temps les témoins mais aussi les bénéficiaires !
 					</p>
+				</div>
+
+				<div class="divtext">
+					<p>
+						A vous, employeurs, recruteurs en ressources humaines,
+						représentants d'organismes de formation, qui recevez ces
+						jeunes, pour un emploi, un stage, un cursus de
+						qualification, pour qui les avoir-être constitue le
+						premier fondement de toute capacité humaine.
+					</p>
+					<h3>
+						Cet engagement est une ressource à valoriser au fil d'un
+						parcours en 3 étapes :
+					</h3>
+				</div>
+			</div>
+
+			<div class="boxes">
+				<div class="box1">
+					<div class="box1top">
+						<p style="font-size: 95%">1ère étape</p>
+						<p style="font-size: 120%">la valorisation</p>
+					</div>
+					<div class="box1bottom">
+						Décrivez votre expérience et mettez en avant ce que vous
+						en avez retiré.
+					</div>
 				</div>
 			</div>
 		</div>
