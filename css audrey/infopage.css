@@ -57,11 +57,21 @@
     text-align: center;
     color: rgb(255, 40, 201);
 }
+.tabbox1:hover{
+    background-color: rgb(255, 40, 201);
+    color: white;
+    margin: 1%;
+}
 .tabbox2 {
     display: table-cell;
     width: 25%;
     text-align: center;
     color: rgb(25, 176, 25);
+}
+.tabbox2:hover{
+    background-color: rgb(25, 176, 25);
+    color: white;
+    margin: 1%;
 }
 .tabbox3 {
     display: table-cell;
@@ -69,10 +79,20 @@
     text-align: center;
     color: rgb(38, 161, 213);
 }
+.tabbox3:hover{
+    background-color: rgb(38, 161, 213);
+    color: white;
+    margin: 1%;
+}
 .tabbox4 {
     display: table-cell;
     width: 25%;
     text-align: center;
+}
+.tabbox4:hover{
+    background-color: rgb(0, 0, 0);
+    color: white;
+    margin: 1%;
 }
 
 .divtextp {
@@ -85,6 +105,7 @@
         "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana,
         sans-serif;
     width: 30%;
+    font-size: 110%;
 }
 
 .boxes {
@@ -121,7 +142,7 @@
 }
 .box1bottom {
     padding: 3%;
-    font-size: 95%;
+    font-size: 98%;
     position: absolute;
     bottom: 10px;
     line-height: 100%;
@@ -153,7 +174,7 @@
 }
 .box2bottom {
     padding: 3%;
-    font-size: 95%;
+    font-size: 98%;
     position: absolute;
     bottom: 10px;
     line-height: 100%;
@@ -185,7 +206,7 @@
 }
 .box3bottom {
     padding: 3%;
-    font-size: 95%;
+    font-size: 98%;
     position: absolute;
     bottom: 10px;
     line-height: 100%;
