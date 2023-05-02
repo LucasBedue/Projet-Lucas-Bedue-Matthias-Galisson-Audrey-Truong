@@ -1,5 +1,14 @@
+.whole{
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    overflow: auto;
+}
+
 .head {
-    height: 200px;
+    height: 20%;
     position: relative;
     background: radial-gradient(
         farthest-corner at 20% 100%,
@@ -24,12 +33,16 @@
     margin-left: 2%;
 }
 .bodybg {
-    height: auto;
+    height: 80%;
     background: radial-gradient(
         farthest-corner at 50% 10%,
         white 80%,
         rgb(149, 149, 149)
     );
+    font-family: "Lucida Sans", "Lucida Sans Regular",
+        "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana,
+        sans-serif;
+
 }
 .tab {
     width: 50%;
