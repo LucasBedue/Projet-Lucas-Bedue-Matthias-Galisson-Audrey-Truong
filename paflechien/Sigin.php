@@ -3,6 +3,7 @@
 $nom = $_POST['nom'];
 $prenom = $_POST['prenom'];
 $mail = $_POST['mail'];
+$date_naissance = $_POST['date_naissance'];
 $mdp = $_POST['mdp'];
 $role = $_POST['role'];
 
@@ -16,14 +17,13 @@ if (strpos($mdp, ';') !== false) {
     exit;
 }
 
-
 $fichier = fopen('infopers.txt', 'r+');
 
 
 while(!feof($fichier)) {
     $line = fgets($fichier);
     $values = explode(";", $line);
-    $mail_fichier = isset($values[2]) ? trim($values[2]) : null;
+    $mail_fichier = isset($values[3]) ? trim($values[3]) : null;
 
     if ($mail_fichier==$mail) {
         fclose($fichier);
@@ -34,7 +34,7 @@ while(!feof($fichier)) {
 
 $fichier = fopen('infopers.txt', 'a');
 
-fwrite($fichier, $nom . ';' . $prenom . ';' . $mail . ';'. $mdp . ';' . $role . ";\n");
+fwrite($fichier, $nom . ';' . $prenom . ';' . $date_naissance . ';' . $mail . ';' . $mdp . ';' . $role . ";\n");
 fclose($fichier);
 
 header('Location: login.php');

@@ -12,6 +12,9 @@
 		<label for="prenom">Prénom :</label>
 		<input type="text" name="prenom" id="prenom" required><br>
 
+		<label for="date_naissance">Date de naissance :</label>
+		<input type="date" name="date_naissance" id="date_naissance" required><br>
+
 		<label for="mail">Email :</label>
 		<input type="text" name="mail" id="mail" required><br>
 
@@ -21,7 +24,7 @@
 		<label for="role">Vous êtes :</label>
 		<select name="role" id="role" required>
 			<option value="Jeune">Jeune</option>
-			<option value="Referent">Référent</option>
+			
 			<option value="Consultant">Consultant</option>
 		</select><br>
 			

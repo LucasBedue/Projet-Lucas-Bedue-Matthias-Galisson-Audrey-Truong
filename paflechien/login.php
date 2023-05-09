@@ -1,10 +1,18 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Connexion</title>
-    </head>
-    <body>
-        <h1>Entrer un mail</h1>
+<head>
+    <title>Connexion</title>
+</head>
+    
+<body>        
+
+    <?php
+    session_start();
+    
+    session_destroy();
+    ?>
+
+    <h1>Entrer un mail</h1>
     <form method="post" action="verificationConnexion.php">
         
     <table>
@@ -20,5 +28,8 @@
     </table>
     <input type="submit" value="Se connecter">
     </form>
-    </body>
+    <form action="menu.php" method="post">
+        <input type="submit" value="Accéder au menu">
+    </form>
+</body>
 </html>
