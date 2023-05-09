@@ -15,15 +15,16 @@
         white 2%,
         rgb(170, 170, 170) 60%
     );
+    font-family: "Lucida Sans", "Lucida Sans Regular",
+    "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana,
+    sans-serif;
 }
 .headtext {
     position: absolute;
     bottom: 0;
     right: 0;
     color: white;
-    font-family: "Lucida Sans", "Lucida Sans Regular",
-        "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana,
-        sans-serif;
+
     font-size: 200%;
     margin-right: 2%;
 }
@@ -33,9 +34,6 @@
     top: 0;
     right: 0;
     color: rgb(255, 40, 201);
-    font-family: "Lucida Sans", "Lucida Sans Regular",
-        "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana,
-        sans-serif;
     font-size: 600%;
     margin-right: 2%;
 	margin-top: 0%;
@@ -45,6 +43,13 @@
     max-height: 15%;
     margin-left: 2%;
 }
+.logoff{
+    font-size: 90%;
+    color: rgb(59, 59, 59);
+    padding-left: 1%;
+    padding-bottom: 5px;
+}
+
 .bodybg {
     height: 80%;
     background: radial-gradient(
@@ -57,6 +62,7 @@
         sans-serif;
 
 }
+
 .tab {
     width: 50%;
     height: 7%;
@@ -121,4 +127,18 @@
     line-height: 110%;
     padding: 1%;
     color: rgb(255, 40, 201);
+}
+.outerbox{
+    padding-bottom: 10%;
+}
+.box{
+    border: 5px;
+    border-color:rgb(255, 40, 201);
+    color: rgb(255, 40, 201);
+    padding: 1%;
+    border-style: solid;
+    font-size: 120%;
+    margin: auto;
+    max-height: 80%;
+    max-width: 50%;
 }
