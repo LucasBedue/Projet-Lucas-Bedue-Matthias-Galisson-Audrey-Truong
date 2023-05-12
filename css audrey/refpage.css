@@ -1,5 +1,5 @@
 .whole{
-    position: relative;
+    position: fixed;
     top: 0;
     left: 0;
     bottom: 0;
@@ -40,8 +40,8 @@
 	margin-top: 0%;
 }
 .fitimg {
-    max-width: 15%;
-    max-height: 15%;
+    max-width: 95%;
+    max-height: 95%;
     margin-left: 2%;
 }
 .bodybg {

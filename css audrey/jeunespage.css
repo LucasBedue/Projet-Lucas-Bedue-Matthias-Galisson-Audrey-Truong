@@ -1,5 +1,5 @@
 .whole{
-    position: relative;
+    position: fixed;
     top: 0;
     left: 0;
     bottom: 0;
@@ -39,8 +39,8 @@
 	margin-top: 0%;
 }
 .fitimg {
-    max-width: 15%;
-    max-height: 15%;
+    max-width: 95%;
+    max-height: 95%;
     margin-left: 2%;
 }
 
@@ -103,16 +103,54 @@
     color: rgb(255, 40, 201);
 }
 .outerbox{
-    padding-bottom: 10%;
+    display: flex;
+    justify-content: center;
+    padding-left: 5%;
+    padding-right: 5%;
+    align-items: center;
 }
 .box{
+    display: inline-block;
     border: 5px;
     border-color:rgb(255, 40, 201);
     color: rgb(255, 40, 201);
     padding: 1%;
     border-style: solid;
     font-size: 120%;
-    margin: auto;
-    max-height: 80%;
-    max-width: 50%;
+    height: 80%;
+    width: 30%;
+    margin-left: 10% ;
+    margin-right: 10% ;
+}
+.box1{
+    display: inline-block;
+    border: 5px;
+    border-color:rgb(255, 40, 201);
+    color: rgb(255, 40, 201);
+    border-style: solid;
+    font-size: 120%;
+    height: 80%;
+    width: 16%;
+}
+.box2{
+    display: inline-block;
+    border: 5px;
+    font-size: 120%;
+    height: 80%;
+    width: 16%;
+}
+
+input[type=text]{
+    font-family:Verdana, Geneva, Tahoma, monospace;
+    border: none;
+    border-bottom: rgb(255, 40, 201) dotted 3px;
+    width: 82%;
+}
+input{
+    padding: 1%;
+    font-size: large;
+    border-color:rgb(255, 40, 201);
+}
+input:focus{
+    outline: none;
 }
