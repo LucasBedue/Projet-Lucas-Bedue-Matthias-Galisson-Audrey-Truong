@@ -14,7 +14,7 @@
 
         if ($role=='Jeune'){
             echo "<p>Salut à toi, jeune entrepreneur !</p>";
-            echo "<form method='post' action='listeexperience.php'>
+            echo "<form method='post' action='./../Creationexperience/listeexperience.php'>
                     <input type='submit' value='Voir toutes les expèriences'>
                 </form>";
             echo "<form method='post' action='creerexperience.php'>
