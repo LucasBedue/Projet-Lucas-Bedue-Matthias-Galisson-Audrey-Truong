@@ -63,13 +63,19 @@
         "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana,
         sans-serif;
 }
+.link{
+    text-decoration: none;
+}
 .tabbox1 {
     display: table-cell;
     width: 25%;
     text-align: center;
     color: rgb(49, 0, 139);
 }
-.tabbox1:hover{
+.tabbox1:hover {
+    background-color: rgb(49, 0, 139);
+}
+.link:hover{
     background-color: rgb(49, 0, 139);
     color: white;
     margin: 1%;
