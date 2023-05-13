@@ -5,9 +5,12 @@
     bottom: 0;
     right: 0;
     overflow: auto;
-
+    background: radial-gradient(
+        farthest-corner at 50% 10%,
+        white 80%,
+        rgb(149, 149, 149)
+    );
 }
-
 .head {
     height: 20%;
     position: relative;
@@ -27,6 +30,7 @@
         sans-serif;
     font-size: 200%;
     margin-right: 2%;
+    margin-bottom: 1%;
 }
 .fitimg {
     max-width: 95%;
@@ -35,15 +39,13 @@
 }
 .bodybg {
     height: 80%;
-    background: radial-gradient(
-        farthest-corner at 50% 10%,
-        white 80%,
-        rgb(149, 149, 149)
-    );
     font-family: "Lucida Sans", "Lucida Sans Regular",
         "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana,
         sans-serif;
 
+}
+a{
+    color: rgb(21, 9, 80);
 }
 .tab {
     width: 50%;
@@ -71,19 +73,20 @@
     display: table-cell;
     width: 25%;
     text-align: center;
-    color: rgb(49, 0, 139);
+    color: rgb(21, 9, 80);
 }
 .tabbox1:hover {
-    background-color: rgb(49, 0, 139);
+    background-color: rgb(21, 9, 80);
 }
 .link:hover{
-    background-color: rgb(49, 0, 139);
+    background-color: rgb(21, 9, 80);
     color: white;
     margin: 1%;
 }
 
 
 .divtextp {
+    position: relative;
     width: auto;
 }
 .divtext {
@@ -93,7 +96,7 @@
         "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana,
         sans-serif;
     width: 30%;
-    font-size: 110%;
+    font-size: 100%;
 }
 
 .boxes {
@@ -101,8 +104,8 @@
         "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana,
         sans-serif;
     display: flex;
+
     justify-content: center;
-    padding-bottom: 3%;
 }
 .box1 {
     border: 5px solid rgb(255, 40, 201);

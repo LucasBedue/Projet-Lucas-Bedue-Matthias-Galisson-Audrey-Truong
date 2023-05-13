@@ -1,3 +1,4 @@
+
 .whole{
     position: fixed;
     top: 0;
@@ -5,6 +6,11 @@
     bottom: 0;
     right: 0;
     overflow: auto;
+    background: radial-gradient(
+        farthest-corner at 50% 10%,
+        white 80%,
+        rgb(149, 149, 149)
+    );
 }
 
 .head {
@@ -26,6 +32,7 @@
         sans-serif;
     font-size: 200%;
     margin-right: 2%;
+    margin-bottom: 1%;
 }
 
 .headtext2{
@@ -47,15 +54,13 @@
 }
 .bodybg {
     height: 80%;
-    background: radial-gradient(
-        farthest-corner at 50% 10%,
-        white 80%,
-        rgb(149, 149, 149)
-    );
     font-family: "Lucida Sans", "Lucida Sans Regular",
         "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana,
         sans-serif;
 
+}
+a{
+    color: rgb(21, 9, 80);
 }
 .tab {
     width: 50%;
@@ -80,13 +85,13 @@
     display: table-cell;
     width: 25%;
     text-align: center;
-    color: rgb(49, 0, 139);
+    color: rgb(21, 9, 80);
 }
 .tabbox1:hover {
-    background-color: rgb(49, 0, 139);
+    background-color: rgb(21, 9, 80);
 }
 .link:hover{
-    background-color: rgb(49, 0, 139);
+    background-color: rgb(21, 9, 80);
     color: white;
     margin: 1%;
 }
@@ -97,4 +102,158 @@
     line-height: 110%;
     padding: 1%;
     color: rgb(38, 161, 213);
+}
+
+.outerbox{
+    display: flex;
+    justify-content: center;
+    padding-left: 5%;
+    padding-right: 5%;
+    align-items: center;
+}
+
+.box1{
+    display: grid;
+    grid-template-rows: [row1] 12% [row2] 28vh [row3];
+    grid-template-columns: 60% 1fr;
+    border: 5px;
+    border-color:rgb(255, 40, 201);
+    color: rgb(255, 40, 201);
+    padding: 1%;
+    border-style: solid;
+    font-size: 110%;
+    width: 120%;
+    margin-left: 2%;
+    margin-right: 2%;
+
+}
+
+input[type=text].c1{
+    font: italic 90% "Fira Sans", serif;
+    border: none;
+    border-bottom: rgb(255, 40, 201) dotted 3px;
+    width: 82%;
+    color: rgb(9, 9, 121);
+}
+input.c1{
+    font: italic 90% "Fira Sans", serif;
+    padding: 1%;
+    font-size: large;
+    border-color:rgb(255, 40, 201);
+    color: rgb(9, 9, 121);
+}
+input:focus.c1{
+    outline: none;
+}
+.box501{
+    grid-row: 1;
+    text-align: right;
+    margin-right: 2%;
+    font-weight: 700;
+    line-height: 0%;
+    color: rgb(255, 40, 201) ;
+}
+.box511{
+    grid-row: 2;
+    background: linear-gradient(to right, white, rgb(255, 40, 201) ) ;
+    color: white ;
+    font-size: 140%;
+    line-height: 0%;
+    text-align: right;
+    padding-right: 2%;
+}
+.box521{
+    padding-top: 2%;
+    padding-bottom: 2%;
+    grid-row: 3;
+    line-height: 170%;
+    background-color: rgb(247, 210, 239) ;
+    width: 100%;
+}
+
+
+.box2{
+    display: grid;
+    grid-template-rows: [row1] 12% [row2] 28vh [row3];
+    grid-template-columns: 60% 1fr;
+    border: 5px;
+    border-color:rgb(25, 176, 25);
+    color: rgb(25, 176, 25);
+    padding: 1%;
+    border-style: solid;
+    font-size: 110%;
+    margin-left: 2% ;
+    margin-right: 2% ;
+    width: 120%;
+}
+.box502{
+    grid-row: 1;
+    text-align: right;
+    margin-right: 2%;
+    font-weight: 700;
+    line-height: 0%;
+    color: rgb(25, 176, 25) ;
+}
+.box512{
+    grid-row: 2;
+    background: linear-gradient(to right, white, rgb(25, 176, 25) ) ;
+    color: white ;
+    font-size: 140%;
+    line-height: 0%;
+    text-align: right;
+    padding-right: 2%;
+}
+.box522{
+    padding-top: 2%;
+    padding-bottom: 2%;
+    grid-row: 3;
+    line-height: 170%;
+    background-color: rgb(210, 247, 215) ;
+    width: 100%;
+}
+input[type=text]{
+    font: italic 90% "Fira Sans", serif;
+    border: none;
+    border-bottom: rgb(25, 176, 25) dotted 3px;
+    width: 82%;
+    background: none;
+    color: rgb(9, 9, 121);
+}
+input{
+    padding: 1%;
+    font-size: large;
+    border-color:rgb(25, 176, 25);
+    font: italic 90% "Fira Sans", serif;
+    color: rgb(9, 9, 121);
+}
+input:focus{
+    outline: none;
+}
+
+.valid{
+    background-color: rgb(38, 161, 213) ;
+    color: white;
+    text-align: center;
+    width: 6%;
+    margin: auto;
+    font-size: larger;
+    line-height: 190%;
+}
+
+.box3{
+    grid-row: 1;
+    grid-column: 1;
+    font-size: 220%;
+    font-weight: bold
+}
+.box4{
+    grid-row: 2 / 3;
+    grid-column: 1;
+    height:90%;
+    font-size: 100%;
+}
+.box5{
+    grid-row: 1 / 2;
+    grid-column: 2;
+    display: grid;
 }

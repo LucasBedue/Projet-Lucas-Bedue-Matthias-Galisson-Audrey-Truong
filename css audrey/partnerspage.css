@@ -5,6 +5,11 @@
     bottom: 0;
     right: 0;
     overflow: auto;
+    background: radial-gradient(
+        farthest-corner at 50% 10%,
+        white 80%,
+        rgb(149, 149, 149)
+    );
 }
 .head {
     height: 20%;
@@ -34,15 +39,14 @@
 }
 .bodybg {
     height: 80%;
-    background: radial-gradient(
-        farthest-corner at 50% 10%,
-        white 80%,
-        rgb(149, 149, 149)
-    );
+
     font-family: "Lucida Sans", "Lucida Sans Regular",
         "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana,
         sans-serif;
 
+}
+a{
+    color: rgb(21, 9, 80);
 }
 .tab {
     width: 50%;
@@ -70,13 +74,13 @@
     display: table-cell;
     width: 25%;
     text-align: center;
-    color: rgb(49, 0, 139);
+    color: rgb(21, 9, 80);
 }
 .tabbox1:hover {
-    background-color: rgb(49, 0, 139);
+    background-color: rgb(21, 9, 80);
 }
 .link:hover{
-    background-color: rgb(49, 0, 139);
+    background-color: rgb(21, 9, 80);
     color: white;
     margin: 1%;
 }

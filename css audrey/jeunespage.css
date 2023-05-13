@@ -5,8 +5,12 @@
     bottom: 0;
     right: 0;
     overflow: auto;
+    background: radial-gradient(
+        farthest-corner at 50% 10%,
+        white 80%,
+        rgb(149, 149, 149)
+    );
 }
-
 .head {
     height: 20%;
     position: relative;
@@ -27,6 +31,7 @@
 
     font-size: 200%;
     margin-right: 2%;
+    margin-bottom: 1%;
 }
 
 .headtext2{
@@ -47,17 +52,14 @@
 
 .bodybg {
     height: 80%;
-    background: radial-gradient(
-        farthest-corner at 50% 10%,
-        white 80%,
-        rgb(149, 149, 149)
-    );
     font-family: "Lucida Sans", "Lucida Sans Regular",
         "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana,
         sans-serif;
 
 }
-
+a{
+    color: rgb(21, 9, 80);
+}
 .tab {
     width: 50%;
     height: 7%;
@@ -82,14 +84,14 @@
     display: table-cell;
     width: 25%;
     text-align: center;
-    color: rgb(49, 0, 139);
+    color: rgb(21, 9, 80);
     
 }
 .tabbox1:hover {
-    background-color: rgb(49, 0, 139);
+    background-color: rgb(21, 9, 80);
 }
 .link:hover{
-    background-color: rgb(49, 0, 139);
+    background-color: rgb(21, 9, 80);
     color: white;
     margin: 1%;
 }
@@ -116,9 +118,9 @@
     padding: 1%;
     border-style: solid;
     font-size: 120%;
-    width: 30%;
-    margin-left: 10% ;
-    margin-right: 10% ;
+    width: 50%;
+    margin-left: 15% ;
+    margin-right: 15% ;
 }
 .box1{   
 
@@ -178,15 +180,18 @@
 }
 
 input[type=text]{
-    font-family:Verdana, Geneva, Tahoma, monospace;
+    font: italic 90% "Fira Sans", serif;
     border: none;
     border-bottom: rgb(255, 40, 201) dotted 3px;
     width: 82%;
+    color: rgb(9, 9, 121);
 }
 input{
+    font: italic 90% "Fira Sans", serif;
     padding: 1%;
     font-size: large;
     border-color:rgb(255, 40, 201);
+    color: rgb(9, 9, 121);
 }
 input:focus{
     outline: none;
