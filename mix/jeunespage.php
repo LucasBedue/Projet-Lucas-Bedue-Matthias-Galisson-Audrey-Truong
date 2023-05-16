@@ -63,7 +63,7 @@ if (!isset($_SESSION['role']) || $_SESSION['role'] !== "Jeune") {
 							<label for="dob">DATE DE NAISSANCE :</label>
 							<input type="date" id="dob" name="dob" required/>
 						</br></br>
-							<label for="mail">Mail :</label>
+							<label for="mail">Mail du référent:</label>
 							<input type="text" id="mail" name="mail" required/>
 						</br>
 							<label for="social">Réseaux sociaux :</label>

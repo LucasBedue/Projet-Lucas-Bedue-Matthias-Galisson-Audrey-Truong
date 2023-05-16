@@ -64,7 +64,7 @@ a{
 }
 .tab {
     width: 50%;
-    height: 7%;
+    height: 50px;
     margin: auto;
     background: linear-gradient(
         to right,
@@ -251,4 +251,11 @@ input:focus{
     right: 0;
     width: 40%;
     padding: 1%;
+}
+
+.tmp1:hover{
+    color: white;
+}
+.tmp2:hover{
+    color: white;
 }

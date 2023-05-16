@@ -64,9 +64,6 @@
 							<label for="dob">DATE DE NAISSANCE :</label>
 							<input type="date" id="dob" name="dob"/>
 						</br></br>
-							<label for="mail">Mail :</label>
-							<input type="text" id="mail" name="mail"/>
-						</br>
 							<label for="social">Réseaux sociaux :</label>
 							<input type="text" id="social" name="social"/>
 						</br>

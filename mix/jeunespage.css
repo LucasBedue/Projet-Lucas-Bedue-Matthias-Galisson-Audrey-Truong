@@ -62,7 +62,7 @@ a{
 }
 .tab {
     width: 50%;
-    height: 7%;
+    height: 50px;
     margin: auto;
     background: linear-gradient(
         to right,
@@ -133,7 +133,6 @@ a{
     text-align: right;
     margin-right: 2%;
     font-weight: 700;
-    line-height: 0%;
     color: rgb(255, 40, 201) ;
 }
 .box11{
@@ -170,6 +169,7 @@ a{
     text-align: center;
     width: 70%;
     margin: auto;
+    margin-bottom: 10%;
 }
 .box2{
     display: inline-block;
