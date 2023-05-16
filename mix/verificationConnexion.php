@@ -26,6 +26,7 @@
             session_start();
             $role = $role_file;
             $_SESSION['role'] = $role;
+            $_SESSION['mail'] = $mail;
             if ($role == "Jeune") {
                 header("Location: jeunespage.php");
                 exit();

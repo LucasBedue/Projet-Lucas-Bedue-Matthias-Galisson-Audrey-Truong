@@ -53,28 +53,28 @@ if (!isset($_SESSION['role']) || $_SESSION['role'] !== "Jeune") {
 						<p>&#32</p>
 					</div>
 					<div class="box">
-						<form>
+						<form method="post" action="enternewexp.php">
 							<label for="nom">NOM :</label>
-							<input type="text" id="nom" name="nom"/>
+							<input type="text" id="nom" name="nom" required/>
 						</br>
 							<label for="prenom">PRENOM :</label>
-							<input type="text" id="prenom" name="prenom"/>
+							<input type="text" id="prenom" name="prenom" required/>
 						</br></br>
 							<label for="dob">DATE DE NAISSANCE :</label>
-							<input type="date" id="dob" name="dob"/>
+							<input type="date" id="dob" name="dob" required/>
 						</br></br>
 							<label for="mail">Mail :</label>
-							<input type="text" id="mail" name="mail"/>
+							<input type="text" id="mail" name="mail" required/>
 						</br>
 							<label for="social">Réseaux sociaux :</label>
 							<input type="text" id="social" name="social"/>
 						</br>
 							<label for="engagement">MON ENGAGEMENT :</label>
-							<input type="text" id="engagement" name="engagement"/>
+							<input type="text" id="engagement" name="engagement" required/>
 						</br>
 							<label for="duree">DUREE :</label>
-							<input type="text" id="duree" name="duree"/>
-						</form>
+							<input type="text" id="duree" name="duree" required/>
+						
 					</div>
 					<div class="box1">
 						<div class="box10"><p>MES SAVOIRS ETRE</p></div>
@@ -82,43 +82,45 @@ if (!isset($_SESSION['role']) || $_SESSION['role'] !== "Jeune") {
 						<div class="box11"><p>Je suis *</p></div>
 
 						<div class="box12">
-								<input type="checkbox" id="autonome" name="autonome" value="autonome">
+								<input type="checkbox" class="ch" id="autonome" name="autonome" value="autonome">
 								<label for="autonome"> Autonome</label>
 							</br>
-								<input type="checkbox" id="passion" name="passion" value="passion">
+								<input type="checkbox" class="ch" id="passion" name="passion" value="passion">
 								<label for="passion"> Passionné</label>
 							</br>
-								<input type="checkbox" id="reflechi" name="reflechi" value="reflechi">
+								<input type="checkbox" class="ch" id="reflechi" name="reflechi" value="reflechi">
 								<label for="reflechi"> Réfléchi</label>
 							</br>
-								<input type="checkbox" id="ecoute" name="ecoute" value="ecoute">
+								<input type="checkbox" class="ch" id="ecoute" name="ecoute" value="ecoute">
 								<label for="ecoute"> A l'ecoute</label>
 							</br>
-								<input type="checkbox" id="organise" name="organise" value="organise">
+								<input type="checkbox" class="ch" id="organise" name="organise" value="organise">
 								<label for="organise"> Organise</label>
 							</br>
-								<input type="checkbox" id="fiable" name="fiable" value="fiable">
+								<input type="checkbox" class="ch" id="fiable" name="fiable" value="fiable">
 								<label for="fiable"> Fiable</label>
 							</br>
-								<input type="checkbox" id="patient" name="patient" value="patient">
+								<input type="checkbox" class="ch" id="patient" name="patient" value="patient">
 								<label for="patient"> Patient</label>
 							</br>
-								<input type="checkbox" id="responsable" name="responsable" value="responsable">
+								<input type="checkbox" class="ch" id="responsable" name="responsable" value="responsable">
 								<label for="responsable"> Responsable</label>
 							</br>
-								<input type="checkbox" id="sociable" name="sociable" value="sociable">
+								<input type="checkbox" class="ch" id="sociable" name="sociable" value="sociable">
 								<label for="sociable"> Sociable</label>
 							</br>
-								<input type="checkbox" id="optimiste" name="optimiste" value="optimiste">
+								<input type="checkbox" class="ch" id="optimiste" name="optimiste" value="optimiste" >
 								<label for="optimiste"> Optimiste</label>
 							</br>
 						</div>
 						<div class="box13"><p>*Faire 4 choix maximum</p></div>
-						<div class="valid">Valider</div>
+						<input type="submit" class="valid" value="Valider">
 					</div>
-					
+					</form>
 				</div>
 			</div>
 		</div>
+			
+		
 	</body>
 </html>
