@@ -18,15 +18,10 @@
 						<p class="tabbox1">
 							<a class="link" href="./infopage.php"> Qui sommes nous? </a>
 						</p>
-						<p class="tabbox1">
-							<a class="link" href="./partnerspage.php">Nos partenaires</a>
-						</p>
+						
 						<p class="tabbox1">
                             <a class="link" href="./profiljeune.php">Profil</a>	<!-- NEED TO MAKE THIS ONLY VISIBLE TO ONLY CONNECTED JEUNES -->
                         </p>
-						<p class="tabbox1">
-							<a class="link" href="./jeunespage.php">Profil</a>
-						</p>
 						<p class="tabbox1">
 						<?php						
 							session_start();

@@ -14,9 +14,7 @@
 			<div class="bodybg">
 				<div class="tab">
 					<div class="tabb">
-						<p class="tabbox1">
-							<a class="link" href="./infopage.php"> Qui sommes nous? </a>
-						</p>
+						
 						<p class="tabbox1">
 							<a class="link" href="./partnerspage.php">Nos partenaires</a>
 						</p>
