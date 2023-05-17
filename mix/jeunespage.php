@@ -33,9 +33,10 @@ if (!isset($_SESSION['role']) || $_SESSION['role'] !== "Jeune") {
 							</a>
 						</p>
 						<p class="tabbox1">
-							<a class="link" href="./partnerspage.php"
-								>Nos partenaires</a
-							>
+							<a class="link" href="./partnerspage.php">Nos partenaires</a>
+						</p>
+						<p class="tabbox1">
+							<a class="link" href="./profiljeune.php">Profil</a>
 						</p>
 						<p class="tabbox1">
 							<a class="link" href="./logout.php">Deconnexion</a>
