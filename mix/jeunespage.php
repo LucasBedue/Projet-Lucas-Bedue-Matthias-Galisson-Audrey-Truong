@@ -13,6 +13,19 @@ if (!isset($_SESSION['role']) || $_SESSION['role'] !== "Jeune") {
 }
 ?>
 		</script>
+		<script type="text/javascript">
+		function chkcontrol(j) {
+		var total=0;
+		for(var i=0; i < document.form1.ch.length; i++){
+		if(document.form1.ch[i].checked){
+		total =total +1;}
+		if(total > 4){
+		document.form1.ch[j].checked = false ;
+		return false;
+		}
+		}
+		} </script>
+
 	</head>
 	<body>
 		<link rel="stylesheet" href="jeunespage.css" />
@@ -53,7 +66,7 @@ if (!isset($_SESSION['role']) || $_SESSION['role'] !== "Jeune") {
 						<p>&#32</p>
 					</div>
 					<div class="box">
-						<form method="post" action="enternewexp.php">
+						<form name="form1" method="post" action="enternewexp.php">
 							<label for="nom">NOM :</label>
 							<input type="text" id="nom" name="nom" required/>
 						</br>
@@ -82,36 +95,37 @@ if (!isset($_SESSION['role']) || $_SESSION['role'] !== "Jeune") {
 						<div class="box11"><p>Je suis *</p></div>
 
 						<div class="box12">
-								<input type="checkbox" class="ch" id="autonome" name="autonome" value="autonome">
+								<input type="checkbox" class="ch" id="autonome" name="ch" value="autonome" onclick='chkcontrol(0)'>
 								<label for="autonome"> Autonome</label>
 							</br>
-								<input type="checkbox" class="ch" id="passion" name="passion" value="passion">
+								<input type="checkbox" class="ch" id="passion" name="ch" value="passion" onclick='chkcontrol(1)'>
 								<label for="passion"> Passionné</label>
 							</br>
-								<input type="checkbox" class="ch" id="reflechi" name="reflechi" value="reflechi">
+								<input type="checkbox" class="ch" id="reflechi" name="ch" value="reflechi" onclick='chkcontrol(2)'>
 								<label for="reflechi"> Réfléchi</label>
 							</br>
-								<input type="checkbox" class="ch" id="ecoute" name="ecoute" value="ecoute">
+								<input type="checkbox" class="ch" id="ecoute" name="ch" value="ecoute" onclick='chkcontrol(3)'>
 								<label for="ecoute"> A l'ecoute</label>
 							</br>
-								<input type="checkbox" class="ch" id="organise" name="organise" value="organise">
+								<input type="checkbox" class="ch" id="organise" name="ch" value="organise" onclick='chkcontrol(4)'>
 								<label for="organise"> Organise</label>
 							</br>
-								<input type="checkbox" class="ch" id="fiable" name="fiable" value="fiable">
+								<input type="checkbox" class="ch" id="fiable" name="ch" value="fiable" onclick='chkcontrol(5)'>
 								<label for="fiable"> Fiable</label>
 							</br>
-								<input type="checkbox" class="ch" id="patient" name="patient" value="patient">
+								<input type="checkbox" class="ch" id="patient" name="ch" value="patient" onclick='chkcontrol(6)'>
 								<label for="patient"> Patient</label>
 							</br>
-								<input type="checkbox" class="ch" id="responsable" name="responsable" value="responsable">
+								<input type="checkbox" class="ch" id="responsable" name="ch" value="responsable" onclick='chkcontrol(7)'>
 								<label for="responsable"> Responsable</label>
 							</br>
-								<input type="checkbox" class="ch" id="sociable" name="sociable" value="sociable">
+								<input type="checkbox" class="ch" id="sociable" name="ch" value="sociable" onclick='chkcontrol(8)'>
 								<label for="sociable"> Sociable</label>
 							</br>
-								<input type="checkbox" class="ch" id="optimiste" name="optimiste" value="optimiste" >
+								<input type="checkbox" class="ch" id="optimiste" name="ch" value="optimiste" onclick='chkcontrol(1)'>
 								<label for="optimiste"> Optimiste</label>
 							</br>
+							
 						</div>
 						<div class="box13"><p>*Faire 4 choix maximum</p></div>
 						<input type="submit" class="valid" value="Valider">

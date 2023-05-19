@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html lang="fr">
-    <head>
-    <?php
+    <head><head>
+		<title>Jeune - Jeunes 6.4</title>
+		<script>
+			<?php
 session_start();
 
 if (!isset($_SESSION['role']) || $_SESSION['role'] !== "Jeune") {
@@ -10,7 +12,8 @@ if (!isset($_SESSION['role']) || $_SESSION['role'] !== "Jeune") {
     exit();
 }
 ?>
-</head>
+
+	</head>
 <body>
 <link rel="stylesheet" href="jeunespage.css" />
 
