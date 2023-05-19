@@ -26,6 +26,7 @@
             session_start();
             $role = $role_file;
             $_SESSION['role'] = $role;
+            $_SESSION['mailsession'] = $mail;
             header("Location: menu.php");
             exit(); 
         } 
