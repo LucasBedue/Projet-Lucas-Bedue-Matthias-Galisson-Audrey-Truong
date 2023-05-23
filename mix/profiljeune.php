@@ -145,10 +145,51 @@ if (!isset($_SESSION['role']) || $_SESSION['role'] !== "Jeune") {
             if(nmbexp!=0){//Si il y a au moins une expérience
                 numverif = 0;
                 for(i=0;i<nmbexp;i++){
-                    var wrap=document.createElement("div");
+                    var contenaire=document.createElement("div");
                     contenaire.classList.add('wrapper');
                     contenaire.innerHTML = <?php  
-                        
+                        ECHO '<div class="leftbox">';   #Div containing the previous experiences
+                        ECHO '<div class="box">';   #Most important informations
+                                ECHO '<label for="mail">Mail du référent:</label>';
+                                ECHO '<p id="mail" name="mail" required/></p>';
+                            ECHO '</br>';
+                                ECHO '<label for="engagement">MON ENGAGEMENT :</label>';
+                                ECHO '<p id="engagement" name="engagement" required/></p>';
+                            ECHO '</br>';
+                                ECHO '<label for="duree">DUREE :</label>';
+                                ECHO '<p id="duree" name="duree" required/></p>';
+                            ECHO '</div>';
+                        ECHO '<div class="box1">';
+                            ECHO '<div class="box11"><p>Je suis *</p></div>';
+                            ECHO '<div class="box12">';
+                                ECHO '<input type="checkbox" class="ch" id="autonome" name="autonome" value="autonome">';
+                                ECHO '<label for="autonome"> Autonome</label>';
+                            ECHO '</br>';
+                                ECHO '<input type="checkbox" class="ch" id="passion" name="passion" value="passion">';
+                                ECHO '<label for="passion"> Passionné</label>	';						
+                            ECHO '</br>';
+                                ECHO '<input type="checkbox" class="ch" id="reflechi" name="reflechi" value="reflechi">';
+                                ECHO '<label for="reflechi"> Réfléchi</label>';
+                            ECHO '</br>';
+                                ECHO '<input type="checkbox" class="ch" id="ecoute" name="ecoute" value="ecoute">';
+                                ECHO '<label for="ecoute"> A l ecoute</label>';
+                            ECHO '</br>';
+                            ECHO '</div>';
+                            ECHO '</div>';
+                            ECHO '<div class="validbox"> '; #To remove or modify an experience and to see if the experience was validated 
+                                ECHO '<div class="box2">';
+                                ECHO '<div class="box21">Cette expérience :</div>';
+                                ECHO '<div class="box22">a été validée</div>';  # to be modified to "n'a pas été validée" if the consultant didn't verify it yet
+                            ECHO '</div> ';
+                                ECHO '<div class="valid">Modifier cette expérience</div> ';
+                                ECHO '<div class="valid">Retirer cette expérience</div>';
+                            ECHO '</div> ';
+                        ECHO '</div>';
+                        ECHO '<div class="rightbox"> '; # To add an experience 
+                            ECHO '<a class="valid" href="./jeunespage.php">Ajouter une expérience</a>';
+                        ECHO '</div>';
+
+
                     ?>;
 
 
