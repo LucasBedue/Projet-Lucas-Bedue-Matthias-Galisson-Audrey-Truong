@@ -15,7 +15,8 @@ if (!isset($_SESSION['role']) || $_SESSION['role'] !== "Jeune") {
 		</script>
 		<script type="text/javascript">
 		function chkcontrol(j) {
-		var total=0;
+		/*
+			var total=0;
 		for(var i=0; i < document.form1.ch.length; i++){
 		if(document.form1.ch[i].checked){
 		total =total +1;}
@@ -24,6 +25,7 @@ if (!isset($_SESSION['role']) || $_SESSION['role'] !== "Jeune") {
 		return false;
 		}
 		}
+		*/
 		} </script>
 
 	</head>
@@ -96,34 +98,34 @@ if (!isset($_SESSION['role']) || $_SESSION['role'] !== "Jeune") {
 						<div class="box11"><p>Je suis *</p></div>
 
 						<div class="box12">
-								<input type="checkbox" class="ch" id="autonome" name="ch" value="autonome" onclick='chkcontrol(0)'>
+								<input type="checkbox" class="ch" id="autonome" name="autonome" value="autonome" onclick='chkcontrol(0)'>
 								<label for="autonome"> Autonome</label>
 							</br>
-								<input type="checkbox" class="ch" id="passion" name="ch" value="passion" onclick='chkcontrol(1)'>
+								<input type="checkbox" class="ch" id="passion" name="passion" value="passion" onclick='chkcontrol(1)'>
 								<label for="passion"> Passionné</label>
 							</br>
-								<input type="checkbox" class="ch" id="reflechi" name="ch" value="reflechi" onclick='chkcontrol(2)'>
+								<input type="checkbox" class="ch" id="reflechi" name="reflechi" value="reflechi" onclick='chkcontrol(2)'>
 								<label for="reflechi"> Réfléchi</label>
 							</br>
-								<input type="checkbox" class="ch" id="ecoute" name="ch" value="ecoute" onclick='chkcontrol(3)'>
+								<input type="checkbox" class="ch" id="ecoute" name="ecoute" value="ecoute" onclick='chkcontrol(3)'>
 								<label for="ecoute"> A l'ecoute</label>
 							</br>
-								<input type="checkbox" class="ch" id="organise" name="ch" value="organise" onclick='chkcontrol(4)'>
+								<input type="checkbox" class="ch" id="organise" name="organise" value="organise" onclick='chkcontrol(4)'>
 								<label for="organise"> Organise</label>
 							</br>
-								<input type="checkbox" class="ch" id="fiable" name="ch" value="fiable" onclick='chkcontrol(5)'>
+								<input type="checkbox" class="ch" id="fiable" name="fiable" value="fiable" onclick='chkcontrol(5)'>
 								<label for="fiable"> Fiable</label>
 							</br>
-								<input type="checkbox" class="ch" id="patient" name="ch" value="patient" onclick='chkcontrol(6)'>
+								<input type="checkbox" class="ch" id="patient" name="patient" value="patient" onclick='chkcontrol(6)'>
 								<label for="patient"> Patient</label>
 							</br>
-								<input type="checkbox" class="ch" id="responsable" name="ch" value="responsable" onclick='chkcontrol(7)'>
+								<input type="checkbox" class="ch" id="responsable" name="responsable" value="responsable" onclick='chkcontrol(7)'>
 								<label for="responsable"> Responsable</label>
 							</br>
-								<input type="checkbox" class="ch" id="sociable" name="ch" value="sociable" onclick='chkcontrol(8)'>
+								<input type="checkbox" class="ch" id="sociable" name="sociable" value="sociable" onclick='chkcontrol(8)'>
 								<label for="sociable"> Sociable</label>
 							</br>
-								<input type="checkbox" class="ch" id="optimiste" name="ch" value="optimiste" onclick='chkcontrol(1)'>
+								<input type="checkbox" class="ch" id="optimiste" name="optimiste" value="optimiste" onclick='chkcontrol(9)'>
 								<label for="optimiste"> Optimiste</label>
 							</br>
 							

@@ -11,10 +11,13 @@ $tabtexte[0]=intval("$tabtexte[0]",10);
 $tabtexte[0]++;
 rewind($f);
 file_put_contents('./../InformationsJeunes/'.$mail,implode("\n",$tabtexte));
+fwrite($f,"\n");
 fclose($f);
 
 //On rajoute notre expèrience à compléter.
 $f = fopen('./../InformationsJeunes/'.$mail,'a+');
+$txt = "0\n"; //0=no verification, 1=referent verification, 2=consultant verification
+fwrite($f,$txt);
 $txt = $_POST['nom']."\n";
 fwrite($f,$txt);
 $txt = $_POST['prenom']."\n";

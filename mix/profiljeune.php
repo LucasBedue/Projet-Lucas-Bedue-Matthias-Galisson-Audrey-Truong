@@ -12,6 +12,8 @@ if (!isset($_SESSION['role']) || $_SESSION['role'] !== "Jeune") {
     exit();
 }
 ?>
+
+
 		</script>
 	</head>
 	<body>
@@ -45,6 +47,8 @@ if (!isset($_SESSION['role']) || $_SESSION['role'] !== "Jeune") {
 						Retrouvez toutes vos expériences passées ou ajoutez en une nouvelle.
 					</p>
 				</div>
+                <div name="divawrapper" id="divawrapper">
+                </div>
                 <div class="wrapper">
                     <div class="leftbox">   <!-- Div containing the previous experiences -->
                         <div class="box">   <!-- Most important informations -->
@@ -119,6 +123,30 @@ if (!isset($_SESSION['role']) || $_SESSION['role'] !== "Jeune") {
                     </div>
                     
                 </div>
-		</div>	
+		</div>
+        <script>
+            nmbexp = <?php 
+            $f = fopen('./../InformationsJeunes/'.$mail,'r+');
+            rewind($f);
+            $nmb = intval("fgetc($f)",10);
+            fclose($f);
+            echo $nmb;
+            ?>
+
+            if(nmbexp!=0){//Si il y a au moins une expérience
+                numverif = 0;
+                for(i=0;i<nmbexp;i++){
+                    var wrap=document.createElement("div");
+                    wrap.classList.add('wrapper');
+                    
+
+
+                    
+                }
+            }
+            else{//Si il n'y a rien
+                document.body.getElementById('divawraper').innerHTML = "Il n'y a aucune expérience!";
+            }
+        </script>	
 	</body>
 </html>
