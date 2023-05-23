@@ -52,36 +52,26 @@ if (!isset($_SESSION['role']) || $_SESSION['role'] !== "Jeune") {
                 <div class="wrapper">
                     <div class="leftbox">   <!-- Div containing the previous experiences -->
                         <div class="box">   <!-- Most important informations -->
-                                <label for="mail">Mail du référent:</label>
-                                <input type="text" id="mail" name="mail" required/>
-                            </br>
-                                <label for="engagement">MON ENGAGEMENT :</label>
-                                <input type="text" id="engagement" name="engagement" required/>
-                            </br>
-                                <label for="duree">DUREE :</label>
-                                <input type="text" id="duree" name="duree" required/>
+                                <p>Mail du référent:</p>
+                                <p class="text" id="mail" name="mail"></p>
+                                <p>MON ENGAGEMENT :</p>
+                                <p class="text" id="engagement" name="engagement"></p>
+                                <p>DUREE :</p>
+                                <p class="text" id="duree" name="duree"></p>
                         </div>
                         <div class="box1">
                             <div class="box11"><p>Je suis *</p></div>
                             <div class="box12">
-                                    <input type="checkbox" class="ch" id="autonome" name="autonome" value="autonome">
-                                    <label for="autonome"> Autonome</label>
-                                </br>
-                                    <input type="checkbox" class="ch" id="passion" name="passion" value="passion">
-                                    <label for="passion"> Passionné</label>							
-                                </br>								
-                                    <input type="checkbox" class="ch" id="reflechi" name="reflechi" value="reflechi">
-                                    <label for="reflechi"> Réfléchi</label>
-                                </br>
-                                    <input type="checkbox" class="ch" id="ecoute" name="ecoute" value="ecoute">
-                                    <label for="ecoute"> A l'ecoute</label>
-                                </br>
+                                    <p id="autonome" name="autonome" value="autonome">- Autonome</p>
+                                    <p id="passion" name="passion" value="passion">- Passionné</p>							
+                                    <p id="reflechi" name="reflechi" value="reflechi">- Réfléchi</p>
+                                    <p id="ecoute" name="ecoute" value="ecoute">- A l écoute</p>
                             </div>
                         </div>   
                         <div class="validbox"> <!-- To remove or modify an experience and to see if the experience was validated -->
                             <div class="box2">
                                 <div class="box21">Cette expérience :</div>
-                                <div class="box22">a été validée</div>  <!-- to be modified to "n'a pas été validée" if the consultant didn't verify it yet -->
+                                <div class="box22">n'a pas été validée</div>  <!-- to be modified to "a été validée" if the consultant verified it-->
                             </div> 
                             <div class="valid">Modifier cette expérience</div> 
                             <div class="valid">Retirer cette expérience</div>
@@ -94,30 +84,20 @@ if (!isset($_SESSION['role']) || $_SESSION['role'] !== "Jeune") {
                 <div class="wrapper"> <!-- what needs to be copied -->
                     <div class="leftbox">   <!-- Div containing the previous experiences -->
                         <div class="box">   <!-- Most important informations -->
-                                <label for="mail">Mail du référent:</label>
-                                <input type="text" id="mail" name="mail" required/>
-                            </br>
-                                <label for="engagement">MON ENGAGEMENT :</label>
-                                <input type="text" id="engagement" name="engagement" required/>
-                            </br>
-                                <label for="duree">DUREE :</label>
-                                <input type="text" id="duree" name="duree" required/>
+                                <p>Mail du référent:</p>
+                                <p class="text" id="mail" name="mail"></p>
+                                <p>MON ENGAGEMENT :</p>
+                                <p class="text" id="engagement" name="engagement"></p>
+                                <p>DUREE :</p>
+                                <p class="text" id="duree" name="duree"></p>
                         </div>
                         <div class="box1">
                             <div class="box11"><p>Je suis *</p></div>
                             <div class="box12">
-                                    <input type="checkbox" class="ch" id="autonome" name="autonome" value="autonome">
-                                    <label for="autonome"> Autonome</label>
-                                </br>
-                                    <input type="checkbox" class="ch" id="passion" name="passion" value="passion">
-                                    <label for="passion"> Passionné</label>							
-                                </br>								
-                                    <input type="checkbox" class="ch" id="reflechi" name="reflechi" value="reflechi">
-                                    <label for="reflechi"> Réfléchi</label>
-                                </br>
-                                    <input type="checkbox" class="ch" id="ecoute" name="ecoute" value="ecoute">
-                                    <label for="ecoute"> A l'ecoute</label>
-                                </br>
+                                    <p id="autonome" name="autonome" value="autonome">- Autonome</p>
+                                    <p id="passion" name="passion" value="passion">- Passionné</p>							
+                                    <p id="reflechi" name="reflechi" value="reflechi">- Réfléchi</p>
+                                    <p id="ecoute" name="ecoute" value="ecoute">- A l écoute</p>
                             </div>
                         </div>   
                         <div class="validbox"> <!-- To remove or modify an experience and to see if the experience was validated -->
@@ -151,13 +131,13 @@ if (!isset($_SESSION['role']) || $_SESSION['role'] !== "Jeune") {
                         ECHO '<div class="leftbox">';   #Div containing the previous experiences
                         ECHO '<div class="box">';   #Most important informations
                                 ECHO '<label for="mail">Mail du référent:</label>';
-                                ECHO '<p id="mail" name="mail" required/></p>';
+                                ECHO '<p class="text" id="mail" name="mail" required/></p>';
                             ECHO '</br>';
                                 ECHO '<label for="engagement">MON ENGAGEMENT :</label>';
-                                ECHO '<p id="engagement" name="engagement" required/></p>';
+                                ECHO '<p class="text" id="engagement" name="engagement" required/></p>';
                             ECHO '</br>';
                                 ECHO '<label for="duree">DUREE :</label>';
-                                ECHO '<p id="duree" name="duree" required/></p>';
+                                ECHO '<p class="text" id="duree" name="duree" required/></p>';
                             ECHO '</div>';
                         ECHO '<div class="box1">';
                             ECHO '<div class="box11"><p>Je suis *</p></div>';
