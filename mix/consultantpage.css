@@ -125,23 +125,15 @@ a{
     position: relative;
 }
 
-input[type=text].c1{
+.text1{
     font: italic 90% "Fira Sans", serif;
     border: none;
     border-bottom: rgb(255, 40, 201) dotted 3px;
     width: 82%;
+    background: none;
     color: rgb(9, 9, 121);
 }
-input.c1{
-    font: italic 90% "Fira Sans", serif;
-    padding: 1%;
-    font-size: large;
-    border-color:rgb(255, 40, 201);
-    color: rgb(9, 9, 121);
-}
-input:focus.c1{
-    outline: none;
-}
+
 .box501{
     grid-row: 1;
     text-align: right;
@@ -206,23 +198,14 @@ input:focus.c1{
     background-color: rgb(210, 247, 215) ;
     width: 100%;
 }
-input[type=text]{
+
+.text2{
     font: italic 90% "Fira Sans", serif;
     border: none;
     border-bottom: rgb(25, 176, 25) dotted 3px;
     width: 82%;
     background: none;
     color: rgb(9, 9, 121);
-}
-input{
-    padding: 1%;
-    font-size: large;
-    border-color:rgb(25, 176, 25);
-    font: italic 90% "Fira Sans", serif;
-    color: rgb(9, 9, 121);
-}
-input:focus{
-    outline: none;
 }
 
 .valid{

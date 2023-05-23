@@ -50,40 +50,32 @@ if (!isset($_SESSION['role']) || $_SESSION['role'] !== "Consultant") {
 							<div class="box501"><p>MES SAVOIRS ETRE</p></div>
 							<div class="box511"><p>Je suis *</p></div>
 							<div class="box521">
-								<input type="checkbox" id="autonome" name="autonome" value="autonome">
+								<input style="pointer-events:none" type="checkbox" id="autonome" name="autonome" value="autonome" checked>
 								<label for="autonome"> Autonome</label>
 							</br>
-								<input type="checkbox" id="passion" name="passion" value="passion">
+								<input style="pointer-events:none" type="checkbox" id="passion" name="passion" value="passion" checked>
 								<label for="passion"> Passionné</label>
 							</br>
-								<input type="checkbox" id="reflechi" name="reflechi" value="reflechi">
+								<input style="pointer-events:none" type="checkbox" id="reflechi" name="reflechi" value="reflechi" checked>
 								<label for="reflechi"> Réfléchi</label>
 							</br>
 						</div>
 						</div>
 						<div class="box4">
-							<form>
-								<label for="nom">NOM :</label>
-								<input class="c1" type="text" id="nom" name="nom"/>
-							</br>
-								<label for="prenom">PRENOM :</label>
-								<input class="c1" type="text" id="prenom" name="prenom"/>
-							</br></br>
-								<label for="dob">DATE DE NAISSANCE :</label>
-								<input class="c1" type="date" id="dob" name="dob"/>
-							</br></br>
-								<label for="mail">Mail :</label>
-								<input class="c1" type="text" id="mail" name="mail"/>
-							</br>
-								<label for="social">Réseaux sociaux :</label>
-								<input class="c1" type="text" id="social" name="social"/>
-							</br>
-								<label for="engagement">MON ENGAGEMENT :</label>
-								<input class="c1" type="text" id="engagement" name="engagement"/>
-							</br>
-								<label for="duree">DUREE :</label>
-								<input class="c1" type="text" id="duree" name="duree"/>
-							</form>
+								<p>NOM :</p>
+								<p class="text1" id="nom" name="nom"></p>
+								<p>PRENOM :</p>
+								<p class="text1" id="prenom" name="prenom"></p>
+								<p>DATE DE NAISSANCE :</p>
+								<p class="text1" id="dob" name="dob"></p>
+								<p>Mail :</p>
+								<p class="text1" id="mail" name="mail"></p>
+								<p>Réseaux sociaux :</p>
+								<p class="text1" id="social" name="social"></p>
+								<p>MON ENGAGEMENT :</p>
+								<p class="text1" id="engagement" name="engagement"></p>
+								<p>DUREE :</p>
+								<p class="text1" id="duree" name="duree"></p>
 						</div>
 					</div>
 					<div class="box2">
@@ -95,39 +87,31 @@ if (!isset($_SESSION['role']) || $_SESSION['role'] !== "Consultant") {
 							<div class="box512"><p>Je confirme sa (son)*</p></div>
 	
 							<div class="box522">
-									<input type="checkbox" id="confiance" name="confiance" value="confiance">
+									<input style="pointer-events:none" type="checkbox" id="confiance" name="confiance" value="confiance" checked>
 									<label for="confiance"> Confiance</label>
 								</br>
-									<input type="checkbox" id="bienveillance" name="bienveillance" value="bienveillance">
+									<input style="pointer-events:none" type="checkbox" id="bienveillance" name="bienveillance" value="bienveillance" checked>
 									<label for="bienveillance"> Bienveillance</label>
 								</br>
-									<input type="checkbox" id="respect" name="respect" value="respect">
+									<input style="pointer-events:none" type="checkbox" id="respect" name="respect" value="respect" checked>
 									<label for="respect"> Respect</label>
 								</br></div>
 						</div>
 						<div class="box4">
-							<form>
-								<label for="nom">NOM :</label>
-								<input type="text" id="nom" name="nom"/>
-							</br>
-								<label for="prenom">PRENOM :</label>
-								<input type="text" id="prenom" name="prenom"/>
-							</br></br>
-								<label for="dob">DATE DE NAISSANCE :</label>
-								<input type="date" id="dob" name="dob"/>
-							</br></br>
-								<label for="mail">Mail :</label>
-								<input type="text" id="mail" name="mail"/>
-							</br>
-								<label for="social">Réseaux sociaux :</label>
-								<input type="text" id="social" name="social"/>
-							</br>
-								<label for="presentationt">PRESENTATION :</label>
-								<input type="text" id="presentation" name="presentation"/>
-							</br>
-								<label for="duree">DUREE :</label>
-								<input type="text" id="duree" name="duree"/>
-							</form>
+								<p>NOM :</p>
+								<p class="text2" id="nom" name="nom"></p>
+								<p>PRENOM :</p>
+								<p class="text2" id="prenom" name="prenom"></p>
+								<p>DATE DE NAISSANCE :</p>
+								<p class="text2" id="dob" name="dob"></p>
+								<p>Mail :</p>
+								<p class="text2" id="mail" name="mail"></p>
+								<p>Réseaux sociaux :</p>
+								<p class="text2" id="social" name="social"></p>
+								<p>PRESENTATION :</p>
+								<p class="text2" id="presentation" name="presentation"></p>
+								<p>DUREE :</p>
+								<p class="text2" id="duree" name="duree"></p>
 						</div>
 				</div>
 				</div>

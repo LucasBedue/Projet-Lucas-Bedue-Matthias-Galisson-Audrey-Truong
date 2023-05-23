@@ -31,7 +31,7 @@
                 header("Location: jeunespage.php");
                 exit();
             } else {
-                header("Location: infopage.php");
+                header("Location: consultantpage.php");
                 exit();
             }
         } 
