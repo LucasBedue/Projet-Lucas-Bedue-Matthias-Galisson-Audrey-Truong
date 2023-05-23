@@ -62,10 +62,18 @@ if (!isset($_SESSION['role']) || $_SESSION['role'] !== "Jeune") {
                         <div class="box1">
                             <div class="box11"><p>Je suis *</p></div>
                             <div class="box12">
-                                    <p id="autonome" name="autonome" value="autonome">- Autonome</p>
-                                    <p id="passion" name="passion" value="passion">- Passionné</p>							
-                                    <p id="reflechi" name="reflechi" value="reflechi">- Réfléchi</p>
-                                    <p id="ecoute" name="ecoute" value="ecoute">- A l écoute</p>
+                                    <input style="pointer-events:none" type="checkbox" id="autonome" name="autonome" value="autonome" checked>
+                                    <label for="autonome"> Autonome</label>
+							    </br>
+                                    <input style="pointer-events:none" type="checkbox" id="passion" name="passion" value="passion" checked>
+                                    <label for="passion"> Passionné</label>			
+                                </br>			
+                                    <input style="pointer-events:none" type="checkbox" id="reflechi" name="reflechi" value="reflechi" checked> 
+                                    <label for="reflechi">Réfléchi</label>
+                                </br>
+                                    <input style="pointer-events:none" type="checkbox" id="ecoute" name="ecoute" value="ecoute" checked>
+                                    <label for="ecoute"> A l écoute</label>
+                                </br>
                             </div>
                         </div>   
                         <div class="validbox"> <!-- To remove or modify an experience and to see if the experience was validated -->
@@ -94,10 +102,18 @@ if (!isset($_SESSION['role']) || $_SESSION['role'] !== "Jeune") {
                         <div class="box1">
                             <div class="box11"><p>Je suis *</p></div>
                             <div class="box12">
-                                    <p id="autonome" name="autonome" value="autonome">- Autonome</p>
-                                    <p id="passion" name="passion" value="passion">- Passionné</p>							
-                                    <p id="reflechi" name="reflechi" value="reflechi">- Réfléchi</p>
-                                    <p id="ecoute" name="ecoute" value="ecoute">- A l écoute</p>
+                                    <input style="pointer-events:none" type="checkbox" id="autonome" name="autonome" value="autonome" checked>
+                                    <label for="autonome"> Autonome</label>
+							    </br>
+                                    <input style="pointer-events:none" type="checkbox" id="passion" name="passion" value="passion" checked>
+                                    <label for="passion"> Passionné</label>			
+                                </br>			
+                                    <input style="pointer-events:none" type="checkbox" id="reflechi" name="reflechi" value="reflechi" checked> 
+                                    <label for="reflechi">Réfléchi</label>
+                                </br>
+                                    <input style="pointer-events:none" type="checkbox" id="ecoute" name="ecoute" value="ecoute" checked>
+                                    <label for="ecoute"> A l écoute</label>
+                                </br>
                             </div>
                         </div>   
                         <div class="validbox"> <!-- To remove or modify an experience and to see if the experience was validated -->
