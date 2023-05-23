@@ -74,7 +74,11 @@ if (!isset($_SESSION['role']) || $_SESSION['role'] !== "Jeune") {
                                 </br>
                             </div>
                         </div>   
-                        <div class="validbox"> <!-- To remove or modify an experience -->
+                        <div class="validbox"> <!-- To remove or modify an experience and to see if the experience was validated -->
+                            <div class="box2">
+                                <div class="box21">Cette expérience :</div>
+                                <div class="box22">a été validée</div>  <!-- to be modified to "n'a pas été validée" if the consultant didn't verify it yet -->
+                            </div> 
                             <div class="valid">Modifier cette expérience</div> 
                             <div class="valid">Retirer cette expérience</div>
                         </div> 
@@ -112,7 +116,11 @@ if (!isset($_SESSION['role']) || $_SESSION['role'] !== "Jeune") {
                                 </br>
                             </div>
                         </div>   
-                        <div class="validbox"> <!-- To remove or modify an experience -->
+                        <div class="validbox"> <!-- To remove or modify an experience and to see if the experience was validated -->
+                            <div class="box2">
+                                <div class="box21">Cette expérience :</div>
+                                <div class="box22">a été validée</div>  <!-- to be modified to "n'a pas été validée" if the consultant didn't verify it yet -->
+                            </div> 
                             <div class="valid">Modifier cette expérience</div> 
                             <div class="valid">Retirer cette expérience</div>
                         </div> 
