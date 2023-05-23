@@ -128,17 +128,20 @@ if (!isset($_SESSION['role']) || $_SESSION['role'] !== "Jeune") {
             nmbexp = <?php 
             $f = fopen('./../InformationsJeunes/'.$mail,'r+');
             rewind($f);
-            $nmb = intval("fgetc($f)",10);
+            $txt=fgetc($f);
+            $nmb = intval("$txt",10);
             fclose($f);
             echo $nmb;
-            ?>
+            ?>;
 
             if(nmbexp!=0){//Si il y a au moins une expérience
                 numverif = 0;
                 for(i=0;i<nmbexp;i++){
                     var wrap=document.createElement("div");
-                    wrap.classList.add('wrapper');
-                    
+                    contenaire.classList.add('wrapper');
+                    contenaire.innerHTML = <?php  
+                        
+                    ?>;
 
 
                     
