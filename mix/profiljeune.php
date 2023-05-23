@@ -187,11 +187,25 @@ if (!isset($_SESSION['role']) || $_SESSION['role'] !== "Jeune") {
 
 
                     ?>;
+                    docmailref = "\n";
+                    docengagement = "\n";
+                    docduree = "\n";
+                    docetre = new Array ("\n","\n","\n","\n");
+                    docvalid = 0;
 
+                    docmailref = <?php  
+                    $f = fopen('./../InformationsJeunes/'.$mail,'r+');
+                    rewind($f);
+
+                    $txt=fgets($f);
 
                     
+                    $nmb = intval("$txt",10);
+                    fclose($f);
+                    ?>
                 }
             }
+        
             else{//Si il n'y a rien
                 document.body.getElementById('divawraper').innerHTML = "Il n'y a aucune expérience!";
             }

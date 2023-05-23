@@ -3,16 +3,30 @@ session_start();
 
 //On regarde le premier nombre et on l'incrémente. C'est le nombre d'expèrience.
 $mail = $_SESSION['mail'];
+$filename='./../InformationsJeunes/'.$mail;
 $f = fopen('./../InformationsJeunes/'.$mail,'r+');
 rewind($f);
-$texte=fread($f,filesize("./../InformationsJeunes/".$mail));
-$tabtexte=explode("\n",$texte);
-$tabtexte[0]=intval("$tabtexte[0]",10);
-$tabtexte[0]++;
-rewind($f);
-file_put_contents('./../InformationsJeunes/'.$mail,implode("\n",$tabtexte));
-fwrite($f,"\n");
+
+$nb = fgetc($f);
+$nb = intval("$nb",10);
+$nb++;
+
 fclose($f);
+
+if(!$file = file($filename)) {
+    return false;
+}
+$file[0] = $nb;
+
+file_put_contents($filename, implode('', $file));
+
+$f = fopen('./../InformationsJeunes/'.$mail,'r+');
+$nb = fgetc($f);
+$nb = "\n";
+fwrite($f,$nb);
+fclose($f);
+
+
 
 //On rajoute notre expèrience à compléter.
 $f = fopen('./../InformationsJeunes/'.$mail,'a+');
