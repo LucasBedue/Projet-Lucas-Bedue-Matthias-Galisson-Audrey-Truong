@@ -47,7 +47,7 @@ if (!isset($_SESSION['role']) || $_SESSION['role'] !== "Jeune") {
 						Retrouvez toutes vos expériences passées ou ajoutez en une nouvelle.
 					</p>
 				</div>
-                <div name="divwrapper" id="divwrapper">
+                <div name="divwrapper" id="divwrapper">ICI
                 </div>
                 <div class="wrapper">
                     <div class="leftbox">   <!-- Div containing the previous experiences -->
@@ -140,10 +140,12 @@ if (!isset($_SESSION['role']) || $_SESSION['role'] !== "Jeune") {
 
             //if(nmbexp!=0){//Si il y a au moins une expérience
                 numverif = 0;
+                let thediv = document.body.whole.bodybg.divwrapper;
+                thediv.innerHTML = "Yo!";
                 //for(i=0;i<nmbexp;i++){
-                    var contenaire=document.createElement("div");
-                    contenaire.classList.add('wrapper');
-                    contenaire.innerHTML = <?php  
+                    let contenaire=document.createElement('div');
+                    contenaire.classList.add("wrapper");
+                    contenaire.textContent = "<?php  
                         ECHO '<div class="leftbox">';   # Div containing the previous experiences 
                         ECHO '<div class="box">';   # Most important informations 
                                 ECHO '<p>Mail du référent:</p>';
@@ -179,9 +181,9 @@ if (!isset($_SESSION['role']) || $_SESSION['role'] !== "Jeune") {
                             ECHO '<div class="valid">Retirer cette expérience</div>';
                         ECHO '</div> ';
                     ECHO '</div>';
+                    
 
-
-                    ?>;
+                    ?>";
                     /*
                     docmailref = "\n";
                     docengagement = "\n";
@@ -198,9 +200,10 @@ if (!isset($_SESSION['role']) || $_SESSION['role'] !== "Jeune") {
                     
                     #$nmb = intval("$txt",10);
                     #fclose($f);
-                    ?>
+                    ?>;
                     */
-                   document.body.getElementById("divwrapper").appendChild(contenaire);
+                   
+                   thediv.appendChild(contenaire);
                 //}
             //}
         /*

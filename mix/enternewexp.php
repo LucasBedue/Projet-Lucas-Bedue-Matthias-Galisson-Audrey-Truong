@@ -16,7 +16,7 @@ fclose($f);
 if(!$file = file($filename)) {
     return false;
 }
-$file[0] = $nb;
+$file[0] = $nb."\n";
 
 file_put_contents($filename, implode('', $file));
 
