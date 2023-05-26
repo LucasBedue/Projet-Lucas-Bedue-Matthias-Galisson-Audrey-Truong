@@ -47,8 +47,8 @@ if (!isset($_SESSION['role']) || $_SESSION['role'] !== "Jeune") {
 						Retrouvez toutes vos expériences passées ou ajoutez en une nouvelle.
 					</p>
 				</div>
-                <div name="divwrapper" id="divwrapper">ICI
-                </div>
+                <div name="divwrapper" id="divwrapper">
+                </div><!-- The div contain all the wrappers-->
                 <div class="wrapper">
                     <div class="leftbox">   <!-- Div containing the previous experiences -->
                         <div class="box">   <!-- Most important informations -->
@@ -128,20 +128,28 @@ if (!isset($_SESSION['role']) || $_SESSION['role'] !== "Jeune") {
                     
                 </div>
 		</div>
-        <script>
-            nmbexp = <?php 
-            $f = fopen('./../InformationsJeunes/'.$mail,'r+');
-            rewind($f);
-            $txt=fgetc($f);
-            $nmb = intval("$txt",10);
-            fclose($f);
-            echo $nmb;
-            ?>;
+        <script type="text/javascript">
+
+            var nmbexp = <?php 
+                $f = fopen('./../InformationsJeunes/'.$mail,'r+');
+                rewind($f);
+                $txt=fgetc($f);
+                $nmb = intval("$txt",10);
+                fclose($f);
+                echo $nmb;
+                ?>;
+            var thediv = document.getElementById("divwrapper");
+            var text = document.createElement("p");
+            var intext = document.createTextNode(nmbexp);
+            text.appendChild(intext);
+            thediv.appendChild(text);
+
+            
+            
 
             //if(nmbexp!=0){//Si il y a au moins une expérience
-                numverif = 0;
-                let thediv = document.body.whole.bodybg.divwrapper;
-                thediv.innerHTML = "Yo!";
+                
+                
                 //for(i=0;i<nmbexp;i++){
                     let contenaire=document.createElement('div');
                     contenaire.classList.add("wrapper");
@@ -203,7 +211,7 @@ if (!isset($_SESSION['role']) || $_SESSION['role'] !== "Jeune") {
                     ?>;
                     */
                    
-                   thediv.appendChild(contenaire);
+                   
                 //}
             //}
         /*
