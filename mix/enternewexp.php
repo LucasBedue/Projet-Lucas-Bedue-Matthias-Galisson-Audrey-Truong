@@ -7,7 +7,7 @@ $filename='./../InformationsJeunes/'.$mail;
 $f = fopen('./../InformationsJeunes/'.$mail,'r+');
 rewind($f);
 
-$nb = fgetc($f);
+$nb = fgets($f);
 $nb = intval("$nb",10);
 $nb++;
 

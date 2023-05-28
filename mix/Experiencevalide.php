@@ -39,7 +39,7 @@
 				<div class="texttop">
 					
                     <p>Votre expérience a été envoyé avec succès!</p>
-                    <input type="button" class="valid" href="./profiljeune.php" value="Voir ma liste d'expérience">
+                    <a class="valid" href="./profiljeune.php">Voir la liste de ces expériences</a>
 					
 				</div>
 
