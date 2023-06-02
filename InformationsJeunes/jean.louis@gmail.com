@@ -1,18 +1,18 @@
-2
 1
-Bedue
-Lucas
-2023-05-10
-jean@troll.com
-facebook
-tuer
-5ans
+0
+j
+j
+2023-06-16
+j
+j
+j
+j
 autonome
 
 
 
-organise
 
+fiable
 
 
 
@@ -32,14 +32,15 @@ optimiste
 
 
 
+2
 0
-Jean
-Eaude
-2023-05-03
-oups@gmail.com
-twitter
-voler
-4ans
+k
+k
+2023-06-14
+k
+k
+k
+k
 autonome
 
 
@@ -49,7 +50,7 @@ autonome
 patient
 
 
-optimiste
+
 
 
 

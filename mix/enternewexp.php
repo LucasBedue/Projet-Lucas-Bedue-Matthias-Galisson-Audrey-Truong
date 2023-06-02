@@ -8,31 +8,12 @@ $filename='./../InformationsJeunes/'.$mail;
 $f = fopen('./../InformationsJeunes/'.$mail,'r+');
 rewind($f);
 
-$nb = fgets($f);
-$nb = intval("$nb",10);
-$nb++;
-
-fclose($f);
-
-if(!$file = file($filename)) {
-    return false;
-}
-$file[0] = $nb."\n";
-
-file_put_contents($filename, implode('', $file));
-
-$f = fopen('./../InformationsJeunes/'.$mail,'r+');
-$nb = fgetc($f);
-$nb = "\n";
-fwrite($f,$nb);
-fclose($f);
-
-
-
 //On rajoute notre expèrience à compléter.
-$f = fopen('./../InformationsJeunes/'.$mail, 'a+');
-$txt = "0\n"; // 0=no verification, 1=referent verification, 2=consultant verification
-fwrite($f, $txt);
+if(feof($f)){
+rewind($f);
+$txt = "0\n"; 
+fwrite($f, $txt);// index of the experience
+fwrite($f, $txt);// 0=no verification, 1=referent verification, 2=consultant verification
 fwrite($f, $_POST['nom']."\n");
 fwrite($f, $_POST['prenom']."\n");
 fwrite($f, $_POST['dob']."\n");
@@ -40,19 +21,59 @@ fwrite($f, $_POST['mail']."\n");
 fwrite($f, $_POST['social']."\n");
 fwrite($f, $_POST['engagement']."\n");
 fwrite($f, $_POST['duree']."\n");
-fwrite($f, isset($_POST['autonome']) ? $_POST['autonome'] : ""."\n");
-fwrite($f, isset($_POST['passion']) ? $_POST['passion'] : ""."\n");
-fwrite($f, isset($_POST['reflechi']) ? $_POST['reflechi'] : ""."\n");
-fwrite($f, isset($_POST['ecoute']) ? $_POST['ecoute'] : ""."\n");
-fwrite($f, isset($_POST['organise']) ? $_POST['organise'] : ""."\n");
-fwrite($f, isset($_POST['fiable']) ? $_POST['fiable'] : ""."\n");
-fwrite($f, isset($_POST['patient']) ? $_POST['patient'] : ""."\n");
-fwrite($f, isset($_POST['responsable']) ? $_POST['responsable'] : ""."\n");
-fwrite($f, isset($_POST['sociable']) ? $_POST['sociable'] : ""."\n");
-fwrite($f, isset($_POST['optimiste']) ? $_POST['optimiste'] : ""."\n");
+fwrite($f, isset($_POST['autonome']) ? $_POST['autonome']."\n" : "\n");
+fwrite($f, isset($_POST['passion']) ? $_POST['passion']."\n" : "\n");
+fwrite($f, isset($_POST['reflechi']) ? $_POST['reflechi']."\n" : "\n");
+fwrite($f, isset($_POST['ecoute']) ? $_POST['ecoute']."\n" : "\n");
+fwrite($f, isset($_POST['organise']) ? $_POST['organise']."\n" : "\n");
+fwrite($f, isset($_POST['fiable']) ? $_POST['fiable']."\n" : "\n");
+fwrite($f, isset($_POST['patient']) ? $_POST['patient']."\n" : "\n");
+fwrite($f, isset($_POST['responsable']) ? $_POST['responsable']."\n" : "\n");
+fwrite($f, isset($_POST['sociable']) ? $_POST['sociable']."\n" : "\n");
+fwrite($f, isset($_POST['optimiste']) ? $_POST['optimiste']."\n" : "\n");
 //La place pour les points du référent
 fwrite($f,"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
+$indiceexp='0';
 
+}
+else{
+    rewind($f);
+    $indiceexp=0;
+    while(!feof($f)){
+
+        for($k=0;$k<34;$k++){
+            $txt=stream_get_line($f,0,"\n");
+            
+        }
+        $indiceexp++;
+
+    }
+    $txt = "$indiceexp\n";//l'index de l'experience
+
+    fwrite($f,$txt);
+	$txt = "0\n"; 
+    fwrite($f, $txt);// 0=no verification, 1=referent verification, 2=consultant verification
+fwrite($f, $_POST['nom']."\n");
+fwrite($f, $_POST['prenom']."\n");
+fwrite($f, $_POST['dob']."\n");
+fwrite($f, $_POST['mail']."\n");
+fwrite($f, $_POST['social']."\n");
+fwrite($f, $_POST['engagement']."\n");
+fwrite($f, $_POST['duree']."\n");
+fwrite($f, isset($_POST['autonome']) ? $_POST['autonome']."\n" : "\n");
+fwrite($f, isset($_POST['passion']) ? $_POST['passion']."\n" : "\n");
+fwrite($f, isset($_POST['reflechi']) ? $_POST['reflechi']."\n" : "\n");
+fwrite($f, isset($_POST['ecoute']) ? $_POST['ecoute']."\n" : "\n");
+fwrite($f, isset($_POST['organise']) ? $_POST['organise']."\n" : "\n");
+fwrite($f, isset($_POST['fiable']) ? $_POST['fiable']."\n" : "\n");
+fwrite($f, isset($_POST['patient']) ? $_POST['patient']."\n" : "\n");
+fwrite($f, isset($_POST['responsable']) ? $_POST['responsable']."\n" : "\n");
+fwrite($f, isset($_POST['sociable']) ? $_POST['sociable']."\n" : "\n");
+fwrite($f, isset($_POST['optimiste']) ? $_POST['optimiste']."\n" : "\n");
+//La place pour les points du référent
+fwrite($f,"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
+$indiceexp=strval($indiceexp);
+}
 fclose($f);
 
 //On envoi le message au référent
@@ -84,7 +105,7 @@ if(isset($_POST["send"])){
 		$email->isHTML(true);
 		
 		$email->Subject = "Devenez référent!";
-		$email->Body="Bonjour&#44;\nLe jeune ".$_POST['prenom'] .$_POST['nom']." souhaite que l&#39;on vérifie son expérience. Merci de le confirmer via l&#39;usage de cet URL :\n";
+		$email->Body="Bonjour,\nLe jeune".' '.$_POST['prenom'] .' '.$_POST['nom'].' '." souhaite que vous vérifiez son expérience. Merci de le confirmer via cet URL :\n"."http://localhost/test/Projet-Lucas-Bedue-Matthias-Galisson-Audrey-Truong-main/mix/refpage.php?q1="."$mail"."&q2="."$indiceexp";
 	
 		$email->send();
 		

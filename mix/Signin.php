@@ -38,7 +38,7 @@ fwrite($fichier, $nom . ';' . $prenom . ';' . $date_naissance . ';' . $mail . ';
 fclose($fichier);
 
 $f = fopen('./../InformationsJeunes/'.$mail,'a+');
-fwrite($f,"0"."\n");
+
 fclose($f);
 header('Location: login.php');
 
