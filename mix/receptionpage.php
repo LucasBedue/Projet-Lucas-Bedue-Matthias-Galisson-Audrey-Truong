@@ -4,7 +4,7 @@
 		<title>Accueil Jeunes 6.4</title>
 	</head>
 	<body>
-		<link rel="stylesheet" href="receptionpage.css" />
+		<link type="text/css" rel="stylesheet" href="receptionpage.css" />
 
 		<div class="bg">
 			<div class="toptext">

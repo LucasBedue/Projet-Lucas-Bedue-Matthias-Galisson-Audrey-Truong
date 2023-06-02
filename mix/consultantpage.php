@@ -15,7 +15,7 @@ if (!isset($_SESSION['role']) || $_SESSION['role'] !== "Consultant") {
 </script>
 
 	<body>
-		<link rel="stylesheet" href="consultantpage.css" />
+		<link type="text/css" rel="stylesheet" href="consultantpage.css" />
 		
 		<div class="whole">
 			<div class="head">
@@ -79,39 +79,46 @@ if (!isset($_SESSION['role']) || $_SESSION['role'] !== "Consultant") {
 						</div>
 					</div>
 					<div class="box2">
-						<div class="box3">REFERENT</div>
-						
-						<div class="box5">					
-							<div class="box502"><p>SES SAVOIRS ETRE</p></div>
-	
-							<div class="box512"><p>Je confirme sa (son)*</p></div>
-	
-							<div class="box522">
-									<input style="pointer-events:none" type="checkbox" id="confiance" name="confiance" value="confiance" checked>
-									<label for="confiance"> Confiance</label>
-								</br>
-									<input style="pointer-events:none" type="checkbox" id="bienveillance" name="bienveillance" value="bienveillance" checked>
-									<label for="bienveillance"> Bienveillance</label>
-								</br>
-									<input style="pointer-events:none" type="checkbox" id="respect" name="respect" value="respect" checked>
-									<label for="respect"> Respect</label>
-								</br></div>
-						</div>
+						<div class="box3">REFERENT</div>				
+							<div class="box5">					
+								<div class="box502"><p>SES SAVOIRS ETRE</p></div>
+		
+								<div class="box512"><p>Je confirme sa (son)*</p></div>
+		
+								<div class="box522">
+										<input style="pointer-events:none" type="checkbox" id="confiance" name="confiance" value="confiance" checked>
+										<label for="confiance"> Confiance</label>
+									</br>
+										<input style="pointer-events:none" type="checkbox" id="bienveillance" name="bienveillance" value="bienveillance" checked>
+										<label for="bienveillance"> Bienveillance</label>
+									</br>
+										<input style="pointer-events:none" type="checkbox" id="respect" name="respect" value="respect" checked>
+										<label for="respect"> Respect</label>
+									</br>
+								</div>
+								<div class="box532">
+									<p class="commentarytext">Commentaires</p>
+								</div>
+								<div class="box542">
+									<p class="commentarytext">wqddqwd</p>
+								</div>
+							</div>
+
 						<div class="box4">
-								<p>NOM :</p>
-								<p class="text2" id="nom" name="nom"></p>
-								<p>PRENOM :</p>
-								<p class="text2" id="prenom" name="prenom"></p>
-								<p>DATE DE NAISSANCE :</p>
-								<p class="text2" id="dob" name="dob"></p>
-								<p>Mail :</p>
-								<p class="text2" id="mail" name="mail"></p>
-								<p>Réseaux sociaux :</p>
-								<p class="text2" id="social" name="social"></p>
-								<p>PRESENTATION :</p>
-								<p class="text2" id="presentation" name="presentation"></p>
-								<p>DUREE :</p>
-								<p class="text2" id="duree" name="duree"></p>
+							<p>NOM :</p>
+							<p class="text2" id="nom" name="nom"></p>
+							<p>PRENOM :</p>
+							<p class="text2" id="prenom" name="prenom"></p>
+							<p>DATE DE NAISSANCE :</p>
+							<p class="text2" id="dob" name="dob"></p>
+							<p>Mail :</p>
+							<p class="text2" id="mail" name="mail"></p>
+							<p>Réseaux sociaux :</p>
+							<p class="text2" id="social" name="social"></p>
+							<p>PRESENTATION :</p>
+							<p class="text2" id="presentation" name="presentation"></p>
+							<p>DUREE :</p>
+							<p class="text2" id="duree" name="duree"></p>
 						</div>
 				</div>
 				</div>

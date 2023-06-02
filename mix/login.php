@@ -4,7 +4,7 @@
 		<title>Login - Jeunes 6.4</title>
 	</head>
 	<body>
-		<link rel="stylesheet" href="login.css" />
+		<link type="text/css" rel="stylesheet" href="login.css" />
 		
 		<div class="whole">
 			<div class="head">

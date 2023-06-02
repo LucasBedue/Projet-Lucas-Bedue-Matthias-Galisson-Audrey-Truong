@@ -4,7 +4,7 @@
 		<title>Partenaires - Jeunes 6.4</title>
 	</head>
 	<body>
-		<link rel="stylesheet" href="partnerspage.css" />
+		<link type="text/css" rel="stylesheet" href="partnerspage.css" />
 		
 		<div class="whole">
 			<div class="head">

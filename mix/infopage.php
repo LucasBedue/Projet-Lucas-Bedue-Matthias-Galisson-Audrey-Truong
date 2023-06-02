@@ -4,7 +4,7 @@
 		<title>Infomations Jeunes 6.4</title>
 	</head>
 	<body>
-		<link rel="stylesheet" href="infopage.css" />
+		<link type="text/css" rel="stylesheet" href="infopage.css" />
 		<div class="whole">
 			<div class="head">
 				<img class="fitimg" src="./logos/logo1.png" alt="Jeunes 6.4" />

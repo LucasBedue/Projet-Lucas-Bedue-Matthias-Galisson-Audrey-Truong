@@ -139,14 +139,13 @@ a{
     text-align: right;
     margin-right: 2%;
     font-weight: 700;
-    line-height: 0%;
     color: rgb(255, 40, 201) ;
 }
 .box511{
     grid-row: 2;
     background: linear-gradient(to right, white, rgb(255, 40, 201) ) ;
     color: white ;
-    font-size: 140%;
+    font-size: 130%;
     line-height: 100%;
     text-align: right;
     padding-right: 2%;
@@ -178,14 +177,13 @@ a{
     text-align: right;
     margin-right: 2%;
     font-weight: 700;
-    line-height: 0%;
     color: rgb(25, 176, 25) ;
 }
 .box512{
     grid-row: 2;
     background: linear-gradient(to right, white, rgb(25, 176, 25) ) ;
     color: white ;
-    font-size: 140%;
+    font-size: 130%;
     line-height: 100%;
     text-align: right;
     padding-right: 2%;
@@ -197,6 +195,33 @@ a{
     line-height: 170%;
     background-color: rgb(210, 247, 215) ;
     width: 100%;
+}
+.box532{ /* Commentary text area header */
+    padding-top: 2%;
+    padding-bottom: 2%;
+    grid-row: 4;
+    line-height: 120%;
+    background: linear-gradient(to left, white, rgb(25, 176, 25) );
+    width: 100%;
+    margin-top: 3%;
+    height: 70%;
+    font-size: 100%;
+    color: rgb(255, 255, 255) ;
+
+}
+.box542{ /* Commentary text area */
+    padding-top: 2%;
+    padding-bottom: 2%;
+    grid-row: 5;
+    background-color: rgb(210, 247, 215) ;
+    width: 100%;
+    color: rgb(9, 9, 121);
+    margin-top: 1%;
+    font-size: 80%;
+    font: italic 90% "Fira Sans", serif;
+}
+.commentarytext{
+    margin-left: 5%;
 }
 
 .text2{
@@ -228,12 +253,18 @@ a{
     font-size: 100%;
 }
 .box5{
+    grid-row: 1;
     display: grid;
     position: absolute;
     top: 0;
     right: 0;
-    width: 40%;
     padding: 1%;
+    width: 40%;
+}
+
+.box6{
+    padding: 1%;
+    background-color: rgb(210, 247, 215);
 }
 
 .tmp1:hover{

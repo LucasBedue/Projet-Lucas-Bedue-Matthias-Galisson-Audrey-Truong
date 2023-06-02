@@ -4,7 +4,7 @@
 		<title>Referent - Jeunes 6.4</title>
 	</head>
 	<body>
-		<link rel="stylesheet" href="refpage.css" />
+		<link type="text/css" rel="stylesheet" href="refpage.css" />
 
 		<div class="whole">
 			<div class="head">

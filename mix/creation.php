@@ -5,7 +5,7 @@
 	</head>
 
 	<body>
-		<link rel="stylesheet" href="creation.css" />
+		<link type="text/css" rel="stylesheet" href="creation.css" />
 		
 		<div class="whole">
 			<div class="head">

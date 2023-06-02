@@ -12,7 +12,7 @@
     ?>
     </head>
     <body>
-        <link rel="stylesheet" href="Experiencevalide.css" />
+        <link type="text/css" rel="stylesheet" href="Experiencevalide.css" />
         <div class="whole">
 			<div class="head">
 				<img class="fitimg" src="./logos/logo1.png" alt="Jeunes 6.4" />

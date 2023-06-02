@@ -17,7 +17,7 @@ if (!isset($_SESSION['role']) || $_SESSION['role'] !== "Jeune") {
 		</script>
 	</head>
 	<body>
-		<link rel="stylesheet" href="profiljeune.css" />
+		<link type="text/css" rel="stylesheet" href="profiljeune.css" />
 
 		<div class="whole">
 			<div class="head">
