@@ -1,4 +1,5 @@
 <?php
+header('Content-Type: text/html; charset=utf-8');
 session_start();
 
 //On regarde le premier nombre et on l'incrémente. C'est le nombre d'expèrience.
@@ -29,59 +30,28 @@ fclose($f);
 
 
 //On rajoute notre expèrience à compléter.
-$f = fopen('./../InformationsJeunes/'.$mail,'a+');
-$txt = "0\n"; //0=no verification, 1=referent verification, 2=consultant verification
-fwrite($f,$txt);
-$txt = $_POST['nom']."\n";
-fwrite($f,$txt);
-$txt = $_POST['prenom']."\n";
-fwrite($f,$txt);
-$txt = $_POST['dob']."\n";
-fwrite($f,$txt);
-$txt = $_POST['mail']."\n";
-fwrite($f,$txt);
-$txt = $_POST['social']."\n";
-fwrite($f,$txt);
-$txt = $_POST['engagement']."\n";
-fwrite($f,$txt);
-$txt = $_POST['duree']."\n";
-fwrite($f,$txt);
-$txt = $_POST['autonome']."\n";
-fwrite($f,$txt);
-$txt = $_POST['passion']."\n";
-fwrite($f,$txt);
-$txt = $_POST['reflechi']."\n";
-fwrite($f,$txt);
-$txt = $_POST['ecoute']."\n";
-fwrite($f,$txt);
-$txt = $_POST['organise']."\n";
-fwrite($f,$txt);
-$txt = $_POST['fiable']."\n";
-fwrite($f,$txt);
-$txt = $_POST['patient']."\n";
-fwrite($f,$txt);
-$txt = $_POST['responsable']."\n";
-fwrite($f,$txt);
-$txt = $_POST['sociable']."\n";
-fwrite($f,$txt);
-$txt = $_POST['optimiste']."\n";
-fwrite($f,$txt);
+$f = fopen('./../InformationsJeunes/'.$mail, 'a+');
+$txt = "0\n"; // 0=no verification, 1=referent verification, 2=consultant verification
+fwrite($f, $txt);
+fwrite($f, $_POST['nom']."\n");
+fwrite($f, $_POST['prenom']."\n");
+fwrite($f, $_POST['dob']."\n");
+fwrite($f, $_POST['mail']."\n");
+fwrite($f, $_POST['social']."\n");
+fwrite($f, $_POST['engagement']."\n");
+fwrite($f, $_POST['duree']."\n");
+fwrite($f, isset($_POST['autonome']) ? $_POST['autonome'] : ""."\n");
+fwrite($f, isset($_POST['passion']) ? $_POST['passion'] : ""."\n");
+fwrite($f, isset($_POST['reflechi']) ? $_POST['reflechi'] : ""."\n");
+fwrite($f, isset($_POST['ecoute']) ? $_POST['ecoute'] : ""."\n");
+fwrite($f, isset($_POST['organise']) ? $_POST['organise'] : ""."\n");
+fwrite($f, isset($_POST['fiable']) ? $_POST['fiable'] : ""."\n");
+fwrite($f, isset($_POST['patient']) ? $_POST['patient'] : ""."\n");
+fwrite($f, isset($_POST['responsable']) ? $_POST['responsable'] : ""."\n");
+fwrite($f, isset($_POST['sociable']) ? $_POST['sociable'] : ""."\n");
+fwrite($f, isset($_POST['optimiste']) ? $_POST['optimiste'] : ""."\n");
 //La place pour les points du référent
-fwrite($f,"\n");
-fwrite($f,"\n");
-fwrite($f,"\n");
-fwrite($f,"\n");
-fwrite($f,"\n");
-fwrite($f,"\n");
-fwrite($f,"\n");
-fwrite($f,"\n");
-fwrite($f,"\n");
-fwrite($f,"\n");
-fwrite($f,"\n");
-fwrite($f,"\n");
-fwrite($f,"\n");
-fwrite($f,"\n");
-fwrite($f,"\n");
+fwrite($f,"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
 
 fclose($f);
 
@@ -89,11 +59,11 @@ fclose($f);
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
-require './../send_mail/phpmailer/src/Exception.php';
-require './../send_mailphpmailer/src/PHPMailer.php';
-require './../send_mailphpmailer/src/SMTP.php';
+require 'phpmailer/src/Exception.php';
+require 'phpmailer/src/PHPMailer.php';
+require 'phpmailer/src/SMTP.php';
 
-if(isset($_POST["valid"])){
+if(isset($_POST["send"])){
 
 		$email= new PHPMailer;
 	//Server settings										
@@ -112,8 +82,9 @@ if(isset($_POST["valid"])){
 
 		//Content
 		$email->isHTML(true);
-		$email->Subject=utf8_encode("Devenez référent!");
-		$email->Body=utf8_encode("Bonjour&#44;\nLe jeune".$_POST['prenom'].$_POST['nom']."souhaite que l&#39;on vérifie son expérience. Merci de le confirmer via l&#39;usage de cet URL :\n");
+		
+		$email->Subject = "Devenez référent!";
+		$email->Body="Bonjour&#44;\nLe jeune ".$_POST['prenom'] .$_POST['nom']." souhaite que l&#39;on vérifie son expérience. Merci de le confirmer via l&#39;usage de cet URL :\n";
 	
 		$email->send();
 		

@@ -15,43 +15,40 @@ if (!isset($_SESSION['role']) || $_SESSION['role'] !== "Jeune") {
 ?>
 		</script>
 		<script type="text/javascript">
-			function checkLesBox(macheckBox){
-				ligne = returnTrParent(macheckBox);
-				var listeInput = ligne.getElementsByTagName('input');
-				var nbCheckBocChecked =  0;
-				for(var i = 0;
-				 i < listeInput.length ;
-				 i++ ){
-					if(listeInput[i].type == "checkbox" && listeInput[i].checked){
-						nbCheckBocChecked ++;
-					}
-				}
-				if(nbCheckBocChecked > 4){
-					alert("Vous ne pouvez coché que 4 cases");
-					macheckBox.checked = false;
-				}
-				 
+	function chkcontrol(j) {
+		var total = 0;
+		var checkboxes = document.querySelectorAll('.ch'); // Sélectionne tous les éléments avec la classe "ch"
+		for (var i = 0; i < checkboxes.length; i++) {
+			if (checkboxes[i].checked) {
+				total = total + 1;
 			}
-			 function returnTrParent(element){
-				var temp = null;
-				var elemParent = element.parentNode ;
-				if(elemParent.tagName == "TR"){
-					elemParent = elemParent;
-				}
-				else if(elemParent.tagName == "TABLE"){
-					alert("Ligne non trouvée");
-					elemParent = null;
-				}
-				else{
-					temp = returnTrParent(elemParent);
-				}
-				return elemParent;
+			if (total > 4) {
+				checkboxes[j].checked = false;
+				return false;
 			}
-		</script>
+		}
+	}
+</script>
+
+<script type="text/javascript">
+	function checkLesBox(macheckBox) {
+		var listeInput = document.querySelectorAll('.ch'); // Sélectionne tous les éléments avec la classe "ch"
+		var nbCheckBoxChecked = 0;
+		for (var i = 0; i < listeInput.length; i++) {
+			if (listeInput[i].type === "checkbox" && listeInput[i].checked) {
+				nbCheckBoxChecked++;
+			}
+		}
+		if (nbCheckBoxChecked > 4) {
+			alert("Vous ne pouvez cocher que 4 cases");
+			macheckBox.checked = false;
+		}
+	}
+</script>
 
 	</head>
 	<body>
-		<link type="text/css" rel="stylesheet" href="jeunespage.css" />
+		<link rel="stylesheet" href="jeunespage.css" />
 
 		<div class="whole">
 			<div class="head">
@@ -119,40 +116,40 @@ if (!isset($_SESSION['role']) || $_SESSION['role'] !== "Jeune") {
 						<div class="box11"><p>Je suis *</p></div>
 						
 						<div class="box12">
-								<input type="checkbox" class="ch" id="autonome" name="autonome" value="autonome" onchange="checkLesBox(this)">
+								<input type="checkbox" class="ch" id="autonome" name="autonome" value="autonome" onclick='chkcontrol(0)' onchange="checkLesBox(this)">
 								<label for="autonome"> Autonome</label>
 							</br>
-								<input type="checkbox" class="ch" id="passion" name="passion" value="passion" onchange="checkLesBox(this)">
+								<input type="checkbox" class="ch" id="passion" name="passion" value="passion" onclick='chkcontrol(1)' onchange="checkLesBox(this)">
 								<label for="passion"> Passionné</label>
 							</br>
-								<input type="checkbox" class="ch" id="reflechi" name="reflechi" value="reflechi" onchange="checkLesBox(this)">
+								<input type="checkbox" class="ch" id="reflechi" name="reflechi" value="reflechi" onclick='chkcontrol(2)' onchange="checkLesBox(this)">
 								<label for="reflechi"> Réfléchi</label>
 							</br>
-								<input type="checkbox" class="ch" id="ecoute" name="ecoute" value="ecoute" onchange="checkLesBox(this)">
+								<input type="checkbox" class="ch" id="ecoute" name="ecoute" value="ecoute" onclick='chkcontrol(3)' onchange="checkLesBox(this)">
 								<label for="ecoute"> A l'ecoute</label>
 							</br>
-								<input type="checkbox" class="ch" id="organise" name="organise" value="organise" onchange="checkLesBox(this)">
+								<input type="checkbox" class="ch" id="organise" name="organise" value="organise" onclick='chkcontrol(4)' onchange="checkLesBox(this)">
 								<label for="organise"> Organise</label>
 							</br>
-								<input type="checkbox" class="ch" id="fiable" name="fiable" value="fiable" onchange="checkLesBox(this)">
+								<input type="checkbox" class="ch" id="fiable" name="fiable" value="fiable" onclick='chkcontrol(5)' onchange="checkLesBox(this)">
 								<label for="fiable"> Fiable</label>
 							</br>
-								<input type="checkbox" class="ch" id="patient" name="patient" value="patient" onchange="checkLesBox(this)">
+								<input type="checkbox" class="ch" id="patient" name="patient" value="patient" onclick='chkcontrol(6)' onchange="checkLesBox(this)">
 								<label for="patient"> Patient</label>
 							</br>
-								<input type="checkbox" class="ch" id="responsable" name="responsable" value="responsable" onchange="checkLesBox(this)">
+								<input type="checkbox" class="ch" id="responsable" name="responsable" value="responsable" onclick='chkcontrol(7)' onchange="checkLesBox(this)">
 								<label for="responsable"> Responsable</label>
 							</br>
-								<input type="checkbox" class="ch" id="sociable" name="sociable" value="sociable" onchange="checkLesBox(this)">
+								<input type="checkbox" class="ch" id="sociable" name="sociable" value="sociable" onclick='chkcontrol(8)' onchange="checkLesBox(this)">
 								<label for="sociable"> Sociable</label>
 							</br>
-								<input type="checkbox" class="ch" id="optimiste" name="optimiste" value="optimiste" onchange="checkLesBox(this)">
+								<input type="checkbox" class="ch" id="optimiste" name="optimiste" value="optimiste" onclick='chkcontrol(9)' onchange="checkLesBox(this)">
 								<label for="optimiste"> Optimiste</label>
 							</br>
 							
 						</div>
 						<div class="box13"><p>*Faire 4 choix maximum</p></div>
-						<input type="submit" class="valid" name="valid" value="Valider">
+						<input type="submit" class="valid" name="send" value="Valider">
 					</div>
 					</form>
 				</div>
