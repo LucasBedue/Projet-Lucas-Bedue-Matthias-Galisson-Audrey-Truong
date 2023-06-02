@@ -152,7 +152,7 @@ if (!isset($_SESSION['role']) || $_SESSION['role'] !== "Jeune") {
 							
 						</div>
 						<div class="box13"><p>*Faire 4 choix maximum</p></div>
-						<input type="submit" class="valid" value="Valider">
+						<input type="submit" class="valid" name="valid" value="Valider">
 					</div>
 					</form>
 				</div>
