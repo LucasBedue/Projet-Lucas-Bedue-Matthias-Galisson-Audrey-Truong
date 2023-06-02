@@ -35,13 +35,16 @@
 }
 
 .enter {
-    color: red;
-    font-size: 180%;
     text-align: center;
     font-family: "Lucida Sans", "Lucida Sans Regular",
         "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana,
         sans-serif;
     padding: 2%;
+}
+
+.enterlink{
+    color: red;
+    text-decoration: none;
 }
 
 .bottombanner {
