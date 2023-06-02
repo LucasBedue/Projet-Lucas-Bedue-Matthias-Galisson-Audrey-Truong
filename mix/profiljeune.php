@@ -17,7 +17,7 @@ if (!isset($_SESSION['role']) || $_SESSION['role'] !== "Jeune") {
 		</script>
 	</head>
 	<body>
-		<link type="text/css" rel="stylesheet" href="profiljeune.css" />
+		<link rel="stylesheet" href="profiljeune.css" />
 
 		<div class="whole">
 			<div class="head">
@@ -53,9 +53,10 @@ if (!isset($_SESSION['role']) || $_SESSION['role'] !== "Jeune") {
 		</div>
         <script type="text/javascript">
             
-            function createthebox(mailref,engagetype,engagelenght,iam1,iam2,iam3,iam4,status){//function that create a box
+            function createthebox(mailref,engagetype,engagelenght,iam1,iam2,iam3,iam4,status,indi){//function that create a box
                             var thediv = document.getElementById("divwrapper");
                             var container=document.createElement('div');
+                            container.id=indi;
 
                             wrapper = document.createElement("div");
                             wrapper.className='wrapper';
@@ -181,13 +182,19 @@ if (!isset($_SESSION['role']) || $_SESSION['role'] !== "Jeune") {
                 $mail = $_SESSION['mail'];
                 $f = fopen('./../InformationsJeunes/'.$mail,'r+');
                 rewind($f);
-                $txt=stream_get_line($f,0,"\n");
-                $nmb = intval("$txt",10);
 
-                if($nmb>0){//if there is at least one of them
-
-                    for($i = 0;$i<$nmb;$i++){//we go through the file, register informations, place them in $tabvar and create a box with these informations
-                        $tabvar=array("mailref","engagetype","engagelenght","iam1","iam2","iam3","iam4",0);
+                if(feof($f)){
+                    ECHO utf8_encode("thereisnothing();");
+                }
+                else{
+                  
+                    while(!feof($f)){
+                        $tabvar=array("mailref","engagetype","engagelenght","iam1","iam2","iam3","iam4",0,0);
+                        $txt =stream_get_line($f,0,"\n");//the indice of the experience
+                        if(($txt=='\n')||(feof($f))||($txt=='')){}//verifie the EOF
+                        else{
+                        $txt =intval("$txt",10);
+                        array_splice($tabvar,8,1,$txt);
 
                         $txt =stream_get_line($f,0,"\n");//The verification state
                         $txt =intval("$txt",10);
@@ -223,13 +230,12 @@ if (!isset($_SESSION['role']) || $_SESSION['role'] !== "Jeune") {
                             $txt=stream_get_line($f,0,"\n");
                         }
 
-                        ECHO utf8_encode("createthebox('".$tabvar[0]."','".$tabvar[1]."','".$tabvar[2]."','".$tabvar[3]."','".$tabvar[4]."','".$tabvar[5]."','".$tabvar[6]."',".$tabvar[7].");");//We create the box
-
+                        ECHO utf8_encode("createthebox('".$tabvar[0]."','".$tabvar[1]."','".$tabvar[2]."','".$tabvar[3]."','".$tabvar[4]."','".$tabvar[5]."','".$tabvar[6]."','".$tabvar[7]."','".$tabvar[8]."');");//We create the box
                     }
+                    }
+                    
                 }
-                else {//We indicate the absence of experience
-                    ECHO utf8_encode("thereisnothing();");
-                }
+
                 fclose($f);
                 
             ?>

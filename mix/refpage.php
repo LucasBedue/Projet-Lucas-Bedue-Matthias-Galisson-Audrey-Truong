@@ -2,9 +2,11 @@
 <html lang="fr">
 	<head>
 		<title>Referent - Jeunes 6.4</title>
+		<!-- Mettre code de limite de checkbox-->
+		
 	</head>
 	<body>
-		<link type="text/css" rel="stylesheet" href="refpage.css" />
+		<link rel="stylesheet" href="refpage.css" />
 
 		<div class="whole">
 			<div class="head">
@@ -23,18 +25,7 @@
 							<a class="link" href="./partnerspage.php">Nos partenaires</a>
 						</p>
 						<p class="tabbox1">
-						<?php						
-							session_start();
-
-							if (!isset($_SESSION['role'])) {						
-								echo '<a class="tmp1" href="logout.php">Déconnexion</a>';
-								echo '<a class="tmp2" href="login.php">Connexion</a>';
-							} else {						
-								echo '<a class="tmp1" href="login.php">Connexion</a>';
-								echo '<a class="tmp2" href="logout.php">Déconnexion</a>';
-								}
-							?>
-						</p>
+						
 					</div>
 				</div>
 				<div class="texttop">
@@ -53,8 +44,10 @@
 
 						</div>
 					</div>
+					
 					<div class="box">
-						<form>
+					<form name="form1" method="post" action="completenewexp.php">
+						
 							<label for="nom">NOM :</label>
 							<input type="text" id="nom" name="nom"/>
 						</br>
@@ -72,7 +65,10 @@
 						</br>
 							<label for="duree">DUREE :</label>
 							<input type="text" id="duree" name="duree"/>
-						</form>
+
+								
+
+						
 					</div>
 					<div class="box1">
 						<div class="box10"><p>SES SAVOIRS ETRE</p></div>
@@ -80,37 +76,49 @@
 						<div class="box11"><p>Je confirme sa (son)*</p></div>
 
 						<div class="box12">
-								<input type="checkbox" id="confiance" name="confiance" value="confiance">
+								<input type="checkbox" id="confiance" name="confiance">
 								<label for="confiance"> Confiance</label>
 							</br>
-								<input type="checkbox" id="bienveillance" name="bienveillance" value="bienveillance">
+								<input type="checkbox" id="bienveillance" name="bienveillance">
 								<label for="bienveillance"> Bienveillance</label>
 							</br>
-								<input type="checkbox" id="respect" name="respect" value="respect">
+								<input type="checkbox" id="respect" name="respect">
 								<label for="respect"> Respect</label>
 							</br>
-								<input type="checkbox" id="honnetete" name="honnetete" value="honnetete">
+								<input type="checkbox" id="honnetete" name="honnetete">
 								<label for="honnetete"> Honnêteté</label>
 							</br>
-								<input type="checkbox" id="tolerance" name="tolerance" value="tolerance">
+								<input type="checkbox" id="tolerance" name="tolerance">
 								<label for="tolerance"> Tolérance</label>
 							</br>
-								<input type="checkbox" id="juste" name="juste" value="juste">
+								<input type="checkbox" id="juste" name="juste">
 								<label for="juste"> Juste</label>
 							</br>
-								<input type="checkbox" id="impartial" name="impartial" value="impartial">
+								<input type="checkbox" id="impartial" name="impartial">
 								<label for="impartial"> Impartial</label>
 							</br>
-								<input type="checkbox" id="travail" name="travail" value="travail">
+								<input type="checkbox" id="travail" name="travail">
 								<label for="travail"> Travail</label>
 							</br>
 						</div>
 						<div class="box13"><p>*Faire 4 choix maximum</p></div>
-						<div class="valid">Valider</div>
+						
+						<input type="submit" class="valid" name="valid" value="Valider">
+</form>
 					</div>
 					
 				</div>
 			</div>
 		</div>
+		<script type="text/javascript">
+			var nomurl=window.location.href;
+			var mailjeune=urlactu.searchParams.get("q1");
+			var numexp=urlactu.searchParams.get("q2");
+			
+
+
+			
+			
+		</script>
 	</body>
 </html>
