@@ -2,8 +2,22 @@
 <html lang="fr">
 	<head>
 		<title>Referent - Jeunes 6.4</title>
-		<!-- Mettre code de limite de checkbox-->
-		
+		<script type="text/javascript">
+	function checkLesBox(macheckBox) {
+		var listeInput = document.querySelectorAll('.ch'); // Sélectionne tous les éléments avec la classe "ch"
+		var nbCheckBoxChecked = 0;
+		for (var i = 0; i < listeInput.length; i++) {
+			if (listeInput[i].type === "checkbox" && listeInput[i].checked) {
+				nbCheckBoxChecked++;
+			}
+		}
+		if (nbCheckBoxChecked > 4) {
+			alert("Vous ne pouvez cocher que 4 cases");
+			macheckBox.checked = false;
+		}
+	}
+</script>
+
 	</head>
 	<body>
 		<link rel="stylesheet" href="refpage.css" />
@@ -47,78 +61,80 @@
 					
 					<div class="box">
 					<form name="form1" method="post" action="completenewexp.php">
-						
+					
 							<label for="nom">NOM :</label>
-							<input type="text" id="nom" name="nom"/>
+							<input type="text" id="nom" name="nom" required/>
 						</br>
 							<label for="prenom">PRENOM :</label>
-							<input type="text" id="prenom" name="prenom"/>
+							<input type="text" id="prenom" name="prenom" required/>
 						</br></br>
 							<label for="dob">DATE DE NAISSANCE :</label>
-							<input type="date" id="dob" name="dob"/>
+							<input type="date" id="dob" name="dob" required/>
 						</br></br>
 							<label for="social">Réseaux sociaux :</label>
 							<input type="text" id="social" name="social"/>
 						</br>
 							<label for="presentationt">PRESENTATION :</label>
-							<input type="text" id="presentation" name="presentation"/>
+							<input type="text" id="presentation" name="presentation" required/>
 						</br>
 							<label for="duree">DUREE :</label>
-							<input type="text" id="duree" name="duree"/>
+							<input type="text" id="duree" name="duree" required/>
 
-								
-
-						
+							<div style="display:none"><!-- a div to share themail and the index -->
+							<input type="text" id="mailjeune" name="mailjeune" visibility="hidden">
+							<input type="text" id="numexp" name="numexp" visibility="hidden">
+							</div>
 					</div>
+					
 					<div class="box1">
 						<div class="box10"><p>SES SAVOIRS ETRE</p></div>
 
 						<div class="box11"><p>Je confirme sa (son)*</p></div>
 
 						<div class="box12">
-								<input type="checkbox" id="confiance" name="confiance">
+								<input type="checkbox" class="ch" id="confiance" name="confiance" onchange="checkLesBox(this)">
 								<label for="confiance"> Confiance</label>
 							</br>
-								<input type="checkbox" id="bienveillance" name="bienveillance">
+								<input type="checkbox" class="ch" id="bienveillance" name="bienveillance" onchange="checkLesBox(this)">
 								<label for="bienveillance"> Bienveillance</label>
 							</br>
-								<input type="checkbox" id="respect" name="respect">
+								<input type="checkbox" class="ch" id="respect" name="respect" onchange="checkLesBox(this)">
 								<label for="respect"> Respect</label>
 							</br>
-								<input type="checkbox" id="honnetete" name="honnetete">
+								<input type="checkbox" class="ch" id="honnetete" name="honnetete" onchange="checkLesBox(this)">
 								<label for="honnetete"> Honnêteté</label>
 							</br>
-								<input type="checkbox" id="tolerance" name="tolerance">
+								<input type="checkbox" class="ch" id="tolerance" name="tolerance" onchange="checkLesBox(this)">
 								<label for="tolerance"> Tolérance</label>
 							</br>
-								<input type="checkbox" id="juste" name="juste">
+								<input type="checkbox" class="ch" id="juste" name="juste" onchange="checkLesBox(this)">
 								<label for="juste"> Juste</label>
 							</br>
-								<input type="checkbox" id="impartial" name="impartial">
+								<input type="checkbox" class="ch" id="impartial" name="impartial" onchange="checkLesBox(this)">
 								<label for="impartial"> Impartial</label>
 							</br>
-								<input type="checkbox" id="travail" name="travail">
+								<input type="checkbox" class="ch" id="travail" name="travail" onchange="checkLesBox(this)">
 								<label for="travail"> Travail</label>
 							</br>
 						</div>
+						
 						<div class="box13"><p>*Faire 4 choix maximum</p></div>
 						
 						<input type="submit" class="valid" name="valid" value="Valider">
+						
 </form>
 					</div>
 					
 				</div>
 			</div>
 		</div>
-		<script type="text/javascript">
-			var nomurl=window.location.href;
-			var mailjeune=urlactu.searchParams.get("q1");
-			var numexp=urlactu.searchParams.get("q2");
-			
-
-
-			
-			
+		<script type="text/javascript"> 
+		
+		var nomurl=window.location.href;
+		var url=new URL(nomurl);
+		document.getElementById("mailjeune").value=url.searchParams.get("q1");
+		document.getElementById("numexp").value=url.searchParams.get("q2");
+		
 		</script>
 	</body>
 </html>
