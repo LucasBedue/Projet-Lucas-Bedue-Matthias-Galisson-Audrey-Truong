@@ -2,50 +2,72 @@
 //This code replace empty lines in the information files by the referent's one
 header('Content-Type: text/html; charset=utf-8');
 $mail=$_POST['mailjeune'];
+$numexp=$_POST['numexp'];
+$index=0;
 
-if(!file_exists('./../InformationsJeunes/'.$mail)){//check if the file exist
-    header("Location: Experiencefromrefinvalide.php");//Show that there is a problem
-}
 $f = fopen('./../InformationsJeunes/'.$mail,'r+');
+
+if((!$f)||($_POST['numexp']<=0)){
+    header("Location: Experiencefromrefinvalide.php");//Show that there is a problem
+    exit();
+}
+$filetext=file('./../InformationsJeunes/'.$mail);
 $txt=stream_get_line($f,0,"\n");
 
 if(feof($f)){
+    fclose($f);
     header("Location: Experiencefromrefinvalide.php");
+    exit();
 }
 rewind($f);
 
-for($i=1;$i<$_POST['numexp'];$i++){
+for($i=1;$i<$numexp;$i++){
     for($j=0;$j<34;$j++){
-        $txt=stream_get_line($f,0,"\n");
+        $index++;
     }
 }
 
-if(feof($f)){
+if(count($filetext)<=($index+1)){
+    fclose($f);
     header("Location: Experiencefromrefinvalide.php");
+    exit();
 }
 
-//replace the state of the experience
-$txt=stream_get_line($f,0,"\n");
-file_put_contents($f,'1'."\n");
+$index++;
 
-for($k=0;$k<17;$k++){//go to the right field
-    $txt=stream_get_line($f,0,"\n");
+if($filetext[$index]!=0){
+    fclose($f);
+    header("Location: Experiencefromrefinvalide.php");
+    exit();
 }
 
-file_put_contents($f,$_POST['nom']."\n");
-file_put_contents($f,$_POST['prenom']."\n");
-file_put_contents($f,$_POST['dob']."\n");
-file_put_contents($f,$_POST['social']."\n");
-file_put_contents($f,$_POST['presentation']."\n");
-file_put_contents($f,$_POST['duree']."\n");
-file_put_contents($f,$_POST['confiance']."\n");
-file_put_contents($f,$_POST['bienveillance']."\n");
-file_put_contents($f,$_POST['respect']."\n");
-file_put_contents($f,$_POST['honnetete']."\n");
-file_put_contents($f,$_POST['tolerance']."\n");
-file_put_contents($f,$_POST['juste']."\n");
-file_put_contents($f,$_POST['impartial']."\n");
-file_put_contents($f,$_POST['travail']."\n");
+$filetext[$index]='1'."\n";
+
+
+for($k=0;$k<18;$k++){//go to the right field
+    $index++;
+}
+$filetext[$index]=$_POST['nom']."\n";
+$filetext[$index+1]=$_POST['prenom']."\n";
+$filetext[$index+2]=$_POST['dob']."\n";
+$filetext[$index+3]=$_POST['social']."\n";
+$filetext[$index+4]=$_POST['presentation']."\n";
+$filetext[$index+5]=$_POST['duree']."\n";
+$filetext[$index+6]=$_POST['comms']."\n";
+$filetext[$index+7]=$_POST['confiance']."\n";
+$filetext[$index+8]=$_POST['bienveillance']."\n";
+$filetext[$index+9]=$_POST['respect']."\n";
+$filetext[$index+10]=$_POST['honnetete']."\n";
+$filetext[$index+11]=$_POST['tolerance']."\n";
+$filetext[$index+12]=$_POST['juste']."\n";
+$filetext[$index+13]=$_POST['impartial']."\n";
+$filetext[$index+14]=$_POST['travail']."\n";
+
+
+foreach($filetext as $ligne){
+    fwrite($f,$ligne);
+}
+
 
 
 fclose($f);

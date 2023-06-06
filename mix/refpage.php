@@ -54,13 +54,14 @@
 							<p>COMMENTAIRES</p>
 						</div>
 						<div class="box22">
+						<form name="form1" method="post" action="completenewexp.php">
 							<textarea name="comms" id="commentaire" cols="18" rows="15"></textarea>
 
 						</div>
 					</div>
 					
 					<div class="box">
-					<form name="form1" method="post" action="completenewexp.php">
+					
 					
 							<label for="nom">NOM :</label>
 							<input type="text" id="nom" name="nom" required/>
@@ -92,28 +93,28 @@
 						<div class="box11"><p>Je confirme sa (son)*</p></div>
 
 						<div class="box12">
-								<input type="checkbox" class="ch" id="confiance" name="confiance" onchange="checkLesBox(this)">
+								<input type="checkbox" class="ch" id="confiance" name="confiance" value="confiance" onchange="checkLesBox(this)">
 								<label for="confiance"> Confiance</label>
 							</br>
-								<input type="checkbox" class="ch" id="bienveillance" name="bienveillance" onchange="checkLesBox(this)">
+								<input type="checkbox" class="ch" id="bienveillance" name="bienveillance" value="bienveillance" onchange="checkLesBox(this)">
 								<label for="bienveillance"> Bienveillance</label>
 							</br>
-								<input type="checkbox" class="ch" id="respect" name="respect" onchange="checkLesBox(this)">
+								<input type="checkbox" class="ch" id="respect" name="respect" value="respect" onchange="checkLesBox(this)">
 								<label for="respect"> Respect</label>
 							</br>
-								<input type="checkbox" class="ch" id="honnetete" name="honnetete" onchange="checkLesBox(this)">
+								<input type="checkbox" class="ch" id="honnetete" name="honnetete" value="honnetete" onchange="checkLesBox(this)">
 								<label for="honnetete"> Honnêteté</label>
 							</br>
-								<input type="checkbox" class="ch" id="tolerance" name="tolerance" onchange="checkLesBox(this)">
+								<input type="checkbox" class="ch" id="tolerance" name="tolerance" value="tolerance" onchange="checkLesBox(this)">
 								<label for="tolerance"> Tolérance</label>
 							</br>
-								<input type="checkbox" class="ch" id="juste" name="juste" onchange="checkLesBox(this)">
+								<input type="checkbox" class="ch" id="juste" name="juste" value="juste" onchange="checkLesBox(this)">
 								<label for="juste"> Juste</label>
 							</br>
-								<input type="checkbox" class="ch" id="impartial" name="impartial" onchange="checkLesBox(this)">
+								<input type="checkbox" class="ch" id="impartial" name="impartial" value="impartial" onchange="checkLesBox(this)">
 								<label for="impartial"> Impartial</label>
 							</br>
-								<input type="checkbox" class="ch" id="travail" name="travail" onchange="checkLesBox(this)">
+								<input type="checkbox" class="ch" id="travail" name="travail" value="travail" onchange="checkLesBox(this)">
 								<label for="travail"> Travail</label>
 							</br>
 						</div>
@@ -122,7 +123,7 @@
 						
 						<input type="submit" class="valid" name="valid" value="Valider">
 						
-</form>
+					</form>
 					</div>
 					
 				</div>
