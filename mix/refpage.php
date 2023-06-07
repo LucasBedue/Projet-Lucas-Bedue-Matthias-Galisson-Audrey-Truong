@@ -121,7 +121,7 @@
 						
 						<div class="box13"><p>*Faire 4 choix maximum</p></div>
 						
-						<input type="submit" class="valid" name="valid" value="Valider">
+						<input type="submit" class="valid" name="send" value="Valider">
 						
 					</form>
 					</div>

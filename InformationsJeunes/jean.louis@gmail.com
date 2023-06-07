@@ -33,7 +33,7 @@ optimiste
 
 
 2
-0
+1
 k
 k
 2023-06-14
@@ -51,21 +51,21 @@ patient
 
 
 
+ezreal
+trueguy
+2023-06-16
+reddit
+niquertamere
+54anschacal
+commentezzeez
+confiance
+
+
+honnetete
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
+travail
 3
 0
 jean

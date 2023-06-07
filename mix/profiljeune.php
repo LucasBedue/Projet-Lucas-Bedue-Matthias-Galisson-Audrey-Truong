@@ -130,6 +130,9 @@ if (!isset($_SESSION['role']) || $_SESSION['role'] !== "Jeune") {
                                 box22.innerHTML+='n&apos;a pas été validée';
                             }
                             else if(status==1){
+                                box22.innerHTML+='a été complétée';
+                            }
+                            else if(status==2){
                                 box22.innerHTML+='a été validée';
                             }
                             
@@ -181,13 +184,13 @@ if (!isset($_SESSION['role']) || $_SESSION['role'] !== "Jeune") {
                 //We search the number of experiences
                 $mail = $_SESSION['mail'];
                 $f = fopen('./../InformationsJeunes/'.$mail,'r+');
-                rewind($f);
+                $txt =stream_get_line($f,0,"\n");
 
                 if(feof($f)){
                     ECHO utf8_encode("thereisnothing();");
                 }
                 else{
-                  
+                  rewind($f);
                     while(!feof($f)){
                         $tabvar=array("mailref","engagetype","engagelenght","iam1","iam2","iam3","iam4",0,0);
                         $txt =stream_get_line($f,0,"\n");//the indice of the experience

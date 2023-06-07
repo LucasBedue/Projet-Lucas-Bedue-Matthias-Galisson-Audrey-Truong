@@ -7,6 +7,7 @@ $date_naissance = $_POST['date_naissance'];
 $mdp = $_POST['mdp'];
 $role = $_POST['role'];
 
+
 if (strpos($mail, '@') === false) {
     echo "<p>L'adresse e-mail n'est pas valide.</p>";
     exit;

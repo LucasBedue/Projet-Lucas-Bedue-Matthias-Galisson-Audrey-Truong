@@ -9,6 +9,8 @@
      
      $mail = $_POST['mail'];
      $mdp = $_POST['mdp'];
+     $numexp=$_SESSION['numexp'];
+     $mailjeune=$_SESSION['mailjeune'];
 
      $file = fopen("infopers.txt", "r");
 
@@ -31,7 +33,7 @@
                 header("Location: jeunespage.php");
                 exit();
             } else {
-                header("Location: consultantpage.php");
+                header("Location: consultantpage.php?q1=".$mailjeune."&q2=".$numexp);
                 exit();
             }
         } 
