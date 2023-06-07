@@ -9,8 +9,7 @@
      
      $mail = $_POST['mail'];
      $mdp = $_POST['mdp'];
-     $numexp=$_SESSION['numexp'];
-     $mailjeune=$_SESSION['mailjeune'];
+     
 
      $file = fopen("infopers.txt", "r");
 

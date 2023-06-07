@@ -101,7 +101,7 @@ if(isset($_POST["send"])){
 		$email->isHTML(true);
 		
 		$email->Subject = "Nouvelle requete pour consultant";
-		$email->Body="Bonjour,\n Veuillez confirmer son expérience via cet URL:\n"."http://localhost/test/Projet-Lucas-Bedue-Matthias-Galisson-Audrey-Truong-main/mix/consultant.php?q1="."$mail"."&q2="."$indiceexp";
+		$email->Body="Bonjour,\n Veuillez confirmer son expérience via cet URL:\n"."http://localhost/test/Projet-Lucas-Bedue-Matthias-Galisson-Audrey-Truong-main/mix/consultant.php?q1="."$mail";
 	
 		$email->send();
 		
