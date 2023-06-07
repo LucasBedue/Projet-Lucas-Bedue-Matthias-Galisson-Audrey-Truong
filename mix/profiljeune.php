@@ -176,8 +176,16 @@ if (!isset($_SESSION['role']) || $_SESSION['role'] !== "Jeune") {
             function thereisnothing(){//for showing that there is nothing
                 var thediv = document.getElementById("divwrapper");
                 var container=document.createElement('p');
+                container.style=("text-align:center");
                 container.innerHTML +='Il n&apos;y a pas encore d&apos;expérience!';
                 thediv.appendChild(container);
+
+                rightbox = document.createElement("div"); 
+                rightbox.className='rightbox';
+                rightbox.id='rightbox';
+                rightbox.innerHTML +='<a class="valid" href="./jeunespage.php">Ajouter une expérience</a>';
+                thediv.appendChild(rightbox);
+
             };
 
             <?php  
