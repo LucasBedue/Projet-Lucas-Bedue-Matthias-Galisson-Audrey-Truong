@@ -37,75 +37,20 @@
 				</div>
 				<div id="divwrapper">
 				</div>
-				<div id="outerbox" class="outerbox">
-					
-					<div class="box1">
-						<div class="box3">JEUNE</div>
-						<div class="box5">						
-							<div class="box501"><p>MES SAVOIRS ETRE</p></div>
-							<div class="box511"><p>Je suis *</p></div>
-							<div id="box521" class="box521"></div>
-						</div>
-						<div class="box4">
-								<p>NOM :</p>
-								<p class="text1" id="nom1" name="nom"></p>
-								<p>PRENOM :</p>
-								<p class="text1" id="prenom1" name="prenom"></p>
-								<p>DATE DE NAISSANCE :</p>
-								<p class="text1" id="dob1" name="dob"></p>
-								<p>Réseaux sociaux :</p>
-								<p class="text1" id="social1" name="social"></p>
-								<p>MON ENGAGEMENT :</p>
-								<p class="text1" id="engagement1" name="engagement"></p>
-								<p>DUREE :</p>
-								<p class="text1" id="duree1" name="duree"></p>
-						</div>
-					</div>
-					<div class="box2">
-						<div class="box3">REFERENT</div>				
-							<div class="box5">					
-								<div class="box502"><p>SES SAVOIRS ETRE</p></div>
-		
-								<div class="box512"><p>Je confirme sa (son)*</p></div>
-		
-								<div id="box522" class="box522">
-								</div>
-								<div class="box532">
-									<p class="commentarytext">Commentaires</p>
-								</div>
-								<div class="box542">
-									<p class="commentarytext">good</p>
-								</div>
-							</div>
-
-						<div class="box4">
-							<p>NOM :</p>
-							<p class="text2" id="nom2" name="nom2"></p>
-							<p>PRENOM :</p>
-							<p class="text2" id="prenom2" name="prenom2"></p>
-							<p>DATE DE NAISSANCE :</p>
-							<p class="text2" id="dob2" name="dob2"></p>
-							<p>Réseaux sociaux :</p>
-							<p class="text2" id="social2" name="social2"></p>
-							<p>PRESENTATION :</p>
-							<p class="text2" id="presentation2" name="presentation2"></p>
-							<p>DUREE :</p>
-							<p class="text2" id="duree2" name="duree2"></p>
-						</div>
-				</div>
-				
-				</div>
-
 				
 			</div>
+
 		</div>
 
 		<script type="text/javascript">
             
             function createthebox(index,stateexp,nomj,prenomj,datej,reseauj,expj,dureej,iam1,iam2,iam3,iam4,nomref,prenomref,dateref,reseauref,expref,dureeref,commref,is1,is2,is3,is4){//function that create a box
-                            var thediv = document.getElementById("divwrapper");
-                            var outerbox=document.createElement('div');
+                            if(stateexp!=1){}
+							else{
+							var thediv = document.getElementById("divwrapper");
+                			var outerbox=document.createElement('div');
                             outerbox.className='outerbox';
+							outerbox.id=index;
 							thediv.appendChild(outerbox);
 
 							var box1=document.createElement('div');
@@ -249,7 +194,7 @@
 							box2.appendChild(box44);
 
 							thediv.innerHTML+='</br>';
-
+						}
 							
             };
 
@@ -265,8 +210,12 @@
 
             <?php  
                 //We search the number of experiences
-                $mail = 'jean.louis@gmail.com';
+				if(isset($_GET['q1'])){
+
+                $mail = $_GET['q1'];
+				if(is_readable('./../InformationsJeunes/'.$mail)){
                 $f = fopen('./../InformationsJeunes/'.$mail,'r+');
+				
                 $txt =stream_get_line($f,0,"\n");
 
                 if(feof($f)){
@@ -277,63 +226,76 @@
                     while(!feof($f)){
                         $tabvar=array(0,0,"nomj","prenomj","datej","reseauj","expj","dureej","iam1","iam2","iam3","iam4","nomref","prenomref","dateref","reseauref","expref","dureeref","commref","is1","is2","is3","is4");
 						$txt =stream_get_line($f,0,"\n");
-						array_splice($tabvar,2,1,$txt);
-						
-						/*
-						if(($txt=='\n')||(feof($f))||($txt=='')){}//verifie the EOF
-                        else{
-							$txt =intval("$txt",10);
-                        array_splice($tabvar,8,1,$txt);
-						
-                        $txt =stream_get_line($f,0,"\n");//the indice of the experience
-                        if(($txt=='\n')||(feof($f))||($txt=='')){}//verifie the EOF
-                        else{
-                        $txt =intval("$txt",10);
-                        array_splice($tabvar,8,1,$txt);
-
-                        $txt =stream_get_line($f,0,"\n");//The verification state
-                        $txt =intval("$txt",10);
-                        array_splice($tabvar,7,1,$txt);
-                        
-                        $txt=stream_get_line($f,0,"\n");
-                        $txt=stream_get_line($f,0,"\n");
-                        $txt=stream_get_line($f,0,"\n");
-                        $txt=stream_get_line($f,0,"\n");//the referent's mail
+						if(feof($f)){}
+						else{
                         array_splice($tabvar,0,1,$txt);
-                        
-                        $txt=stream_get_line($f,0,"\n");
-                        $txt=stream_get_line($f,0,"\n");//the kind of engagement
+						$txt =stream_get_line($f,0,"\n");
                         array_splice($tabvar,1,1,$txt);
+						$txt =stream_get_line($f,0,"\n");
+						array_splice($tabvar,2,1,$txt);
+						$txt =stream_get_line($f,0,"\n");
+						array_splice($tabvar,3,1,$txt);
+						$txt =stream_get_line($f,0,"\n");
+						array_splice($tabvar,4,1,$txt);
+						$txt =stream_get_line($f,0,"\n");
+						$txt =stream_get_line($f,0,"\n");
+						array_splice($tabvar,5,1,$txt);
+						$txt =stream_get_line($f,0,"\n");
+						array_splice($tabvar,6,1,$txt);
+						$txt =stream_get_line($f,0,"\n");
+						array_splice($tabvar,7,1,$txt);
 
-                        $txt=stream_get_line($f,0,"\n");//the lenght of the engagement
-                        array_splice($tabvar,2,1,$txt);
-
-                        $count = 0;
+						$count = 0;
                         for($j = 0;$j<10;$j++){//for the "savoir-etre"
-                            if($count>4){}
+                            if($count>3){}
                             else{
                                 $txt=stream_get_line($f,0,"\n");
                                 if($txt==''){}
                                 else{
-                                    array_splice($tabvar,(3+$count),1,$txt);
+                                    array_splice($tabvar,(8+$count),1,$txt);
                                     $count++;
                                 }
                             }
                         }
 
-                        for($k = 0;$k<15;$k++){//we pass the next 15 lines
-                            $txt=stream_get_line($f,0,"\n");
+						$txt =stream_get_line($f,0,"\n");
+						array_splice($tabvar,12,1,$txt);
+						$txt =stream_get_line($f,0,"\n");
+						array_splice($tabvar,13,1,$txt);
+						$txt =stream_get_line($f,0,"\n");
+						array_splice($tabvar,14,1,$txt);
+						$txt =stream_get_line($f,0,"\n");
+						array_splice($tabvar,15,1,$txt);
+						$txt =stream_get_line($f,0,"\n");
+						array_splice($tabvar,16,1,$txt);
+						$txt =stream_get_line($f,0,"\n");
+						array_splice($tabvar,17,1,$txt);
+						$txt =stream_get_line($f,0,"\n");
+						array_splice($tabvar,18,1,$txt);
+
+						$countu = 0;
+                        for($b = 0;$b<8;$b++){//for the "savoir-etre"
+                            if($countu>3){}
+                            else{
+                                $txt=stream_get_line($f,0,"\n");
+                                if($txt==''){}
+                                else{
+                                    array_splice($tabvar,(19+$countu),1,$txt);
+                                    $countu++;
+                                }
+                            }
                         }
-						*/
+
 
                         ECHO utf8_encode("createthebox('".$tabvar[0]."','".$tabvar[1]."','".$tabvar[2]."','".$tabvar[3]."','".$tabvar[4]."','".$tabvar[5]."','".$tabvar[6]."','".$tabvar[7]."','".$tabvar[8]."','".$tabvar[9]."','".$tabvar[10]."','".$tabvar[11]."','".$tabvar[12]."','".$tabvar[13]."','".$tabvar[14]."','".$tabvar[15]."','".$tabvar[16]."','".$tabvar[17]."','".$tabvar[18]."','".$tabvar[19]."','".$tabvar[20]."','".$tabvar[21]."','".$tabvar[22]."');");//We create the box
                     }
+				}
                 }
                     
                 
 
                 fclose($f);
-                
+			}}
             ?>
             
         </script>	
