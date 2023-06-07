@@ -98,7 +98,7 @@ if(isset($_POST["send"])){
 		//Recipients
 		
 		$email->setFrom('ganvi2dormir@outlook.fr');
-		$email->addAddress('labaguette72@gmail.com');
+		$email->addAddress('$mail');
 
 		//Content
 		$email->isHTML(true);
