@@ -89,7 +89,7 @@
 							<p style="font-size: 95%">1ère étape</p>
 							<p style="font-size: 120%">la valorisation</p>
 						</div>
-						<div class="box1bottom">
+						<div class="boxbottom">
 							Décrivez votre expérience et mettez en avant ce que
 							vous en avez retiré.
 						</div>
@@ -100,7 +100,7 @@
 							<p style="font-size: 95%">2ème étape</p>
 							<p style="font-size: 120%">la confirmation</p>
 						</div>
-						<div class="box2bottom">
+						<div class="boxbottom">
 							Confirmez cette expérience et ce que vous avez pu 
 							constater au contact de ce jeune.
 						</div>
@@ -111,7 +111,7 @@
 							<p style="font-size: 95%">3ème étape</p>
 							<p style="font-size: 120%">la consultation</p>
 						</div>
-						<div class="box3bottom">
+						<div class="boxbottom">
 							Validez cet engagement en prenant compte de sa valeur.
 						</div>
 					</div>

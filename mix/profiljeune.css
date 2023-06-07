@@ -126,14 +126,24 @@ a{          /*  Color of links  */
     padding: 1%;
     color: rgb(255, 40, 201);
 }
-.leftbox{
+
+.wrapper{       /*   To contain all the created divs for each experience   */
+    display: flex;
+    padding-bottom: 2%;
+}
+
+/*----------*/
+
+.leftbox{       /*   Left box container   */
     display: flex;
     padding-left: 3%;
     width: 76%;
     margin: 0px;
 }
 
-.box{
+/*-----*/
+
+.box{       /*   Box with the main information from the experience   */
     border: 5px;
     border-color:rgb(255, 40, 201);
     color: rgb(255, 40, 201);
@@ -143,37 +153,71 @@ a{          /*  Color of links  */
     width: 70%;
 }
 
-.box1{   
+/*-----*/
+
+.box1{      /*   Container for the checkbox part   */
     display: grid; 
     padding-left: 2%;
     font-size: 100%;
     width: 30%;
 }
 
-.box11{
+.box11{     /*   Upper part (title) of the checkbox container   */
     grid-row: 2;
     background: linear-gradient(to right, white, rgb(255, 40, 201) ) ;
     color: white ;
     font-size: 140%;
     line-height: 0%;
+    height: 80%;
     text-align: right;
     padding-right: 2%;
     width: 100%;
 }
-.box12{
+.box12{     /*   Lower part of the checkbox container   */
     padding-top: 4%;
     grid-row: 3;
     padding-left: 2%;
     background-color: rgb(247, 210, 239) ;
     width: 100%;
 }
-.validbox{
+
+/*-----*/
+
+.box2{      /*   Container for the valid and modify/delete divs   */
+    border: 2px;
+    border-color:rgb(255, 40, 201);
+    color: rgb(255, 40, 201);
+    border-style: solid;
+    width: 100%;
+    background: linear-gradient(to right, rgb(231, 130, 206), white ) ;
+}
+
+.box21{     /*   Upper text in the valid div   */
+    color: rgb(0, 0, 0) ;
+    font-size: 110%;
+    text-align: center;
+    width: 100%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+.box22{     /*   Lower text in the valid div   */
+    color: rgb(9, 9, 121);
+    font-size: 120%;
+    text-align: center;
+    width: 100%;
+    padding-top: 2%;
+    padding-bottom: 4%;
+}
+
+.validbox{      /*   Container for the modify/remove buttons   */
     display: table-column;
     margin: auto;
     width: 20%;
     padding-left: 2%;
 }
-.valid{
+
+.valid{     /*   Button   */
     background-color: rgb(255, 40, 201);
     color: white ;
     font-size: 90%;
@@ -186,7 +230,9 @@ a{          /*  Color of links  */
     text-decoration: none;
 }
 
-.text{
+/*-----*/
+
+.text{      /*   Text area in "box"   */
     font: italic 90% "Fira Sans", serif;
     border: none;
     border-bottom: rgb(255, 40, 201) dotted 3px;
@@ -195,44 +241,16 @@ a{          /*  Color of links  */
     font-size: 110%;
 }
 
-input:focus{
+input:focus{    /*   Remove outline for inputs   */
     outline: none;
 }
 
-.rightbox{
+/*----------*/
+
+.rightbox{      /*   Right box    */
     display: flex;
     margin: auto;
     padding: 2%;
     width: 10%;
 }
-.wrapper{
-    display: flex;
-    padding-bottom: 2%;
-}
 
-.box2{
-    border: 2px;
-    border-color:rgb(255, 40, 201);
-    color: rgb(255, 40, 201);
-    border-style: solid;
-    width: 100%;
-    background: linear-gradient(to right, rgb(231, 130, 206), white ) ;
-}
-
-.box21{
-    color: rgb(0, 0, 0) ;
-    font-size: 110%;
-    text-align: center;
-    width: 100%;
-    padding-top: 5%;
-    padding-bottom: 5%;
-}
-
-.box22{
-    color: rgb(9, 9, 121);
-    font-size: 120%;
-    text-align: center;
-    width: 100%;
-    padding-top: 2%;
-    padding-bottom: 4%;
-}

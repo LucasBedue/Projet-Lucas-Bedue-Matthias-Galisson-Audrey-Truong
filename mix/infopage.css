@@ -14,7 +14,14 @@
         rgb(149, 149, 149)
     );
 }
-.head {
+
+/********************************/
+
+/********************************/
+
+/*   Header   */
+
+.head {         /*   Header background   */
     height: 20%;
     position: relative;
     background: radial-gradient(
@@ -23,7 +30,8 @@
         rgb(170, 170, 170) 60%
     );
 }
-.headtext {
+
+.headtext {         /*   Header text   */
     position: absolute;
     bottom: 0;
     right: 0;
@@ -35,11 +43,17 @@
     margin-right: 2%;
     margin-bottom: 1%;
 }
-.fitimg {
+
+.fitimg {       /*  Icon  */
     max-width: 95%;
     max-height: 95%;
     margin-left: 2%;
 }
+
+/********************************/
+
+/*   Body   */
+
 .bodybg {
     height: 80%;
     font-family: "Lucida Sans", "Lucida Sans Regular",
@@ -47,10 +61,16 @@
         sans-serif;
 
 }
-a{
+
+a{          /*  Color of links  */
     color: rgb(21, 9, 80);
 }
-.tab {
+
+/*------------------------------*/
+
+/*   Menu   */
+
+.tab {      /*   Background of the menu   */
     width: 50%;
     height: 50px;
     margin: auto;
@@ -61,7 +81,8 @@ a{
         rgb(190, 190, 190)
     );
 }
-.tabb {
+
+.tabb {     /*   Container for the tabs of the menu   */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -69,30 +90,38 @@ a{
         "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana,
         sans-serif;
 }
-.link{
+
+.link{      /*   To remove the underline of the links   */
     text-decoration: none;
 }
-.tabbox1 {
+
+.tabbox1 {  /*   CSS of the individual tabs   */
     display: table-cell;
     width: 25%;
     text-align: center;
     color: rgb(21, 9, 80);
 }
-.tabbox1:hover {
+
+.tabbox1:hover {    /*   To change the background color on hover   */
     background-color: rgb(21, 9, 80);
 }
-.link:hover{
+
+.link:hover{        /*   To change the link color on hover   */
     background-color: rgb(21, 9, 80);
     color: white;
     margin: 1%;
 }
 
+/*------------------------------*/
 
-.divtextp {
+/*   Main body   */
+
+.divtextp {     /*   Main text container   */
     position: relative;
     width: auto;
 }
-.divtext {
+
+.divtext {      /*   Text   */
     display: table-cell;
     padding: 2%;
     font-family: "Lucida Sans", "Lucida Sans Regular",
@@ -102,15 +131,26 @@ a{
     font-size: 100%;
 }
 
-.boxes {
+/*----------*/
+
+.boxes {        /*   Box container   */
     font-family: "Lucida Sans", "Lucida Sans Regular",
         "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana,
         sans-serif;
     display: flex;
-
     justify-content: center;
 }
-.box1 {
+
+.boxbottom {        /*   Box bottom part   */
+    color: rgb(102, 102, 102);
+    padding: 3%;
+    font-size: 98%;
+    position: absolute;
+    bottom: 10px;
+    line-height: 100%;
+}
+
+.box1 {     /*   Box 1   */
     border: 5px solid rgb(255, 40, 201);
     width: 200px;
     height: 200px;
@@ -122,7 +162,8 @@ a{
         rgb(247, 181, 237)
     );
 }
-.box1top {
+
+.box1top {     /*   Box 1 upper part   */
     background: linear-gradient(to right, rgb(252, 188, 252), rgb(255, 40, 201));
     color: white;
     font-size: 120%;
@@ -134,15 +175,8 @@ a{
     line-height: 60%;
     padding-top: 10px;
 }
-.box1bottom {
-    padding: 3%;
-    font-size: 98%;
-    position: absolute;
-    bottom: 10px;
-    line-height: 100%;
-}
 
-.box2 {
+.box2 {         /*   Box 2   */
     border: 5px solid rgb(25, 176, 25);
     width: 200px;
     height: 200px;
@@ -154,7 +188,8 @@ a{
         rgb(109, 236, 117)
     );
 }
-.box2top {
+
+.box2top {     /*   Box 2 upper part   */
     background: linear-gradient(to right, rgb(151, 249, 183), rgb(25, 176, 25));
     color: white;
     font-size: 120%;
@@ -166,15 +201,8 @@ a{
     line-height: 60%;
     padding-top: 10px;
 }
-.box2bottom {
-    padding: 3%;
-    font-size: 98%;
-    position: absolute;
-    bottom: 10px;
-    line-height: 100%;
-}
 
-.box3 {
+.box3 {         /*   Box 3   */
     border: 5px solid rgb(38, 161, 213);
     width: 200px;
     height: 200px;
@@ -186,7 +214,7 @@ a{
         rgb(139, 224, 245)
     );
 }
-.box3top {
+.box3top {     /*   Box 3 upper part   */
     background: linear-gradient(to right, rgb(156, 229, 255), rgb(38, 161, 213));
     color: white;
     font-size: 120%;
@@ -198,18 +226,15 @@ a{
     line-height: 60%;
     padding-top: 10px;
 }
-.box3bottom {
-    padding: 3%;
-    font-size: 98%;
-    position: absolute;
-    bottom: 10px;
-    line-height: 100%;
-}
+
+
+/*----------*/
+
+/*   Switch for the "Connexion" and "Deconnexion" tabs   */
 
 .tmp1{
     text-decoration: none;
     display: none;
-
 }
 .tmp2{
     text-decoration: none;

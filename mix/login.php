@@ -19,10 +19,10 @@
 						Connectez vous à votre compte
 					</p>
 				</div>
-                <div class="login2">
+                <div class="login">
                     <form method="post" action="verificationConnexion.php">
             
-                        <table class="login">
+                        <table class="login2">
                             <tr>
                                 <td> Email : </td>
                                 <td> <input type="text" name="mail" id="mail" required> </td>
