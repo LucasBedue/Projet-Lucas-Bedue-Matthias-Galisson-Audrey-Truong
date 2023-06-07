@@ -3,19 +3,7 @@
 	<head>
 		<title>Consultant - Jeunes 6.4</title>
 	</head>
-	<script><?php
-session_start();
-
-$_SESSION['mailjeune']=$_GET['q1'];
-$_SESSION['numexp']=$_GET['q2'];
-
-if (!isset($_SESSION['role']) || $_SESSION['role'] !== "Consultant") {
-	echo 'alert("Vous n\'avez pas accès à cette page car vous n\'etes pas consultant .");';
-	echo 'window.location.href = "login.php";';
-	echo 'exit();';
-}
-?>
-</script>
+	
 
 	<body>
 		<link type="text/css" rel="stylesheet" href="consultantpage.css" />
@@ -54,7 +42,7 @@ if (!isset($_SESSION['role']) || $_SESSION['role'] !== "Consultant") {
 						<div class="box5">						
 							<div class="box501"><p>MES SAVOIRS ETRE</p></div>
 							<div class="box511"><p>Je suis *</p></div>
-							<div class="box521">
+							<div id="box521" class="box521">
 								<input style="pointer-events:none" type="checkbox" id="autonome" name="autonome" value="autonome" checked>
 								<label for="autonome"> Autonome</label>
 							</br>
@@ -88,7 +76,7 @@ if (!isset($_SESSION['role']) || $_SESSION['role'] !== "Consultant") {
 		
 								<div class="box512"><p>Je confirme sa (son)*</p></div>
 		
-								<div class="box522">
+								<div id="box522" class="box522">
 										<input style="pointer-events:none" type="checkbox" id="confiance" name="confiance" value="confiance" checked>
 										<label for="confiance"> Confiance</label>
 									</br>
@@ -103,23 +91,23 @@ if (!isset($_SESSION['role']) || $_SESSION['role'] !== "Consultant") {
 									<p class="commentarytext">Commentaires</p>
 								</div>
 								<div class="box542">
-									<p class="commentarytext">wqddqwd</p>
+									<p id="commentarytext" class="commentarytext">wqddqwd</p>
 								</div>
 							</div>
 
 						<div class="box4">
 							<p>NOM :</p>
-							<p class="text2" id="nom" name="nom2"></p>
+							<p class="text2" id="nom2" name="nom2"></p>
 							<p>PRENOM :</p>
-							<p class="text2" id="prenom" name="prenom2"></p>
+							<p class="text2" id="prenom2" name="prenom2"></p>
 							<p>DATE DE NAISSANCE :</p>
-							<p class="text2" id="dob" name="dob2"></p>
+							<p class="text2" id="dob2" name="dob2"></p>
 							<p>Réseaux sociaux :</p>
-							<p class="text2" id="social" name="social2"></p>
+							<p class="text2" id="social2" name="social2"></p>
 							<p>PRESENTATION :</p>
-							<p class="text2" id="presentation" name="presentation2"></p>
+							<p class="text2" id="presentation2" name="presentation2"></p>
 							<p>DUREE :</p>
-							<p class="text2" id="duree" name="duree2"></p>
+							<p class="text2" id="duree2" name="duree2"></p>
 						</div>
 				</div>
 				</div>
@@ -133,28 +121,55 @@ if (!isset($_SESSION['role']) || $_SESSION['role'] !== "Consultant") {
 		<script type="text/javascript">
 			
 		function createthebox(nom1,prenom1,date1,reseau1,engage1,duree1,iam1,iam2,iam3,iam4,nom2,prenom2,date2,reseau2,engage2,duree2,iam5,iam6,iam7,iam8,comm){//function that create a box
-			document.getElementById("nom1").value=nom1;
-			document.getElementById("prenom1").value=prenom1;
-			document.getElementById("date1").value=date1;
-			document.getElementById("reseau1").value=reseau1;
-			document.getElementById("engage1").value=engage1;
-			document.getElementById("duree1").value=duree1;
-			document.getElementById("nom2").value=nom2;
-			document.getElementById("prenom2").value=prenom2;
-			document.getElementById("date2").value=date2;
-			document.getElementById("reseau2").value=reseau2;
-			document.getElementById("engage2").value=engage2;
-			document.getElementById("duree2").value=duree2;
+			document.getElementById("nom1").innerHTML=nom1;
+			document.getElementById("prenom1").innerHTML=prenom1;
+			document.getElementById("dob1").innerHTML=date1;
+			document.getElementById("social1").innerHTML=reseau1;
+			document.getElementById("engagement1").innerHTML=engage1;
+			document.getElementById("duree1").innerHTML=duree1;
+			document.getElementById("nom2").innerHTML=nom2;
+			document.getElementById("prenom2").innerHTML=prenom2;
+			document.getElementById("dob2").innerHTML=date2;
+			document.getElementById("social2").innerHTML=reseau2;
+			document.getElementById("presentation2").innerHTML=engage2;
+			document.getElementById("duree2").innerHTML=duree2;
+			document.getElementById("commentarytext").innerHTML=comm;
 
-            
+			box12=document.getElementById("box521");
+							
+			if((iam1!='iam1')&&(iam1!='')){
+            box12.innerHTML +='<input style="pointer-events:none" type="checkbox" id="'+iam1+'" name="'+iam1+'" value="'+iam1+'" checked>';
+            box12.innerHTML +='<label for="autonome"> '+iam1+'</label>';
+                            box12.innerHTML +='</br>';
+                            }
+                            if((iam2!='iam2')&&(iam2!='')){
+                            box12.innerHTML +='<input style="pointer-events:none" type="checkbox" id="'+iam2+'" name="'+iam2+'" value="'+iam2+'" checked>';
+                            box12.innerHTML +='<label for="autonome"> '+iam2+'</label>';
+                            box12.innerHTML +='</br>';
+                            }
+                            if((iam3!='iam3')&&(iam3!='')){
+                            box12.innerHTML +='<input style="pointer-events:none" type="checkbox" id="'+iam3+'" name="'+iam3+'" value="'+iam3+'" checked>';
+                            box12.innerHTML +='<label for="autonome"> '+iam3+'</label>';
+                            box12.innerHTML +='</br>';
+                            }
+                            if((iam4!='iam4')&&(iam4!='')){
+                            box12.innerHTML +='<input style="pointer-events:none" type="checkbox" id="'+iam4+'" name="'+iam4+'" value="'+iam4+'" checked>';
+                            box12.innerHTML +='<label for="autonome"> '+iam4+'</label>';
+                            box12.innerHTML +='</br>';
+                            }
 
-
+			
 		}
 
+		var nomurl=window.location.href;
+		var url=new URL(nomurl);
+		mailjeune=url.searchParams.get("q1");
+		
+		
 
 		<?php 
-		$mailjeune = $_SESSION['mailjeune'];
-		$numexp=$_SESSION['numexp'];
+		
+		
 		$index=0;
 		$f = fopen('./../InformationsJeunes/'.$mailjeune,'r+');
 		$filetext=file('./../InformationsJeunes/'.$mail);
@@ -170,6 +185,7 @@ if (!isset($_SESSION['role']) || $_SESSION['role'] !== "Consultant") {
 			
 				$tabvar=array("nom1","prenom1","date1","reseau1","engage1","duree1","iam1","iam2","iam3","iam4","nom2","prenom2","date2","reseau2","engage2","duree2","iam5","iam6","iam7","iam8","comm");
 				
+				/*
 				for($i=1;$i<$numexp;$i++){
 					for($j=0;$j<34;$j++){
 						$index++;
@@ -229,7 +245,7 @@ if (!isset($_SESSION['role']) || $_SESSION['role'] !== "Consultant") {
 						}
 					}
 				}
-
+				*/
 				ECHO utf8_encode("createthebox('".$tabvar[0]."','".$tabvar[1]."','".$tabvar[2]."','".$tabvar[3]."','".$tabvar[4]."','".$tabvar[5]."','".$tabvar[6]."','".$tabvar[7]."','".$tabvar[8]."','".$tabvar[9]."','".$tabvar[10]."','".$tabvar[11]."','".$tabvar[12]."','".$tabvar[13]."','".$tabvar[14]."','".$tabvar[15]."','".$tabvar[16]."','".$tabvar[17]."','".$tabvar[18]."','".$tabvar[19]."','".$tabvar[20]."');");//We create the box
 			
 		}
