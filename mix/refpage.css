@@ -1,3 +1,6 @@
+/*   CSS of the referent profile creation page   */
+
+/*   Background of the website   */
 .whole{
     position: fixed;
     top: 0;
@@ -11,7 +14,14 @@
         rgb(149, 149, 149)
     );
 }
-.head {
+
+/********************************/
+
+/********************************/
+
+/*   Header   */
+
+.head {         /*   Header background   */
     height: 20%;
     position: relative;
     background: radial-gradient(
@@ -20,7 +30,7 @@
         rgb(170, 170, 170) 60%
     );
 }
-.headtext {
+.headtext {     /*   Text   */
     position: absolute;
     bottom: 0;
     right: 0;
@@ -33,7 +43,7 @@
     margin-bottom: 1%;
 }
 
-.headtext2{
+.headtext2{     /*   Title   */
 	position: absolute;
     top: 0;
     right: 0;
@@ -45,23 +55,32 @@
     margin-right: 2%;
 	margin-top: 0%;
 }
-.fitimg {
+.fitimg {       /*  Icon  */
     max-width: 95%;
     max-height: 95%;
     margin-left: 2%;
 }
+
+/********************************/
+
+/*   Body   */
+
 .bodybg {
     height: 80%;
-
     font-family: "Lucida Sans", "Lucida Sans Regular",
         "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana,
         sans-serif;
-
 }
-a{
+
+a{          /*  Color of links  */
     color: rgb(21, 9, 80);
 }
-.tab {
+
+/*------------------------------*/
+
+/*   Menu   */
+
+.tab {      /*   Background of the menu   */
     width: 50%;
     height: 50px;
     margin: auto;
@@ -72,45 +91,55 @@ a{
         rgb(190, 190, 190)
     );
 }
-.tabb {
+.tabb {     /*   Container for the tabs of the menu   */
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.link{
+
+.link{      /*   To remove the underline of the links   */
     text-decoration: none;
 }
-.tabbox1 {
+
+.tabbox1 {  /*   CSS of the individual tabs   */
     display: table-cell;
     width: 25%;
     text-align: center;
     color: rgb(21, 9, 80);
     
 }
-.tabbox1:hover {
+.tabbox1:hover {    /*   To change the background color on hover   */
     background-color: rgb(21, 9, 80);
 }
-.link:hover{
+.link:hover{        /*   To change the link color on hover   */
     background-color: rgb(21, 9, 80);
     color: white;
     margin: 1%;
 }
 
-.texttop{
+/*------------------------------*/
+
+/*   Main body   */
+
+.texttop{       /*   Upper text   */
     text-align: center;
     font-size: 140%;
     line-height: 110%;
     padding: 1%;
     color: rgb(25, 176, 25);
 }
-.outerbox{
+
+.outerbox{      /*   Main container   */
     display: flex;
     justify-content: center;
     padding-left: 5%;
     padding-right: 5%;
     align-items: center;
 }
-.box{
+
+/*----------*/
+
+.box{       /*   Container for the middle part of the page  (Information fields)   */
     border: 5px;
     border-color:rgb(25, 176, 25);
     color: rgb(25, 176, 25);
@@ -121,18 +150,23 @@ a{
     margin-left: 15% ;
     margin-right: 15% ;
 }
-.box1{   
+
+/*----------*/
+
+.box1{      /*   Container for the right part of the page  (Checkboxes)   */
     display: grid; 
     font-size: 120%;
     width: 16%;
 }
-.box10{
+
+.box10{     /*      */
     grid-row: 1;
     text-align: right;
     margin-right: 2%;
     font-weight: 700;
     color: rgb(25, 176, 25) ;
 }
+
 .box11{
     grid-row: 2;
     background: linear-gradient(to right, white, rgb(25, 176, 25) ) ;
@@ -141,6 +175,7 @@ a{
     text-align: right;
     padding-right: 2%;
 }
+
 .box12{
     padding-top: 2%;
     padding-bottom: 2%;
@@ -149,6 +184,7 @@ a{
     background-color: rgb(210, 247, 215) ;
     width: 100%;
 }
+
 .box13{
     grid-row: 4;
     bottom: 0px;
@@ -158,6 +194,7 @@ a{
     width: 100%;
     height: 80%;
 }
+
 .valid{
     grid-row: 5;
     background-color: rgb(25, 176, 25);
@@ -168,7 +205,10 @@ a{
     margin: auto;
     margin-bottom: 10%;
 }
-.box2{
+
+/*----------*/
+
+.box2{             /*   Container for the left part of the page (Commentary area)   */
     display: grid; 
     font-size: 120%;
     height: 80%;

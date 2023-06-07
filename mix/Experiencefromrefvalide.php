@@ -22,8 +22,6 @@
                 <p class="tabbox1">
                     <a class="link" href="./partnerspage.php">Nos partenaires</a>
                 </p>
-                <p class="tabbox1">
-                
             </div>
         </div>
         <div class="texttop">
