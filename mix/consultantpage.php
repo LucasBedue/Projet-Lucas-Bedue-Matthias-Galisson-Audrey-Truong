@@ -2,6 +2,7 @@
 <html lang="fr">
 	<head>
 		<title>Consultant - Jeunes 6.4</title>
+		<?php session_start(); ?>
 	</head>
 	
 
@@ -36,23 +37,15 @@
 				</div>
 				<div id="divwrapper">
 				</div>
-				<div class="outerbox">
+				<div id="outerbox" class="outerbox">
+					
 					<div class="box1">
 						<div class="box3">JEUNE</div>
 						<div class="box5">						
 							<div class="box501"><p>MES SAVOIRS ETRE</p></div>
 							<div class="box511"><p>Je suis *</p></div>
 							<div id="box521" class="box521">
-								<input style="pointer-events:none" type="checkbox" id="autonome" name="autonome" value="autonome" checked>
-								<label for="autonome"> Autonome</label>
-							</br>
-								<input style="pointer-events:none" type="checkbox" id="passion" name="passion" value="passion" checked>
-								<label for="passion"> Passionné</label>
-							</br>
-								<input style="pointer-events:none" type="checkbox" id="reflechi" name="reflechi" value="reflechi" checked>
-								<label for="reflechi"> Réfléchi</label>
-							</br>
-						</div>
+							</div>
 						</div>
 						<div class="box4">
 								<p>NOM :</p>
@@ -77,15 +70,6 @@
 								<div class="box512"><p>Je confirme sa (son)*</p></div>
 		
 								<div id="box522" class="box522">
-										<input style="pointer-events:none" type="checkbox" id="confiance" name="confiance" value="confiance" checked>
-										<label for="confiance"> Confiance</label>
-									</br>
-										<input style="pointer-events:none" type="checkbox" id="bienveillance" name="bienveillance" value="bienveillance" checked>
-										<label for="bienveillance"> Bienveillance</label>
-									</br>
-										<input style="pointer-events:none" type="checkbox" id="respect" name="respect" value="respect" checked>
-										<label for="respect"> Respect</label>
-									</br>
 								</div>
 								<div class="box532">
 									<p class="commentarytext">Commentaires</p>
@@ -110,6 +94,7 @@
 							<p class="text2" id="duree2" name="duree2"></p>
 						</div>
 				</div>
+				
 				</div>
 
 				<div class="valid">
@@ -119,27 +104,49 @@
 		</div>
 
 		<script type="text/javascript">
-			
-		function createthebox(nom1,prenom1,date1,reseau1,engage1,duree1,iam1,iam2,iam3,iam4,nom2,prenom2,date2,reseau2,engage2,duree2,iam5,iam6,iam7,iam8,comm){//function that create a box
-			document.getElementById("nom1").innerHTML=nom1;
-			document.getElementById("prenom1").innerHTML=prenom1;
-			document.getElementById("dob1").innerHTML=date1;
-			document.getElementById("social1").innerHTML=reseau1;
-			document.getElementById("engagement1").innerHTML=engage1;
-			document.getElementById("duree1").innerHTML=duree1;
-			document.getElementById("nom2").innerHTML=nom2;
-			document.getElementById("prenom2").innerHTML=prenom2;
-			document.getElementById("dob2").innerHTML=date2;
-			document.getElementById("social2").innerHTML=reseau2;
-			document.getElementById("presentation2").innerHTML=engage2;
-			document.getElementById("duree2").innerHTML=duree2;
-			document.getElementById("commentarytext").innerHTML=comm;
-
-			box12=document.getElementById("box521");
+            
+            function createthebox(index,validation,nomjeune,prenomjeune,datejeune,reseaujeune,expjeune,dureejeune,iam1,iam2,iam3,iam4,nomref,prenomref,dateref,reseauref,expref,dureeref,comm,is1,is2,is3,is4){//function that create a box
+                            var thediv = document.getElementById("divwrapper");
+                            var container=document.createElement('div');
+                            container.id=indi;
+							container.innerHTML='YOKO'
+							/*
+							box1=document.createElement('div');
+							box1.className=('box1');
 							
-			if((iam1!='iam1')&&(iam1!='')){
-            box12.innerHTML +='<input style="pointer-events:none" type="checkbox" id="'+iam1+'" name="'+iam1+'" value="'+iam1+'" checked>';
-            box12.innerHTML +='<label for="autonome"> '+iam1+'</label>';
+                            wrapper = document.createElement("div");
+                            wrapper.className='wrapper';
+
+                            leftbox = document.createElement("div"); 
+                            leftbox.className='leftbox';
+
+                            box = document.createElement("div"); 
+                            box.className='box';
+
+                            box.innerHTML +='<p>Mail du référent:</p>';
+                            box.innerHTML +='<p class="text" id="mail" name="mail">'+mailref+'</p>';
+                            box.innerHTML +='<p>MON ENGAGEMENT :</p>';
+                            box.innerHTML +='<p class="text" id="engagement" name="engagement">'+engagetype+'</p>';
+                            box.innerHTML +='<p>DUREE :</p>';
+                            box.innerHTML +='<p class="text" id="duree" name="duree">'+engagelenght+'</p>';
+                    
+                            leftbox.appendChild(box);
+
+
+                            box1 = document.createElement("div"); 
+                            box1.className='box1';
+
+                            box11 = document.createElement("div"); 
+                            box11.className='box11';
+                            box11.innerHTML +='<p>Je suis *</p>';
+                            box1.appendChild(box11);
+
+                            box12 = document.createElement("div"); 
+                            box12.className='box12';
+                    
+                            if((iam1!='iam1')&&(iam1!='')){
+                            box12.innerHTML +='<input style="pointer-events:none" type="checkbox" id="'+iam1+'" name="'+iam1+'" value="'+iam1+'" checked>';
+                            box12.innerHTML +='<label for="autonome"> '+iam1+'</label>';
                             box12.innerHTML +='</br>';
                             }
                             if((iam2!='iam2')&&(iam2!='')){
@@ -158,107 +165,154 @@
                             box12.innerHTML +='</br>';
                             }
 
-			
-		}
+                            box1.appendChild(box12);
 
-		var nomurl=window.location.href;
-		var url=new URL(nomurl);
-		mailjeune=url.searchParams.get("q1");
-		
-		
+                            leftbox.appendChild(box1);
+                    
+                            validbox = document.createElement("div"); 
+                            validbox.className='validbox';
 
-		<?php 
-		
-		
-		$index=0;
-		$f = fopen('./../InformationsJeunes/'.$mailjeune,'r+');
-		$filetext=file('./../InformationsJeunes/'.$mail);
-		$txt=stream_get_line($f,0,"\n");
-		
-		if(feof($f)){
-			fclose($f);
-			header("Location: consultanterreur.php");
-			exit();
-		}
-		else{
-			rewind($f);
-			
-				$tabvar=array("nom1","prenom1","date1","reseau1","engage1","duree1","iam1","iam2","iam3","iam4","nom2","prenom2","date2","reseau2","engage2","duree2","iam5","iam6","iam7","iam8","comm");
-				
-				/*
-				for($i=1;$i<$numexp;$i++){
-					for($j=0;$j<34;$j++){
-						$index++;
-					}
-				}
-				if(count($filetext)<=($index+1)){
-					fclose($f);
-					header("Location: consultanterreur.php");
-					exit();
-				}
-				$index++;
-				if($filetext[$index]!='1'){
-					fclose($f);
-					header("Location: consultanterreur.php");
-					exit();
-				}
-				
-				array_splice($tabvar,0,1,$filetext[$index+1]);
-				array_splice($tabvar,1,1,$filetext[$index+2]);
-				array_splice($tabvar,2,1,$filetext[$index+3]);
-				array_splice($tabvar,3,1,$filetext[$index+5]);
-				array_splice($tabvar,4,1,$filetext[$index+6]);
-				array_splice($tabvar,5,1,$filetext[$index+7]);
+                            box2 = document.createElement("div"); 
+                            box2.className='box2';
 
-				
-				$count = 0;
-				for($j = 0;$j<10;$j++){//for the "savoir-etre"
-					if($count>4){}
-					else{
-						$txt=$filetext[$index+8+$j];
-						if($txt==''){}
-						else{
-							array_splice($tabvar,(6+$count),1,$txt);
-							$count++;
-						}
-					}
-				}
+                            box21 = document.createElement("div"); 
+                            box21.className='box21';
 
-			
+                            box22 = document.createElement("div"); 
+                            box22.className='box22';
 
-				array_splice($tabvar,10,1,$filetext[$index+18]);
-				array_splice($tabvar,11,1,$filetext[$index+19]);
-				array_splice($tabvar,12,1,$filetext[$index+20]);
-				array_splice($tabvar,13,1,$filetext[$index+21]);
-				array_splice($tabvar,14,1,$filetext[$index+22]);
-				array_splice($tabvar,15,1,$filetext[$index+23]);
+                            box21.innerHTML+='Cette expérience :';
+                            if(status==0){
+                                box22.innerHTML+='n&apos;a pas été validée';
+                            }
+                            else if(status==1){
+                                box22.innerHTML+='a été complétée';
+                            }
+                            else if(status==2){
+                                box22.innerHTML+='a été validée';
+                            }
+                            
 
-				$count = 0;
-				for($t = 0;$t<10;$t++){//for the "savoir-etre"
-					if($count>4){}
-					else{
-						$txt=$filetext[$index+24+$t];
-						if($txt==''){}
-						else{
-							array_splice($tabvar,(16+$count),1,$txt);
-							$count++;
-						}
-					}
-				}
-				*/
-				ECHO utf8_encode("createthebox('".$tabvar[0]."','".$tabvar[1]."','".$tabvar[2]."','".$tabvar[3]."','".$tabvar[4]."','".$tabvar[5]."','".$tabvar[6]."','".$tabvar[7]."','".$tabvar[8]."','".$tabvar[9]."','".$tabvar[10]."','".$tabvar[11]."','".$tabvar[12]."','".$tabvar[13]."','".$tabvar[14]."','".$tabvar[15]."','".$tabvar[16]."','".$tabvar[17]."','".$tabvar[18]."','".$tabvar[19]."','".$tabvar[20]."');");//We create the box
-			
-		}
+                            box2.appendChild(box21);
+                            box2.appendChild(box22);
+                            validbox.appendChild(box2);
 
-		fclose($f);
-		
-		
-		?>
+                            valid1 = document.createElement("div"); 
+                            valid1.className='valid';
+
+                            valid1.innerHTML +='Modifier cette expérience';
+                    
+
+                            valid2 = document.createElement("div"); 
+                            valid2.className='valid';
+
+                            valid2.innerHTML +='Retirer cette expérience'; 
+
+                            validbox.appendChild(valid1);
+                            validbox.appendChild(valid2);
+
+                            leftbox.appendChild(validbox);
+
+                            wrapper.appendChild(leftbox);
+                            
+                            
+                            if(!document.getElementById('rightbox')){//create only one rightbox
+                                rightbox = document.createElement("div"); 
+                                rightbox.className='rightbox';
+                                rightbox.id='rightbox';
+                                rightbox.innerHTML +='<a class="valid" href="./jeunespage.php">Ajouter une expérience</a>';
+                                wrapper.appendChild(rightbox);
+                            }
+                            */
+                            
+                            //container.appendChild(wrapper);
+                            thediv.appendChild(container);
+            };
+
+            function thereisnothing(){//for showing that there is nothing
+                var thediv = document.getElementById("divwrapper");
+                var container=document.createElement('p');
+                container.style=("text-align:center");
+                container.innerHTML +='Il n&apos;y a pas encore d&apos;expérience!';
+                thediv.appendChild(container);
 
 
+            };
 
+            <?php  
+                //We search the number of experiences
+                $mail = 'jean.louis@gmail.com';
+                $f = fopen('./../InformationsJeunes/'.$mail,'r+');
+                $txt =stream_get_line($f,0,"\n");
 
-		</script>
+                if(feof($f)){
+                    ECHO utf8_encode("thereisnothing();");
+                }
+                else{
+                  rewind($f);
+                    //while(!feof($f)){
+                        $tabvar=array("nomjeune","prenomjeune","datejeune","reseaujeune","expjeune","dureejeune","iam1","iam2","iam3","iam4","nomref","prenomref","dateref","reseauref","expref","dureeref","comm","is1","is2","is3","is4",0,0);
+						//$txt =stream_get_line($f,0,"\n");
+						//array_splice($tabvar,2,1,$txt);
+						//	$txt =stream_get_line($f,0,"\n");
+						/*
+						if(($txt=='\n')||(feof($f))||($txt=='')){}//verifie the EOF
+                        else{
+							$txt =intval("$txt",10);
+                        array_splice($tabvar,8,1,$txt);
+						
+                        $txt =stream_get_line($f,0,"\n");//the indice of the experience
+                        if(($txt=='\n')||(feof($f))||($txt=='')){}//verifie the EOF
+                        else{
+                        $txt =intval("$txt",10);
+                        array_splice($tabvar,8,1,$txt);
+
+                        $txt =stream_get_line($f,0,"\n");//The verification state
+                        $txt =intval("$txt",10);
+                        array_splice($tabvar,7,1,$txt);
+                        
+                        $txt=stream_get_line($f,0,"\n");
+                        $txt=stream_get_line($f,0,"\n");
+                        $txt=stream_get_line($f,0,"\n");
+                        $txt=stream_get_line($f,0,"\n");//the referent's mail
+                        array_splice($tabvar,0,1,$txt);
+                        
+                        $txt=stream_get_line($f,0,"\n");
+                        $txt=stream_get_line($f,0,"\n");//the kind of engagement
+                        array_splice($tabvar,1,1,$txt);
+
+                        $txt=stream_get_line($f,0,"\n");//the lenght of the engagement
+                        array_splice($tabvar,2,1,$txt);
+
+                        $count = 0;
+                        for($j = 0;$j<10;$j++){//for the "savoir-etre"
+                            if($count>4){}
+                            else{
+                                $txt=stream_get_line($f,0,"\n");
+                                if($txt==''){}
+                                else{
+                                    array_splice($tabvar,(3+$count),1,$txt);
+                                    $count++;
+                                }
+                            }
+                        }
+
+                        for($k = 0;$k<15;$k++){//we pass the next 15 lines
+                            $txt=stream_get_line($f,0,"\n");
+                        }
+						*/
+
+                        ECHO utf8_encode("createthebox('".$tabvar[0]."','".$tabvar[1]."','".$tabvar[2]."','".$tabvar[3]."','".$tabvar[4]."','".$tabvar[5]."','".$tabvar[6]."','".$tabvar[7]."','".$tabvar[8]."','".$tabvar[9]."','".$tabvar[10]."','".$tabvar[11]."','".$tabvar[12]."','".$tabvar[13]."','".$tabvar[14]."','".$tabvar[15]."','".$tabvar[16]."','".$tabvar[17]."','".$tabvar[18]."','".$tabvar[19]."','".$tabvar[20]."','".$tabvar[21]."','".$tabvar[22]."');");//We create the box
+                    }
+                //}
+                    
+                
+
+                fclose($f);
+                
+            ?>
+            
+        </script>	
 
 	</body>
 </html>
