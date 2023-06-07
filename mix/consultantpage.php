@@ -68,8 +68,6 @@ if (!isset($_SESSION['role']) || $_SESSION['role'] !== "Consultant") {
 								<p class="text1" id="prenom" name="prenom"></p>
 								<p>DATE DE NAISSANCE :</p>
 								<p class="text1" id="dob" name="dob"></p>
-								<p>Mail :</p>
-								<p class="text1" id="mail" name="mail"></p>
 								<p>Réseaux sociaux :</p>
 								<p class="text1" id="social" name="social"></p>
 								<p>MON ENGAGEMENT :</p>
@@ -111,8 +109,6 @@ if (!isset($_SESSION['role']) || $_SESSION['role'] !== "Consultant") {
 							<p class="text2" id="prenom" name="prenom"></p>
 							<p>DATE DE NAISSANCE :</p>
 							<p class="text2" id="dob" name="dob"></p>
-							<p>Mail :</p>
-							<p class="text2" id="mail" name="mail"></p>
 							<p>Réseaux sociaux :</p>
 							<p class="text2" id="social" name="social"></p>
 							<p>PRESENTATION :</p>
