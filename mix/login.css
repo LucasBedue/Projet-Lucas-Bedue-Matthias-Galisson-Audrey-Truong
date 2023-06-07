@@ -14,7 +14,14 @@
         rgb(149, 149, 149)
     );
 }
-.head {
+
+/********************************/
+
+/********************************/
+
+/*   Header   */
+
+.head {         /*   Header background   */
     height: 20%;
     position: relative;
     background: radial-gradient(
@@ -23,7 +30,8 @@
         rgb(170, 170, 170) 60%
     );
 }
-.headtext {
+
+.headtext {     /*   Text   */
     position: absolute;
     bottom: 0;
     right: 0;
@@ -35,7 +43,7 @@
     margin-right: 2%;
 }
 
-.headtext2{
+.headtext2{     /*   Title   */
 	position: absolute;
     top: 0;
     right: 0;
@@ -47,11 +55,17 @@
     margin-right: 4%;
 	margin-top: 1%;
 }
-.fitimg {
+
+.fitimg {       /*  Icon  */
     max-width: 95%;
     max-height: 95%;
     margin-left: 2%;
 }
+
+/********************************/
+
+/*   Body   */
+
 .bodybg {
     height: 80%;
     
@@ -61,7 +75,11 @@
 
 }
 
-.texttop{
+/*------------------------------*/
+
+/*   Main body   */
+
+.texttop{       /*   Upper text   */
     text-align: center;
     font-size: 140%;
     line-height: 110%;
@@ -69,18 +87,20 @@
     color: rgb(39, 39, 39);
 }
 
-.login{
+.login{         /*   Container for the login information   */
+    text-align: center;
+    font-size: 120%;
+}
+
+
+.login2{         /*   Container for the mail and password fields   */
     margin-left: auto;
     margin-right: auto;
     text-align: left;
 
 }
-.login2{
-    text-align: center;
-    font-size: 120%;
-}
 
-.textbot{
+.textbot{       /*   Bottom text   */
     text-align: center;
     font-size: 100%;
     line-height: 110%;

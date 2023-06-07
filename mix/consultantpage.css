@@ -13,7 +13,13 @@
     );
 }
 
-.head {
+/********************************/
+
+/********************************/
+
+/*   Header   */
+
+.head {         /*   Header background   */
     height: 20%;
     position: relative;
     background: radial-gradient(
@@ -22,7 +28,8 @@
         rgb(170, 170, 170) 60%
     );
 }
-.headtext {
+
+.headtext {         /*   Header text   */
     position: absolute;
     bottom: 0;
     right: 0;
@@ -47,11 +54,13 @@
     margin-right: 2%;
 	margin-top: 0%;
 }
+
 .fitimg {
     max-width: 95%;
     max-height: 95%;
     margin-left: 2%;
 }
+
 .bodybg {
     height: 80%;
     font-family: "Lucida Sans", "Lucida Sans Regular",
@@ -59,9 +68,11 @@
         sans-serif;
 
 }
+
 a{
     color: rgb(21, 9, 80);
 }
+
 .tab {
     width: 50%;
     height: 50px;
@@ -73,23 +84,28 @@ a{
         rgb(190, 190, 190)
     );
 }
+
 .tabb {
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
 .link{
     text-decoration: none;
 }
+
 .tabbox1 {
     display: table-cell;
     width: 25%;
     text-align: center;
     color: rgb(21, 9, 80);
 }
+
 .tabbox1:hover {
     background-color: rgb(21, 9, 80);
 }
+
 .link:hover{
     background-color: rgb(21, 9, 80);
     color: white;
@@ -159,7 +175,6 @@ a{
     width: 100%;
 }
 
-
 .box2{
     border: 5px;
     border-color:rgb(25, 176, 25);
@@ -172,6 +187,7 @@ a{
     width: 120%;
     position: relative;
 }
+
 .box502{
     grid-row: 1;
     text-align: right;
@@ -179,6 +195,7 @@ a{
     font-weight: 700;
     color: rgb(25, 176, 25) ;
 }
+
 .box512{
     grid-row: 2;
     background: linear-gradient(to right, white, rgb(25, 176, 25) ) ;
@@ -188,6 +205,7 @@ a{
     text-align: right;
     padding-right: 2%;
 }
+
 .box522{
     padding-top: 2%;
     padding-bottom: 2%;
@@ -196,30 +214,31 @@ a{
     background-color: rgb(210, 247, 215) ;
     width: 100%;
 }
+
 .box532{                /* Commentary text area header */
-    padding-top: 2%;
-    padding-bottom: 2%;
     grid-row: 4;
     background: linear-gradient(to left, white, rgb(25, 176, 25) );
     width: 100%;
     margin-top: 3%;
-    font-size: 100%;
+    font-size: 90%;
+    line-height: 40%;
     color: rgb(255, 255, 255) ;
 
 }
+
 .box542{                /* Commentary text area */
-    padding-top: 2%;
-    padding-bottom: 2%;
     grid-row: 5;
     background-color: rgb(210, 247, 215) ;
-    width: 100%;
     color: rgb(9, 9, 121);
     margin-top: 1%;
     font-size: 80%;
     font: italic 90% "Fira Sans", serif;
+    width: 100%;
 }
+
 .commentarytext{
     margin-left: 5%;
+    margin-right: 5%;
 }
 
 .text2{
@@ -240,16 +259,19 @@ a{
     font-size: larger;
     line-height: 190%;
 }
+
 .box3{
     font-size: 220%;
     font-weight: bold;
     width: 60%;
 }
+
 .box4{
     width: 58%;
     height:90%;
     font-size: 100%;
 }
+
 .box5{
     grid-row: 1;
     display: grid;
@@ -258,6 +280,7 @@ a{
     right: 0;
     padding: 1%;
     width: 40%;
+
 }
 
 .box6{

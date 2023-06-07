@@ -75,7 +75,7 @@
 									<p class="commentarytext">Commentaires</p>
 								</div>
 								<div class="box542">
-									<p id="commentarytext" class="commentarytext">wqddqwd</p>
+									<p class="commentarytext">good</p>
 								</div>
 							</div>
 

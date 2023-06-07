@@ -50,7 +50,7 @@
 					</div>
 
 					<div class="divtext">
-						<h2>De quoi s'agit-il ?</h2>
+						<h2>A qui s'adresse-t'il ?</h2>
 						<p>
 							A vous, jeunes entre 16 et 30 ans, qui vous êtes
 							investis spontanément dans une association ou dans
@@ -89,7 +89,7 @@
 							<p style="font-size: 95%">1ère étape</p>
 							<p style="font-size: 120%">la valorisation</p>
 						</div>
-						<div class="box1bottom">
+						<div class="boxbottom">
 							Décrivez votre expérience et mettez en avant ce que
 							vous en avez retiré.
 						</div>
@@ -97,23 +97,22 @@
 
 					<div class="box2">
 						<div class="box2top">
-							<p style="font-size: 95%">1ère étape</p>
-							<p style="font-size: 120%">la valorisation</p>
+							<p style="font-size: 95%">2ème étape</p>
+							<p style="font-size: 120%">la confirmation</p>
 						</div>
-						<div class="box2bottom">
-							Décrivez votre expérience et mettez en avant ce que
-							vous en avez retiré.
+						<div class="boxbottom">
+							Confirmez cette expérience et ce que vous avez pu 
+							constater au contact de ce jeune.
 						</div>
 					</div>
 
 					<div class="box3">
 						<div class="box3top">
-							<p style="font-size: 95%">1ère étape</p>
-							<p style="font-size: 120%">la valorisation</p>
+							<p style="font-size: 95%">3ème étape</p>
+							<p style="font-size: 120%">la consultation</p>
 						</div>
-						<div class="box3bottom">
-							Décrivez votre expérience et mettez en avant ce que
-							vous en avez retiré.
+						<div class="boxbottom">
+							Validez cet engagement en prenant compte de sa valeur.
 						</div>
 					</div>
 				</div>
