@@ -218,7 +218,7 @@ a{          /*  Color of links  */
     width: 16%;
 }
 
-.box21{         /*      */
+.box21{         /*   Top part   */
     grid-row: 1;
     color: white;
     background: radial-gradient(
@@ -231,7 +231,7 @@ a{          /*  Color of links  */
     font-weight: bold;
 }
 
-.box22{         /*      */
+.box22{         /*   Bottom part (text area)   */
     grid-row: 2;
     color: white;
     background: radial-gradient(
