@@ -72,6 +72,9 @@ foreach($filetext as $ligne){
 
 fclose($f);
 
+$nomdumail=$_POST['nom'];
+$prenomdumail=$_POST['prenom'];
+
 //On envoi le message au référent
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
@@ -100,8 +103,8 @@ if(isset($_POST["send"])){
 		//Content
 		$email->isHTML(true);
 		
-		$email->Subject = "Nouvelle requete pour consultant";
-		$email->Body="Bonjour,\n Veuillez confirmer son expérience via cet URL:\n"."http://localhost/test/Projet-Lucas-Bedue-Matthias-Galisson-Audrey-Truong-main/mix/consultant.php?q1="."$mail";
+		$email->Subject = "Le referant a validé une de vos expérience!";
+		$email->Body="Bonjour,\n ".' '.$nomdumail.' '."$prenomdumail".' '."a vérifié une de vos expérience!";
 	
 		$email->send();
 		
