@@ -38,8 +38,6 @@
 						<p class="tabbox1">
 							<a class="link" href="./partnerspage.php">Nos partenaires</a>
 						</p>
-						<p class="tabbox1">
-						
 					</div>
 				</div>
 				<div class="texttop">
@@ -61,8 +59,6 @@
 					</div>
 					
 					<div class="box">
-					
-					
 							<label for="nom">NOM :</label>
 							<input type="text" id="nom" name="nom" required/>
 						</br>
@@ -81,7 +77,7 @@
 							<label for="duree">DUREE :</label>
 							<input type="text" id="duree" name="duree" required/>
 
-							<div style="display:none"><!-- a div to share themail and the index -->
+							<div style="display:none">		<!-- a div to share the mail and the index -->
 							<input type="text" id="mailjeune" name="mailjeune" visibility="hidden">
 							<input type="text" id="numexp" name="numexp" visibility="hidden">
 							</div>
