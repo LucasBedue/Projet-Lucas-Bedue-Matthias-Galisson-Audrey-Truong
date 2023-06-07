@@ -32,7 +32,7 @@
 				</div>
 				<div class="texttop">
 					<p>
-						Validez cet engagement en prenant en compte sa valeur.
+						Visionnez son CV.
 					</p>
 				</div>
 				<div id="divwrapper">
@@ -44,8 +44,7 @@
 						<div class="box5">						
 							<div class="box501"><p>MES SAVOIRS ETRE</p></div>
 							<div class="box511"><p>Je suis *</p></div>
-							<div id="box521" class="box521">
-							</div>
+							<div id="box521" class="box521"></div>
 						</div>
 						<div class="box4">
 								<p>NOM :</p>
@@ -97,136 +96,161 @@
 				
 				</div>
 
-				<div class="valid">
-					<p>Valider</p>
-				</div>
+				
 			</div>
 		</div>
 
 		<script type="text/javascript">
             
-            function createthebox(index,validation,nomjeune,prenomjeune,datejeune,reseaujeune,expjeune,dureejeune,iam1,iam2,iam3,iam4,nomref,prenomref,dateref,reseauref,expref,dureeref,comm,is1,is2,is3,is4){//function that create a box
+            function createthebox(index,stateexp,nomj,prenomj,datej,reseauj,expj,dureej,iam1,iam2,iam3,iam4,nomref,prenomref,dateref,reseauref,expref,dureeref,commref,is1,is2,is3,is4){//function that create a box
                             var thediv = document.getElementById("divwrapper");
-                            var container=document.createElement('div');
-                            container.id=indi;
-							container.innerHTML='YOKO'
-							/*
-							box1=document.createElement('div');
-							box1.className=('box1');
-							
-                            wrapper = document.createElement("div");
-                            wrapper.className='wrapper';
+                            var outerbox=document.createElement('div');
+                            outerbox.className='outerbox';
+							thediv.appendChild(outerbox);
 
-                            leftbox = document.createElement("div"); 
-                            leftbox.className='leftbox';
-
-                            box = document.createElement("div"); 
-                            box.className='box';
-
-                            box.innerHTML +='<p>Mail du référent:</p>';
-                            box.innerHTML +='<p class="text" id="mail" name="mail">'+mailref+'</p>';
-                            box.innerHTML +='<p>MON ENGAGEMENT :</p>';
-                            box.innerHTML +='<p class="text" id="engagement" name="engagement">'+engagetype+'</p>';
-                            box.innerHTML +='<p>DUREE :</p>';
-                            box.innerHTML +='<p class="text" id="duree" name="duree">'+engagelenght+'</p>';
-                    
-                            leftbox.appendChild(box);
-
-
-                            box1 = document.createElement("div"); 
+							var box1=document.createElement('div');
                             box1.className='box1';
+							outerbox.appendChild(box1);
 
-                            box11 = document.createElement("div"); 
-                            box11.className='box11';
-                            box11.innerHTML +='<p>Je suis *</p>';
-                            box1.appendChild(box11);
+							var box3=document.createElement('div');
+                            box3.className='box3';
+							box3.innerHTML='JEUNE';
+							box1.appendChild(box3);
 
-                            box12 = document.createElement("div"); 
-                            box12.className='box12';
-                    
-                            if((iam1!='iam1')&&(iam1!='')){
-                            box12.innerHTML +='<input style="pointer-events:none" type="checkbox" id="'+iam1+'" name="'+iam1+'" value="'+iam1+'" checked>';
-                            box12.innerHTML +='<label for="autonome"> '+iam1+'</label>';
-                            box12.innerHTML +='</br>';
+                            var box5=document.createElement('div');
+                            box5.className='box5';
+							box1.appendChild(box5);
+
+							var box501=document.createElement('div');
+                            box501.className='box501';
+							box501.innerHTML='<p>MES SAVOIRS ETRE</p>';
+							box5.appendChild(box501);
+
+							var box511=document.createElement('div');
+                            box511.className='box511';
+							box511.innerHTML='<p>MES SAVOIRS ETRE</p>';
+							box5.appendChild(box511);
+
+							var box521=document.createElement('div');
+                            box521.className='box521';
+							if((iam1!='iam1')&&(iam1!='')){
+								box521.innerHTML +='<input style="pointer-events:none" type="checkbox" id="'+iam1+'" name="'+iam1+'" value="'+iam1+'" checked>';
+								box521.innerHTML +='<label for="autonome"> '+iam1+'</label>';
+								box521.innerHTML +='</br>';
                             }
                             if((iam2!='iam2')&&(iam2!='')){
-                            box12.innerHTML +='<input style="pointer-events:none" type="checkbox" id="'+iam2+'" name="'+iam2+'" value="'+iam2+'" checked>';
-                            box12.innerHTML +='<label for="autonome"> '+iam2+'</label>';
-                            box12.innerHTML +='</br>';
+								box521.innerHTML +='<input style="pointer-events:none" type="checkbox" id="'+iam2+'" name="'+iam2+'" value="'+iam2+'" checked>';
+								box521.innerHTML +='<label for="autonome"> '+iam2+'</label>';
+								box521.innerHTML +='</br>';
                             }
                             if((iam3!='iam3')&&(iam3!='')){
-                            box12.innerHTML +='<input style="pointer-events:none" type="checkbox" id="'+iam3+'" name="'+iam3+'" value="'+iam3+'" checked>';
-                            box12.innerHTML +='<label for="autonome"> '+iam3+'</label>';
-                            box12.innerHTML +='</br>';
+								box521.innerHTML +='<input style="pointer-events:none" type="checkbox" id="'+iam3+'" name="'+iam3+'" value="'+iam3+'" checked>';
+								box521.innerHTML +='<label for="autonome"> '+iam3+'</label>';
+								box521.innerHTML +='</br>';
                             }
                             if((iam4!='iam4')&&(iam4!='')){
-                            box12.innerHTML +='<input style="pointer-events:none" type="checkbox" id="'+iam4+'" name="'+iam4+'" value="'+iam4+'" checked>';
-                            box12.innerHTML +='<label for="autonome"> '+iam4+'</label>';
-                            box12.innerHTML +='</br>';
+								box521.innerHTML +='<input style="pointer-events:none" type="checkbox" id="'+iam4+'" name="'+iam4+'" value="'+iam4+'" checked>';
+								box521.innerHTML +='<label for="autonome"> '+iam4+'</label>';
+								box521.innerHTML +='</br>';
                             }
+							box5.appendChild(box521);
 
-                            box1.appendChild(box12);
+							var box4=document.createElement('div');
+                            box4.className='box4';
+							box4.innerHTML+='<p>NOM :</p>';
+							box4.innerHTML+='<p class="text1" id="nom1" name="nom">'+nomj+'</p>';
+							box4.innerHTML+='<p>PRENOM :</p>';
+							box4.innerHTML+='<p class="text1" id="prenom1" name="prenom">'+prenomj+'</p>';
+							box4.innerHTML+='<p>DATE DE NAISSANCE :</p>';
+							box4.innerHTML+='<p class="text1" id="dob1" name="dob">'+datej+'</p>';
+							box4.innerHTML+='<p>Réseaux sociaux :</p>';
+							box4.innerHTML+='<p class="text1" id="social1" name="social">'+reseauj+'</p>';
+							box4.innerHTML+='<p>MON ENGAGEMENT :</p>';
+							box4.innerHTML+='<p class="text1" id="engagement1" name="engagement">'+expj+'</p>';
+							box4.innerHTML+='<p>DUREE :</p>';
+							box4.innerHTML+='<p class="text1" id="duree1" name="duree">'+dureej+'</p>';
+						
+							box1.appendChild(box4);
 
-                            leftbox.appendChild(box1);
-                    
-                            validbox = document.createElement("div"); 
-                            validbox.className='validbox';
-
-                            box2 = document.createElement("div"); 
+							var box2=document.createElement('div');
                             box2.className='box2';
+							outerbox.appendChild(box2);
 
-                            box21 = document.createElement("div"); 
-                            box21.className='box21';
+							var box33=document.createElement('div');
+                            box33.className='box3';
+							box33.innerHTML='REFERENT';
+							box2.appendChild(box33);
 
-                            box22 = document.createElement("div"); 
-                            box22.className='box22';
+							var box55=document.createElement('div');
+                            box55.className='box5';
+							box2.appendChild(box55);
 
-                            box21.innerHTML+='Cette expérience :';
-                            if(status==0){
-                                box22.innerHTML+='n&apos;a pas été validée';
+							var box502=document.createElement('div');
+                            box502.className='box502';
+							box502.innerHTML='<p>SES SAVOIRS ETRE</p>';
+							box55.appendChild(box502);
+
+							var box512=document.createElement('div');
+                            box512.className='box512';
+							box512.innerHTML='<p>Je confirme sa (son)*</p>';
+							box55.appendChild(box502);
+
+							var box522=document.createElement('div');
+                            box522.className='box522';
+							if((is1!='is1')&&(is1!='')){
+								box522.innerHTML +='<input style="pointer-events:none" type="checkbox" id="'+is1+'" name="'+is1+'" value="'+is1+'" checked>';
+								box522.innerHTML +='<label for="autonome"> '+is1+'</label>';
+								box522.innerHTML +='</br>';
                             }
-                            else if(status==1){
-                                box22.innerHTML+='a été complétée';
+                            if((is2!='is2')&&(is2!='')){
+								box522.innerHTML +='<input style="pointer-events:none" type="checkbox" id="'+is2+'" name="'+is2+'" value="'+is2+'" checked>';
+								box522.innerHTML +='<label for="autonome"> '+is2+'</label>';
+								box522.innerHTML +='</br>';
                             }
-                            else if(status==2){
-                                box22.innerHTML+='a été validée';
+                            if((is3!='is3')&&(is3!='')){
+								box522.innerHTML +='<input style="pointer-events:none" type="checkbox" id="'+is3+'" name="'+is3+'" value="'+is3+'" checked>';
+								box522.innerHTML +='<label for="autonome"> '+is3+'</label>';
+								box522.innerHTML +='</br>';
                             }
-                            
-
-                            box2.appendChild(box21);
-                            box2.appendChild(box22);
-                            validbox.appendChild(box2);
-
-                            valid1 = document.createElement("div"); 
-                            valid1.className='valid';
-
-                            valid1.innerHTML +='Modifier cette expérience';
-                    
-
-                            valid2 = document.createElement("div"); 
-                            valid2.className='valid';
-
-                            valid2.innerHTML +='Retirer cette expérience'; 
-
-                            validbox.appendChild(valid1);
-                            validbox.appendChild(valid2);
-
-                            leftbox.appendChild(validbox);
-
-                            wrapper.appendChild(leftbox);
-                            
-                            
-                            if(!document.getElementById('rightbox')){//create only one rightbox
-                                rightbox = document.createElement("div"); 
-                                rightbox.className='rightbox';
-                                rightbox.id='rightbox';
-                                rightbox.innerHTML +='<a class="valid" href="./jeunespage.php">Ajouter une expérience</a>';
-                                wrapper.appendChild(rightbox);
+                            if((is4!='is4')&&(is4!='')){
+								box522.innerHTML +='<input style="pointer-events:none" type="checkbox" id="'+is4+'" name="'+is4+'" value="'+is4+'" checked>';
+								box522.innerHTML +='<label for="autonome"> '+is4+'</label>';
+								box522.innerHTML +='</br>';
                             }
-                            */
-                            
-                            //container.appendChild(wrapper);
-                            thediv.appendChild(container);
+							box55.appendChild(box522);
+							
+							var box532=document.createElement('div');
+                            box532.className='box532';
+							box532.innerHTML='<p class="commentarytext">Commentaires</p>';
+							box55.appendChild(box532);
+
+							
+							var box542=document.createElement('div');
+                            box542.className='box542';
+							box542.innerHTML='<p class="commentarytext">'+commref+'</p>';
+							box55.appendChild(box542);
+
+							
+							var box44=document.createElement('div');
+                            box44.className='box4';
+							box44.innerHTML+='<p>NOM :</p>';
+							
+							box44.innerHTML+='<p class="text2" id="nom2" name="nom2">'+nomref+'</p>';
+							box44.innerHTML+='<p>PRENOM :</p>';
+							box44.innerHTML+='<p class="text2" id="prenom2" name="prenom2">'+prenomref+'</p>';
+							box44.innerHTML+='<p>DATE DE NAISSANCE :</p>';
+							box44.innerHTML+='<p class="text2" id="dob2" name="dob2">'+dateref+'</p>';
+							box44.innerHTML+='<p>Réseaux sociaux :</p>';
+							box44.innerHTML+='<p class="text2" id="social2" name="social2">'+reseauref+'</p>';
+							box44.innerHTML+='<p>PRESENTATION :</p>';
+							box44.innerHTML+='<p class="text2" id="presentation2" name="presentation2">'+expref+'</p>';
+							box44.innerHTML+='<p>DUREE :</p>';
+							box44.innerHTML+='<p class="text2" id="duree2" name="duree2">'+dureeref+'</p>';
+							box2.appendChild(box44);
+
+							thediv.innerHTML+='</br>';
+
+							
             };
 
             function thereisnothing(){//for showing that there is nothing
@@ -250,11 +274,11 @@
                 }
                 else{
                   rewind($f);
-                    //while(!feof($f)){
-                        $tabvar=array("nomjeune","prenomjeune","datejeune","reseaujeune","expjeune","dureejeune","iam1","iam2","iam3","iam4","nomref","prenomref","dateref","reseauref","expref","dureeref","comm","is1","is2","is3","is4",0,0);
-						//$txt =stream_get_line($f,0,"\n");
-						//array_splice($tabvar,2,1,$txt);
-						//	$txt =stream_get_line($f,0,"\n");
+                    while(!feof($f)){
+                        $tabvar=array(0,0,"nomj","prenomj","datej","reseauj","expj","dureej","iam1","iam2","iam3","iam4","nomref","prenomref","dateref","reseauref","expref","dureeref","commref","is1","is2","is3","is4");
+						$txt =stream_get_line($f,0,"\n");
+						array_splice($tabvar,2,1,$txt);
+						
 						/*
 						if(($txt=='\n')||(feof($f))||($txt=='')){}//verifie the EOF
                         else{
@@ -304,7 +328,7 @@
 
                         ECHO utf8_encode("createthebox('".$tabvar[0]."','".$tabvar[1]."','".$tabvar[2]."','".$tabvar[3]."','".$tabvar[4]."','".$tabvar[5]."','".$tabvar[6]."','".$tabvar[7]."','".$tabvar[8]."','".$tabvar[9]."','".$tabvar[10]."','".$tabvar[11]."','".$tabvar[12]."','".$tabvar[13]."','".$tabvar[14]."','".$tabvar[15]."','".$tabvar[16]."','".$tabvar[17]."','".$tabvar[18]."','".$tabvar[19]."','".$tabvar[20]."','".$tabvar[21]."','".$tabvar[22]."');");//We create the box
                     }
-                //}
+                }
                     
                 
 
