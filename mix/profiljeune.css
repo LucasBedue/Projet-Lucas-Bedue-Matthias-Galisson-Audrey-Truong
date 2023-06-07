@@ -14,7 +14,14 @@
         rgb(149, 149, 149)
     );
 }
-.head {
+
+/********************************/
+
+/********************************/
+
+/*   Header   */
+
+.head {         /*   Header background   */
     height: 20%;
     position: relative;
     background: radial-gradient(
@@ -26,7 +33,8 @@
     "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana,
     sans-serif;
 }
-.headtext {
+
+.headtext {     /*   Text   */
     position: absolute;
     bottom: 0;
     right: 0;
@@ -37,7 +45,7 @@
     margin-bottom: 1%;
 }
 
-.headtext2{
+.headtext2{     /*   Title   */
 	position: absolute;
     top: 0;
     right: 0;
@@ -46,12 +54,15 @@
     margin-right: 2%;
 	margin-top: 0%;
 }
-.fitimg {
+.fitimg {       /*  Icon  */
     max-width: 95%;
     max-height: 95%;
     margin-left: 2%;
 }
 
+/********************************/
+
+/*   Body   */
 
 .bodybg {
     height: 80%;
@@ -59,10 +70,16 @@
         "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana,
         sans-serif;
 }
-a{
+
+a{          /*  Color of links  */
     color: rgb(21, 9, 80);
 }
-.tab {
+
+/*------------------------------*/
+
+/*   Menu   */
+
+.tab {      /*   Background of the menu   */
     width: 50%;
     height: 50px;
     margin: auto;
@@ -73,32 +90,36 @@ a{
         rgb(190, 190, 190)
     );
 }
-.tabb {
+
+.tabb {     /*   Container for the tabs of the menu   */
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.link{
+.link{      /*   To remove the underline of the links   */
     text-decoration: none;
 }
-.tabbox1 {
+.tabbox1 {  /*   CSS of the individual tabs   */
     display: table-cell;
     width: 25%;
     text-align: center;
     color: rgb(21, 9, 80);
     
 }
-.tabbox1:hover {
+.tabbox1:hover {    /*   To change the background color on hover   */
     background-color: rgb(21, 9, 80);
 }
-.link:hover{
+.link:hover{        /*   To change the link color on hover   */
     background-color: rgb(21, 9, 80);
     color: white;
     margin: 1%;
 }
 
+/*------------------------------*/
 
-.texttop{
+/*   Main body   */
+
+.texttop{       /*   Upper text   */
     text-align: center;
     font-size: 140%;
     line-height: 110%;

@@ -103,7 +103,7 @@ if (!isset($_SESSION['role']) || $_SESSION['role'] !== "Consultant") {
 									<p class="commentarytext">Commentaires</p>
 								</div>
 								<div class="box542">
-									<p class="commentarytext">wqddqwd</p>
+									<p class="commentarytext">good</p>
 								</div>
 							</div>
 

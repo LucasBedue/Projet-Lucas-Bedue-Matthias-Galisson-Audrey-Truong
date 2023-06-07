@@ -22,6 +22,7 @@
         rgb(170, 170, 170) 60%
     );
 }
+
 .headtext {
     position: absolute;
     bottom: 0;
@@ -197,29 +198,27 @@ a{
     width: 100%;
 }
 .box532{                /* Commentary text area header */
-    padding-top: 2%;
-    padding-bottom: 2%;
     grid-row: 4;
     background: linear-gradient(to left, white, rgb(25, 176, 25) );
     width: 100%;
     margin-top: 3%;
-    font-size: 100%;
+    font-size: 90%;
+    line-height: 40%;
     color: rgb(255, 255, 255) ;
 
 }
 .box542{                /* Commentary text area */
-    padding-top: 2%;
-    padding-bottom: 2%;
     grid-row: 5;
     background-color: rgb(210, 247, 215) ;
-    width: 100%;
     color: rgb(9, 9, 121);
     margin-top: 1%;
     font-size: 80%;
     font: italic 90% "Fira Sans", serif;
+    width: 100%;
 }
 .commentarytext{
     margin-left: 5%;
+    margin-right: 5%;
 }
 
 .text2{
@@ -258,6 +257,7 @@ a{
     right: 0;
     padding: 1%;
     width: 40%;
+
 }
 
 .box6{
