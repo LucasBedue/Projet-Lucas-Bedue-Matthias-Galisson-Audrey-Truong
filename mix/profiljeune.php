@@ -46,13 +46,51 @@ if (!isset($_SESSION['role']) || $_SESSION['role'] !== "Jeune") {
 				<div class="texttop">
 					<p>
 						Retrouvez toutes vos expériences passées ou ajoutez en une nouvelle.
-					</p>
+					</p><br><div class="download-button"><!--This button download the CV -->
+                                <button onclick="downloadPDF()">Télécharger le CV</button>
+                            </div>
 				</div>
+                
+                
                 <div name="divwrapper" id="divwrapper">         <!-- The div that will contain all the wrappers-->
                 </div>
 
 		</div>
         <script type="text/javascript">
+            
+            function downloadPDF() {
+            // Récupérer le contenu de tous les éléments avec les classes "box" et "box1"
+            var boxContents = document.getElementsByClassName('box');
+            var box1Contents = document.getElementsByClassName('box1');
+
+            //on rassemble tout
+            var pdfContent = '';
+
+            var maxLength = Math.max(boxContents.length, box1Contents.length);
+            for (var i = 0; i < maxLength; i++) {
+                if (i < boxContents.length) {
+                    pdfContent += boxContents[i].innerHTML + '\n';
+                }
+                if (i < box1Contents.length) {
+                    pdfContent += box1Contents[i].innerHTML + '\n';
+                }
+            }
+
+            // on crée un formulaire pour le transfert
+            var form = document.createElement('form');
+            form.action = 'dl_pdf.php';
+            form.method = 'POST';
+
+            // Ajouter un champ caché pour contenir le contenu du PDF
+            var pdfContentField = document.createElement('input');
+            pdfContentField.type = 'hidden';
+            pdfContentField.name = 'pdfContent';
+            pdfContentField.value = pdfContent;
+            form.appendChild(pdfContentField);
+            document.body.appendChild(form);
+            form.submit();
+        }
+
             
             function createthebox(mailref,engagetype,engagelenght,iam1,iam2,iam3,iam4,status,indi){//function that create a box
                             var thediv = document.getElementById("divwrapper");
