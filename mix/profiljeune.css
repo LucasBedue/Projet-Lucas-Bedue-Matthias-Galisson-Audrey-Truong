@@ -211,7 +211,6 @@ a{          /*  Color of links  */
 }
 
 .validbox{      /*   Container for the modify/remove buttons   */
-    display: table-column;
     margin: auto;
     width: 20%;
     padding-left: 2%;

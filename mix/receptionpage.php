@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="fr">
 	<head>
-		<title>Accueil Jeunes 6.4</title>
+		<title>Accueil - Jeunes 6.4</title>
+		<!--	Reception page	-->
 	</head>
 	<body>
 		<link type="text/css" rel="stylesheet" href="receptionpage.css" />
 
-		<div class="bg">
+		<div class="bg">			<!--	Main body	-->
 			<div class="toptext">
 				<p>
 					Pour faire de l'engagement <br />
@@ -21,10 +22,10 @@
 				</p>
 			</div>
 			<div class="enter">
-				<a class="enterlink" href="infopage.php">ENTRER</a>
+				<a class="enterlink" href="infopage.php">ENTRER</a>			<!--	Link to info page	-->
 			</div>
 		</div>
-		<div class="bottombanner">
+		<div class="bottombanner">			<!--	Bottom banner	-->
 			<p>
 				JEUNES 6.4 est un dispositif de valorisation de l'engagement des
 				jeunes en Pyrénées-Atlantiques soutenu par l'Etat,

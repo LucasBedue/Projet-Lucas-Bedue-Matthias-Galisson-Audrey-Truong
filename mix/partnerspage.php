@@ -2,25 +2,26 @@
 <html lang="fr">
 	<head>
 		<title>Partenaires - Jeunes 6.4</title>
+		<!--	Page with the the project's parteners		-->
 	</head>
 	<body>
 		<link type="text/css" rel="stylesheet" href="partnerspage.css" />
 		
-		<div class="whole">
-			<div class="head">
+		<div class="whole">			<!--	Container for the whole page	-->
+			<div class="head">			<!--	Header	-->
 				<img class="fitimg" src="./logos/logo1.png" alt="Jeunes 6.4" />
 				<p class="headtext">PARTENAIRES</p>
 			</div>
 
-			<div class="bodybg">
-				<div class="tab">
+			<div class="bodybg">			<!--	Main body	-->
+				<div class="tab">				<!--	Menu	-->
 					<div class="tabb">
 						<p class="tabbox1">
 							<a class="link" href="./infopage.php"> Qui sommes nous? </a>
 						</p>
 						
 						<p class="tabbox1">
-                            <a class="link" href="./profiljeune.php">Profil</a>	<!-- NEED TO MAKE THIS ONLY VISIBLE TO ONLY CONNECTED JEUNES -->
+                            <a class="link" href="./profiljeune.php">Profil</a>
                         </p>
 						<p class="tabbox1">
 						<?php						
@@ -46,7 +47,7 @@
 						institutionnels...
 					</p>
 				</div>
-				<div class="imagesgrp">
+				<div class="imagesgrp">				<!--	Logos	-->
 					<img
 						class="images"
 						src="logos/rf.png"

@@ -2,17 +2,18 @@
 <html lang="fr">
 	<head>
 		<title>Infomations Jeunes 6.4</title>
+		<!--	Main informations page	-->
 	</head>
 	<body>
 		<link type="text/css" rel="stylesheet" href="infopage.css" />
-		<div class="whole">
-			<div class="head">
+		<div class="whole">			<!--	Container for the whole page	-->
+			<div class="head">			<!--	Header	-->
 				<img class="fitimg" src="./logos/logo1.png" alt="Jeunes 6.4" />
 				<p class="headtext">Pour faire de l'engagement une valeur</p>
 			</div>
 
-			<div class="bodybg">
-				<div class="tab">
+			<div class="bodybg">			<!--	Main body	-->
+				<div class="tab">				<!--	Menu	-->
 					<div class="tabb">
 						
 						<p class="tabbox1">
@@ -37,7 +38,7 @@
 					</div>
 				</div>
 
-				<div class="divtextp">
+				<div class="divtextp">			<!--	Container for the main text		-->
 					<div class="divtext">
 						<h2>De quoi s'agit-il ?</h2>
 						<p>
@@ -83,7 +84,7 @@
 					</div>
 				</div>
 
-				<div class="boxes">
+				<div class="boxes">			<!--	Container for the 3 bottom boxes	-->
 					<div class="box1">
 						<div class="box1top">
 							<p style="font-size: 95%">1ère étape</p>

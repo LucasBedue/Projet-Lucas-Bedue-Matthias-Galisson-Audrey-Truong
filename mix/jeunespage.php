@@ -2,6 +2,7 @@
 <html lang="fr">
 	<head>
 		<title>Jeune - Jeunes 6.4</title>
+		<!--	Page for the "Jeune" to create the profile of his experience		-->
 		<script>
 			
 			<?php
@@ -37,15 +38,15 @@ if (!isset($_SESSION['role']) || $_SESSION['role'] !== "Jeune") {
 	<body>
 		<link rel="stylesheet" href="jeunespage.css" />
 
-		<div class="whole">
-			<div class="head">
+		<div class="whole">			<!--	Container for the whole page	-->
+			<div class="head">			<!--	Header	-->
 				<img class="fitimg" src="./logos/logo1.png" alt="Jeunes 6.4" />
 				<p class="headtext2">JEUNE</p>
 				<p class="headtext">Je donne de la valeur à mon engagement</p>
 			</div>
 
-			<div class="bodybg">
-				<div class="tab">
+			<div class="bodybg">			<!--	Main body	-->
+				<div class="tab">				<!--	Menu	-->
 					<div class="tabb">
 						<p class="tabbox1">
 							<a class="link" href="./infopage.php">
@@ -69,11 +70,11 @@ if (!isset($_SESSION['role']) || $_SESSION['role'] !== "Jeune") {
 						en avez retiré.
 					</p>
 				</div>
-				<div class="outerbox">
-					<div class="box2">
+				<div class="outerbox">			<!--	Container for the different elements specific to this page	-->
+					<div class="box2">			<!--	Right box (empty)	-->
 						<p>&#32</p>
 					</div>
-					<div class="box">
+					<div class="box">			<!--	Center box (form)	-->
 						<form name="form1" method="post" action="enternewexp.php">
 							<label for="nom">NOM :</label>
 							<input type="text" id="nom" name="nom" required/>
@@ -97,7 +98,7 @@ if (!isset($_SESSION['role']) || $_SESSION['role'] !== "Jeune") {
 							<input type="text" id="duree" name="duree" required/>
 						
 					</div>
-					<div class="box1">
+					<div class="box1">			<!--	Right box (qualities checkboxes)	-->
 						<div class="box10"><p>MES SAVOIRS ETRE</p></div>
 
 						<div class="box11"><p>Je suis *</p></div>

@@ -2,6 +2,7 @@
 <html lang="fr">
 	<head>
 		<title>Consultant - Jeunes 6.4</title>
+		<!--	Page for the "Consultant"		-->
 		<?php session_start(); ?>
 	</head>
 	
@@ -9,15 +10,15 @@
 	<body>
 		<link type="text/css" rel="stylesheet" href="consultantpage.css" />
 		
-		<div class="whole">
-			<div class="head">
+		<div class="whole">			<!--	Container for the whole page	-->
+			<div class="head">			<!--	Header	-->
 				<img class="fitimg" src="./logos/logo1.png" alt="Jeunes 6.4" />
 				<p class="headtext2">CONSULTANT</p>
 				<p class="headtext">Je donne de la valeur à ton engagement</p>
 			</div>
 
-			<div class="bodybg">
-				<div class="tab">
+			<div class="bodybg">			<!--	Main body	-->
+				<div class="tab">				<!--	Menu	-->
 					<div class="tabb">
 						<p class="tabbox1">
 							<a class="link" href="./infopage.php"> Qui sommes nous? </a>
@@ -35,7 +36,7 @@
 						Visionnez son CV.
 					</p>
 				</div>
-				<div id="divwrapper">
+				<div id="divwrapper">         <!-- The div that will contain all the wrappers-->
 				</div>
 				
 			</div>

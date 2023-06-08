@@ -2,24 +2,25 @@
 <html lang="fr">
 	<head>
 		<title>Login - Jeunes 6.4</title>
+        <!--	Login page	-->
 	</head>
 	<body>
 		<link type="text/css" rel="stylesheet" href="login.css" />
 		
-		<div class="whole">
-			<div class="head">
+		<div class="whole">			<!--	Container for the whole page	-->
+			<div class="head">			<!--	Header	-->
 				<img class="fitimg" src="./logos/logo1.png" alt="Jeunes 6.4" />
 				<p class="headtext2">LOGIN</p>
 			</div>
 
-			<div class="bodybg">
+			<div class="bodybg">			<!--	Main body	-->
 
 				<div class="texttop">
 					<p>
 						Connectez vous à votre compte
 					</p>
 				</div>
-                <div class="login">
+                <div class="login">			<!--	Login form	-->
                     <form method="post" action="verificationConnexion.php">
             
                         <table class="login2">
@@ -41,7 +42,7 @@
 
                 <div class="textbot">
                     <p>Pas encore de compte ?</p>
-                    <p>Créez un compte <a href="creation.php">ici</a></p>
+                    <p>Créez un compte <a href="creation.php">ici</a></p>			<!--	Link to account creation page	-->
                 </div>
 			</div>
 		</div>

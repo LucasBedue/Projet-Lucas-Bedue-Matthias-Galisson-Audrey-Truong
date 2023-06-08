@@ -1,26 +1,28 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head>
-    <?php
-        session_start();
+        <title>Expérience validée ( Jeune ) - Jeunes 6.4</title>
+        <?php
+            session_start();
 
-        if (!isset($_SESSION['role']) || $_SESSION['role'] !== "Jeune") {
-            echo '<script>alert("Veuillez vous connecter en tant que compte Jeune pour accéder à cette page.");</script>';
-            echo '<script>window.location.href = "login.php";</script>';
-            exit();
-        }
-    ?>
+            if (!isset($_SESSION['role']) || $_SESSION['role'] !== "Jeune") {
+                echo '<script>alert("Veuillez vous connecter en tant que compte Jeune pour accéder à cette page.");</script>';
+                echo '<script>window.location.href = "login.php";</script>';
+                exit();
+            }
+        ?>
     </head>
     <body>
         <link type="text/css" rel="stylesheet" href="Experiencevalide.css" />
-        <div class="whole">
-			<div class="head">
+
+        <div class="whole">			<!--	Container for the whole page	-->
+			<div class="head">			<!--	Header	-->
 				<img class="fitimg" src="./logos/logo1.png" alt="Jeunes 6.4" />
 				<p class="headtext2">JEUNE</p>
 			</div>
 
-			<div class="bodybg">
-                <div class="tab">
+			<div class="bodybg">			<!--	Main body	-->
+                <div class="tab">				<!--	Menu	-->
                     <div class="tabb">
                         <p class="tabbox1">
                             <a class="link" href="./infopage.php">Qui sommes nous?</a>
@@ -39,7 +41,7 @@
 				<div class="texttop">
 					
                     <p>Votre expérience a été envoyé avec succès!</p>
-                    <a class="valid" href="./profiljeune.php">Voir la liste de ces expériences</a>
+                    <a class="valid" href="./profiljeune.php">Voir la liste de ces expériences</a>				<!--	Link to the profile page with all the experiences	-->
 					
 				</div>
 

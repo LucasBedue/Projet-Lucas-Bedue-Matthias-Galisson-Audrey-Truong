@@ -2,6 +2,7 @@
 <html lang="fr">
 	<head>
 		<title>Jeune - Jeunes 6.4</title>
+		<!--	Profile page for the "Jeune" to contain all his past experiences	-->
 		<script>
 			<?php
 session_start();
@@ -19,15 +20,15 @@ if (!isset($_SESSION['role']) || $_SESSION['role'] !== "Jeune") {
 	<body>
 		<link rel="stylesheet" href="profiljeune.css" />
 
-		<div class="whole">
-			<div class="head">
+		<div class="whole">			<!--	Container for the whole page	-->
+			<div class="head">			<!--	Header	-->
 				<img class="fitimg" src="./logos/logo1.png" alt="Jeunes 6.4" />
 				<p class="headtext2">JEUNE</p>
 				<p class="headtext">Je donne de la valeur à mon engagement</p>
 			</div>
 
-			<div class="bodybg">
-				<div class="tab">
+			<div class="bodybg">			<!--	Main body	-->
+				<div class="tab">				<!--	Menu	-->
 					<div class="tabb">
 						<p class="tabbox1">
 							<a class="link" href="./infopage.php">
@@ -47,9 +48,9 @@ if (!isset($_SESSION['role']) || $_SESSION['role'] !== "Jeune") {
 						Retrouvez toutes vos expériences passées ou ajoutez en une nouvelle.
 					</p>
 				</div>
-                <div name="divwrapper" id="divwrapper">
-                </div><!-- The div contain all the wrappers-->
-                
+                <div name="divwrapper" id="divwrapper">         <!-- The div that will contain all the wrappers-->
+                </div>
+
 		</div>
         <script type="text/javascript">
             

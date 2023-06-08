@@ -1,26 +1,26 @@
 <!DOCTYPE html>
 <html lang="fr">
 	<head>
-		<title>Login - Jeunes 6.4</title>
+		<title>Création de compte - Jeunes 6.4</title>
 	</head>
 
 	<body>
 		<link type="text/css" rel="stylesheet" href="creation.css" />
 		
-		<div class="whole">
-			<div class="head">
+		<div class="whole">			<!--	Container for the whole page	-->
+			<div class="head">			<!--	Header	-->
 				<img class="fitimg" src="./logos/logo1.png" alt="Jeunes 6.4" />
 				<p class="headtext2">CRÉATION</p>
 			</div>
 
-			<div class="bodybg">
+			<div class="bodybg">			<!--	Main body	-->
 
 				<div class="texttop">
 					<p>
 						Créez un compte
 					</p>
 				</div>
-                <div class="login2">
+                <div class="login2">			<!--	Form	-->
                     <form action="Signin.php" method="post">
                         <label for="nom">Nom :</label>
                         <input type="text" name="nom" id="nom" required><br>
@@ -50,7 +50,7 @@
 
                 <div class="textbot">
                     <p>Vous avez déja un compte</p>
-                    <p>Connectez-vous <a href="login.php">ici</a></p>
+                    <p>Connectez-vous <a href="login.php">ici</a></p>			<!--	Link to login page	-->
                 </div>
 			</div>
 		</div>

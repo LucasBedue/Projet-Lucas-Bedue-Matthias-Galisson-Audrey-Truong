@@ -1,36 +1,37 @@
 <!DOCTYPE html>
 <html lang="fr">
 	<head>
-		<title>Referent - Jeunes 6.4</title>
+		<title>Référent - Jeunes 6.4</title>
+		<!--	Page for the "Référent"		-->
 		<script type="text/javascript">
-	function checkLesBox(macheckBox) {
-		var listeInput = document.querySelectorAll('.ch'); // Sélectionne tous les éléments avec la classe "ch"
-		var nbCheckBoxChecked = 0;
-		for (var i = 0; i < listeInput.length; i++) {
-			if (listeInput[i].type === "checkbox" && listeInput[i].checked) {
-				nbCheckBoxChecked++;
+			function checkLesBox(macheckBox) {
+				var listeInput = document.querySelectorAll('.ch'); // Sélectionne tous les éléments avec la classe "ch"
+				var nbCheckBoxChecked = 0;
+				for (var i = 0; i < listeInput.length; i++) {
+					if (listeInput[i].type === "checkbox" && listeInput[i].checked) {
+						nbCheckBoxChecked++;
+					}
+				}
+				if (nbCheckBoxChecked > 4) {
+					alert("Vous ne pouvez cocher que 4 cases");
+					macheckBox.checked = false;
+				}
 			}
-		}
-		if (nbCheckBoxChecked > 4) {
-			alert("Vous ne pouvez cocher que 4 cases");
-			macheckBox.checked = false;
-		}
-	}
-</script>
+		</script>
 
 	</head>
 	<body>
 		<link rel="stylesheet" href="refpage.css" />
 
-		<div class="whole">
-			<div class="head">
+		<div class="whole">			<!--	Container for the whole page	-->
+			<div class="head">			<!--	Header	-->
 				<img class="fitimg" src="./logos/logo1.png" alt="Jeunes 6.4" />
 				<p class="headtext2">RÉFÉRENT</p>
 				<p class="headtext">Je confirme la valeur de ton engagement</p>
 			</div>
 
-			<div class="bodybg">
-				<div class="tab">
+			<div class="bodybg">			<!--	Main body	-->
+				<div class="tab">				<!--	Menu	-->
 					<div class="tabb">
 						<p class="tabbox1">
 							<a class="link" href="./infopage.php"> Qui sommes nous? </a>
@@ -46,8 +47,8 @@
 						constater au contact de ce jeune.
 					</p>
 				</div>
-				<div class="outerbox">
-					<div class="box2">
+				<div class="outerbox">			<!--	Container for the different elements specific to this page	-->
+					<div class="box2">			<!--	Right box (comments)	-->
 						<div class="box21">
 							<p>COMMENTAIRES</p>
 						</div>
@@ -58,7 +59,7 @@
 						</div>
 					</div>
 					
-					<div class="box">
+					<div class="box">			<!--	Center box (form)	-->
 							<label for="nom">NOM :</label>
 							<input type="text" id="nom" name="nom" required/>
 						</br>
@@ -83,7 +84,7 @@
 							</div>
 					</div>
 					
-					<div class="box1">
+					<div class="box1">			<!--	Right box (qualities checkboxes)	-->
 						<div class="box10"><p>SES SAVOIRS ETRE</p></div>
 
 						<div class="box11"><p>Je confirme sa (son)*</p></div>
