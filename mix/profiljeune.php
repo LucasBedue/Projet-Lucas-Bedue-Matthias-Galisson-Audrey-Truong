@@ -140,35 +140,56 @@ if (!isset($_SESSION['role']) || $_SESSION['role'] !== "Jeune") {
                             box2.appendChild(box22);
                             validbox.appendChild(box2);
 
-                            valid1 = document.createElement("div"); 
-                            valid1.className='valid';
+                            form1=document.createElement("form"); 
+                            form1.name="form1";
+                            form1.action="modifierexp.php";
+                            form1.method="POST";
+                            validbox.appendChild(form1);
 
-                            valid1.innerHTML +='<form action="./modifierexp.php" method="post">';
+                            form2=document.createElement("form"); 
+                            form2.name="form2";
+                            form2.action="retirerexp.php";
+                            form2.method="POST";
+                            validbox.appendChild(form2);
 
-                            modif=document.createElement("div"); 
-                            modif.style="display:none";
-                            modif.innerHTML +='<input type="text" name="indice" value="'+indi+'" visibility="hidden">';
-                            valid1.appendChild(modif);
 
-                            valid1.innerHTML +='<button type="submit" class="valid" >Modifier cette expérience</a>';
-                            valid1.innerHTML +='</form>';
-                    
+                            divcach1=document.createElement("div"); 
+                            divcach1.style="display:none";
+                            form1.appendChild(divcach1);
 
-                            valid2 = document.createElement("div"); 
-                            valid2.className='valid';
+                            divcach2=document.createElement("div"); 
+                            divcach2.style="display:none";
+                            form2.appendChild(divcach2);
 
-                            valid2.innerHTML +='<form action="./retirerexp.php" method="post">';
 
-                            retire=document.createElement("div"); 
-                            retire.style="display:none";
-                            retire.innerHTML +='<input type="text" name="indice" value="'+indi+'" visibility="hidden">';
-                            valid2.appendChild(retire);
+                            textcach1=document.createElement("input"); 
+                            textcach1.type="text";
+                            textcach1.name="indice1";
+                            textcach1.value=indi;
+                            divcach1.appendChild(textcach1);
 
-                            valid2.innerHTML +='<button type="submit" class="valid" >Retirer cette expérience</a>';
-                            valid2.innerHTML +='</form>';
+                            textcach2=document.createElement("input"); 
+                            textcach2.type="text";
+                            textcach2.name="indice2";
+                            textcach2.value=indi;
+                            divcach2.appendChild(textcach2);
 
-                            validbox.appendChild(valid1);
-                            validbox.appendChild(valid2);
+                            submit1=document.createElement("input"); 
+                            submit1.type="submit";
+                            submit1.className="valid";
+                            submit1.name="modifier";
+                            submit1.value="Modifier cette expérience";
+                            form1.appendChild(submit1);
+
+                            submit2=document.createElement("input"); 
+                            submit2.type="submit";
+                            submit2.className="valid";
+                            submit2.name="retirer";
+                            submit2.value="Retirer cette expérience";
+                            form2.appendChild(submit2);
+
+
+                            
 
                             if(!document.getElementById('CVsend')){//create only one rightbox
                                 CVsend = document.createElement("div"); 

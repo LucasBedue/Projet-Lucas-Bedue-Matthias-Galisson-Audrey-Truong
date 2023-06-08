@@ -32,7 +32,7 @@ if(isset($_POST["send"])){
 		//Content
 		$email->isHTML(true);
 		
-		$email->Subject = "Un jeune vous envoi son CV!";
+		$email->Subject = "Un jeune vous envoie son CV!";
 		$email->Body="Bonjour,\nUn jeune veut partager son CV avec vous. Cliquez sur cet URL :\n http://localhost/test/Projet-Lucas-Bedue-Matthias-Galisson-Audrey-Truong-main/mix/consultantpage.php?q1="."$mailjeune";
 	
 		$email->send();
