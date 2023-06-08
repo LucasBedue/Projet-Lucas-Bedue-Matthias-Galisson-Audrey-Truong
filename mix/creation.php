@@ -37,12 +37,11 @@
                         <label for="mdp">Mot de passe :</label>
                         <input type="password" name="mdp" id="mdp" required><br>
                 
+                        <div style=display:none>
                         <label for="role">Vous êtes :</label>
-                        <select name="role" id="role" required>
-                            <option value="Jeune">Jeune</option>
-                            
-                            <option value="Consultant">Consultant</option>
+                        <input type="text" id="Jeune" name="role" value="Jeune">
                         </select><br>
+                        </div>
                             
                         <input type="submit" value="Créer le compte">
                     </form>
