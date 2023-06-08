@@ -46,7 +46,7 @@ if (!isset($_SESSION['role']) || $_SESSION['role'] !== "Jeune") {
 				<div class="texttop">
 					<p>
 						Retrouvez toutes vos expériences passées ou ajoutez en une nouvelle.
-					</p><br><div class="download-button"><!--This button download the CV -->
+					</p><br><div id="download-button" class="download-button"><!--This button download the CV -->
                                 <button onclick="downloadPDF()">Télécharger le CV</button>
                             </div>
 				</div>
@@ -62,17 +62,20 @@ if (!isset($_SESSION['role']) || $_SESSION['role'] !== "Jeune") {
             // Récupérer le contenu de tous les éléments avec les classes "box" et "box1"
             var boxContents = document.getElementsByClassName('box');
             var box1Contents = document.getElementsByClassName('box1');
+            var box22Contents = document.getElementsByClassName('box22');
 
             //on rassemble tout
             var pdfContent = '';
 
             var maxLength = Math.max(boxContents.length, box1Contents.length);
             for (var i = 0; i < maxLength; i++) {
+                if(box22Contents[i].innerHTML=='a été validée'){
                 if (i < boxContents.length) {
                     pdfContent += boxContents[i].innerHTML + '\n';
                 }
                 if (i < box1Contents.length) {
                     pdfContent += box1Contents[i].innerHTML + '\n';
+                }
                 }
             }
 
@@ -269,6 +272,9 @@ if (!isset($_SESSION['role']) || $_SESSION['role'] !== "Jeune") {
                 rightbox.id='rightbox';
                 rightbox.innerHTML +='<a class="valid" href="./jeunespage.php">Ajouter une expérience</a>';
                 thediv.appendChild(rightbox);
+
+                var divdl = document.getElementById("download-button");
+                divdl.style="display:none";
 
                 
             };
