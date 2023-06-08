@@ -48,15 +48,9 @@ if (!isset($_SESSION['role']) || $_SESSION['role'] !== "Jeune") {
                 
                 <div class="texttop">
 					<p>
-						Ecrivez l'adresse mail du consultant pour qu'il recoive votre CV.
+						Problème avec l'envoi du mail.
 					</p>
-                    <div>
-                    <form name="form1" method="post" action="envoiCVtraitement.php">
-                            
-							<input type="text" id="mail" name="mail" required/>
-                            <input type="submit"  name="send" value="Valider">
-                    </form>
-                </div>
+                   
 				</div>
 
             </div>
