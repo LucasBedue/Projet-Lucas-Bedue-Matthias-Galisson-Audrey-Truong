@@ -143,13 +143,29 @@ if (!isset($_SESSION['role']) || $_SESSION['role'] !== "Jeune") {
                             valid1 = document.createElement("div"); 
                             valid1.className='valid';
 
-                            valid1.innerHTML +='Modifier cette expérience';
+                            valid1.innerHTML +='<form action="./modifierexp.php" method="post">';
+
+                            modif=document.createElement("div"); 
+                            modif.style="display:none";
+                            modif.innerHTML +='<input type="text" name="indice" value="'+indi+'" visibility="hidden">';
+                            valid1.appendChild(modif);
+
+                            valid1.innerHTML +='<button type="submit" class="valid" >Modifier cette expérience</a>';
+                            valid1.innerHTML +='</form>';
                     
 
                             valid2 = document.createElement("div"); 
                             valid2.className='valid';
 
-                            valid2.innerHTML +='Retirer cette expérience'; 
+                            valid2.innerHTML +='<form action="./retirerexp.php" method="post">';
+
+                            retire=document.createElement("div"); 
+                            retire.style="display:none";
+                            retire.innerHTML +='<input type="text" name="indice" value="'+indi+'" visibility="hidden">';
+                            valid2.appendChild(retire);
+
+                            valid2.innerHTML +='<button type="submit" class="valid" >Retirer cette expérience</a>';
+                            valid2.innerHTML +='</form>';
 
                             validbox.appendChild(valid1);
                             validbox.appendChild(valid2);

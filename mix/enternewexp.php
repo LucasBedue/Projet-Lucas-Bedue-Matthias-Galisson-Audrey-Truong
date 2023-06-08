@@ -11,7 +11,7 @@ rewind($f);
 //On rajoute notre expèrience à compléter.
 if(feof($f)){
 rewind($f);
-$txt = "0\n"; 
+$txt = "1\n"; 
 fwrite($f, $txt);// index of the experience
 fwrite($f, $txt);// 0=no verification, 1=referent verification, 2=consultant verification
 fwrite($f, $_POST['nom']."\n");
@@ -113,5 +113,5 @@ if(isset($_POST["send"])){
 	
 
 header("Location: Experiencevalide.php");
-
+exit();
 ?>
