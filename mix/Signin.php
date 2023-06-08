@@ -1,5 +1,5 @@
 <?php
-
+                                //Get all value of "creation"
 $nom = $_POST['nom'];
 $prenom = $_POST['prenom'];
 $mail = $_POST['mail'];
@@ -8,8 +8,8 @@ $mdp = $_POST['mdp'];
 $role = $_POST['role'];
 
 
-if (strpos($mail, '@') === false) {
-    echo "<p>L'adresse e-mail n'est pas valide.</p>";
+if (strpos($mail, '@') === false) {                         //set conditions to password and email
+    echo "<p>L'adresse e-mail n'est pas valide.</p>";       
     exit;
 }
 if (strpos($mdp, ';') !== false) {
@@ -21,7 +21,7 @@ if (strpos($mdp, ';') !== false) {
 $fichier = fopen('infopers.txt', 'r+');
 
 
-while(!feof($fichier)) {
+while(!feof($fichier)) {                                        //check if the address is not already in use
     $line = fgets($fichier);
     $values = explode(";", $line);
     $mail_fichier = isset($values[3]) ? trim($values[3]) : null;
@@ -35,7 +35,7 @@ while(!feof($fichier)) {
 
 $fichier = fopen('infopers.txt', 'a');
 
-fwrite($fichier, $nom . ';' . $prenom . ';' . $date_naissance . ';' . $mail . ';' . $mdp . ';' . $role . ";\n");
+fwrite($fichier, $nom . ';' . $prenom . ';' . $date_naissance . ';' . $mail . ';' . $mdp . ';' . $role . ";\n");    //writes personal information to the file
 fclose($fichier);
 
 $f = fopen('./../InformationsJeunes/'.$mail,'a+');

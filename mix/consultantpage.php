@@ -3,7 +3,28 @@
 	<head>
 		<title>Consultant - Jeunes 6.4</title>
 		<!--	Page for the "Consultant"		-->
-		<?php session_start(); ?>
+		<?php // Démarre ou restaure la session
+session_start();
+
+// Vérifie si le dernier temps d'activité existe dans la session
+if (isset($_SESSION['last_activity'])) {
+    // Durée d'inactivité en secondes (15 minutes = 900 secondes)
+    $inactive_duration = 900;
+
+    // Calcul du temps écoulé depuis le dernier temps d'activité
+    $elapsed_time = time() - $_SESSION['last_activity'];
+
+    // Vérifie si l'utilisateur est resté inactif pendant plus de 15 minutes
+    if ($elapsed_time > $inactive_duration) {
+        // Détruit la session
+        session_destroy();
+        
+        // Redirige l'utilisateur vers la page de déconnexion
+        header("Location: logout.php");
+        exit;
+    }
+}
+ ?>
 	</head>
 	
 
