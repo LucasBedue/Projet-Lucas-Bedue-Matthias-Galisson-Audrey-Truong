@@ -139,7 +139,7 @@
 							var box512=document.createElement('div');
                             box512.className='box512';
 							box512.innerHTML='<p>Je confirme sa (son)*</p>';
-							box55.appendChild(box502);
+							box55.appendChild(box512);
 
 							var box522=document.createElement('div');
                             box522.className='box522';
