@@ -130,11 +130,9 @@ if (!isset($_SESSION['role']) || $_SESSION['role'] !== "Jeune") {
                                 box22.innerHTML+='n&apos;a pas été validée';
                             }
                             else if(status==1){
-                                box22.innerHTML+='a été complétée';
-                            }
-                            else if(status==2){
                                 box22.innerHTML+='a été validée';
                             }
+                            
                             
 
                             box2.appendChild(box21);
@@ -155,6 +153,15 @@ if (!isset($_SESSION['role']) || $_SESSION['role'] !== "Jeune") {
                             validbox.appendChild(valid1);
                             validbox.appendChild(valid2);
 
+                            if(!document.getElementById('CVsend')){//create only one rightbox
+                                CVsend = document.createElement("div"); 
+                                CVsend.className='valid';
+                                CVsend.id='CVsend';
+                                CVsend.innerHTML +='<a class="valid" href="./envoiCV.php">Envoyer son CV a un consultant</a>';
+                                
+                                validbox.appendChild(CVsend);
+                            }
+
                             leftbox.appendChild(validbox);
 
                             wrapper.appendChild(leftbox);
@@ -165,6 +172,7 @@ if (!isset($_SESSION['role']) || $_SESSION['role'] !== "Jeune") {
                                 rightbox.className='rightbox';
                                 rightbox.id='rightbox';
                                 rightbox.innerHTML +='<a class="valid" href="./jeunespage.php">Ajouter une expérience</a>';
+                                
                                 wrapper.appendChild(rightbox);
                             }
                             
@@ -186,6 +194,7 @@ if (!isset($_SESSION['role']) || $_SESSION['role'] !== "Jeune") {
                 rightbox.innerHTML +='<a class="valid" href="./jeunespage.php">Ajouter une expérience</a>';
                 thediv.appendChild(rightbox);
 
+                
             };
 
             <?php  
