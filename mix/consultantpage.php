@@ -273,7 +273,7 @@
                             if($count>3){}
                             else{
                                 
-                                if(($txt=='')||($txt="\n")){}
+                                if($txt==''){}
                                 else{
                                     array_splice($tabvar,(8+$count),1,$txt);
                                     $count++;

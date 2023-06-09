@@ -36,7 +36,8 @@
 				echo '<script>window.location.href = "login.php";</script>';
 				exit();
 			}
-			?>
+
+            ?>
 		</script>
 		
 	
@@ -54,7 +55,12 @@
 			alert("Vous ne pouvez cocher que 4 cases");
 			macheckBox.checked = false;
 		}
-	}
+	};
+    function changethechk(texte,indexchk){
+    var listeInput = document.querySelectorAll('.ch');
+    listeInput[indexchk].checked=1;
+
+};
 </script>
 
 	</head>
@@ -170,19 +176,9 @@
 				</div>
 			</div>
 		</div>
-<script>
-
-
-
-function changethechk(texte,indexchk){
-    var listeInput = document.querySelectorAll('.ch');
-    listeInput[indexchk].checked=1;
-
-}
-
-<?php 
-header('Content-Type: text/html; charset=utf-8');
-if(!isset($_POST['indice1'])){ECHO('marchepas');}
+        <script>
+            <?php
+        if(!isset($_POST['indice1'])){ECHO('marchepas');}
 $mail = $_SESSION['mail'];
 $indice=$_POST['indice1'];
 $index=0;
@@ -252,15 +248,10 @@ for($i=0;$i<10;$i++){
    
     
 }
-echo('document.getElementById("numexp").value='.$indice.';');
+echo('document.getElementById("numexp").value='."$indice".';');
 
 fclose($f);
-?>
-
-
-
-
-
+			?>
             </script>
 		
 	</body>

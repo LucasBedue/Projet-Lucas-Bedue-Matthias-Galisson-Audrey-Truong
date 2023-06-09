@@ -148,7 +148,7 @@
 
                             box11 = document.createElement("div"); 
                             box11.className='box11';
-                            box11.innerHTML +='<p>Je suis *</p>';
+                            box11.innerHTML +='<p>Je suis</p>';
                             box1.appendChild(box11);
 
                             box12 = document.createElement("div"); 
