@@ -39,16 +39,16 @@ if (!isset($_SESSION['role']) || $_SESSION['role'] !== "Admin") {
 }
 ?>
 		</script>
-		
-
+	
 	</head>
 	<body>
-		<link type="text/css" rel="stylesheet" href="Adminpage.css" />
+		<link rel="stylesheet" href="Adminpage.css" />
 
 		<div class="whole">			<!--	Container for the whole page	-->
 			<div class="head">			<!--	Header	-->
 				<img class="fitimg" src="./logos/logo1.png" alt="Jeunes 6.4" />
 				<p class="headtext2">ADMIN</p>
+				<p class="headtext"></p>
 			</div>
 
 			<div class="bodybg">			<!--	Main body	-->
@@ -69,7 +69,66 @@ if (!isset($_SESSION['role']) || $_SESSION['role'] !== "Admin") {
 				</div>
 				<div class="texttop">
 					<p>
-						Choissisez un jeune et vérifiez son compte.
+						Choissiser un jeune et vérifier son compte
+						<?php
+							$folder = './../InformationsJeunes'; // Dossier à explorer
+
+							// Obtenir la liste des fichiers dans le dossier
+							$files = array_diff(scandir($folder), array('.', '..'));
+
+							// Tableau pour stocker les termes extraits des fichiers
+							$terms = array();
+
+							// Parcourir les fichiers et extraire les termes
+							foreach ($files as $file) {
+								$content = file($folder . '/' . $file); // Lire le contenu du fichier ligne par ligne
+
+								$term = '';
+								$lineNumber = 0;
+								$fileEnded = false;
+								$tmp=0;
+
+								// Parcourir les lignes du fichier
+								foreach ($content as $line) {
+									$line = trim($line);
+								
+									// Ignorer les fichiers terminés
+									if ($fileEnded) {
+										continue;
+									}
+								
+									// Vérifier les différentes conditions de ligne
+									if ($lineNumber == 2 + $tmp * 34) {
+										if ($line != '') {
+											$nextLine = isset($content[$lineNumber + 1]) ? trim($content[$lineNumber + 1]) : '';
+											$term .= $line . ' ' . $nextLine;
+										}
+										$tmp = $tmp + 1;
+									}
+								
+									// Vérifier si la fin du fichier est atteinte
+									if ($lineNumber == count($content) - 1) {
+										$fileEnded = true;
+									}
+								
+									// Vérifier si les termes sont récupérés
+									if (!empty($term)) {
+										$terms[] = $term;
+										break; // Sortir de la boucle dès que les termes sont récupérés
+									}
+								
+									$lineNumber++;
+								}
+							}
+							?>
+						<br>
+							<!-- Création du menu déroulant HTML -->
+							<select name="term">
+						<?php foreach ($terms as $term): ?>
+							<option value="<?php echo $term; ?>"><?php echo $term; ?></option>
+						<?php endforeach; ?>
+						</select>
+
 					</p>
 				</div>
 				
