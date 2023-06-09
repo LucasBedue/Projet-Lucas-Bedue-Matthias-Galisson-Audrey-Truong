@@ -340,10 +340,10 @@
                         array_splice($tabvar,2,1,$txt);
 
                         $count = 0;
-                        for($j = 0;$j<10;$j++){//for the "savoir-etre"
-                            if($count>4){}
+                        for($j = 0;$j<10;$j++){$txt=stream_get_line($f,0,"\n");//for the "savoir-etre"
+                            if($count>3){}
                             else{
-                                $txt=stream_get_line($f,0,"\n");
+                                
                                 if($txt==''){}
                                 else{
                                     array_splice($tabvar,(3+$count),1,$txt);

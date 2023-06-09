@@ -40,17 +40,28 @@ $indiceexp='0';
 else{
     rewind($f);
     $indiceexp=0;
-    while(!feof($f)){
-
-        for($k=0;$k<34;$k++){
-            $txt=stream_get_line($f,0,"\n");
-            
-        }
-        $indiceexp++;
-
-    }
-    $txt = "$indiceexp\n";//l'index de l'experience
-
+/////////
+	
+	while(!feof($f)){
+		
+		$txt=stream_get_line($f,0,"\n");
+		if(($txt!=0)&&($txt!='')&&($txt!='\n')){
+			$indiceexp=$txt;
+			for($k=0;$k<33;$k++){
+				$txt=stream_get_line($f,0,"\n");
+			}
+		}
+		else{
+			for($k=0;$k<33;$k++){
+				$txt=stream_get_line($f,0,"\n");
+			}
+		}
+		
+	}
+	$indiceexp++;
+///////
+    
+	$txt=$indiceexp."\n";
     fwrite($f,$txt);
 	$txt = "0\n"; 
     fwrite($f, $txt);// 0=no verification, 1=referent verification, 2=consultant verification

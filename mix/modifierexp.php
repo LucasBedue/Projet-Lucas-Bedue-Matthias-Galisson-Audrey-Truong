@@ -98,7 +98,7 @@
 						<p>&#32</p>
 					</div>
 					<div class="box">			<!--	Center box (form)	-->
-						<form name="form1" method="post" action="modofication.php">
+						<form name="form1" method="post" action="modification.php">
 							<label for="nom">NOM :</label>
 							<input type="text" id="nom" name="nom" required/>
 						</br>
@@ -119,6 +119,10 @@
 						</br>
 							<label for="duree">DUREE :</label>
 							<input type="text" id="duree" name="duree" required/>
+                            <div style="display:none">	<!-- a div to share the index -->
+							
+							<input type="text" id="numexp" name="numexp" visibility="hidden">
+							</div>
 						
 					</div>
 					<div class="box1">			<!--	Right box (qualities checkboxes)	-->
@@ -167,11 +171,12 @@
 			</div>
 		</div>
 <script>
+
+
+
 function changethechk(texte,indexchk){
     var listeInput = document.querySelectorAll('.ch');
-    if
-
-
+    listeInput[indexchk].checked=1;
 
 }
 
@@ -241,10 +246,13 @@ echo('document.getElementById("duree").value="'."$txt".'";');
 
 for($i=0;$i<10;$i++){
     $txt=stream_get_line($f,0,"\n");
-    echo('changethechk('."$txt".','.$i.');');
+    if(($txt!='')&&($txt!="\n")){
+        echo('changethechk('."$txt".','.$i.');');
+    }
+   
     
 }
-
+echo('document.getElementById("numexp").value='.$indice.';');
 
 fclose($f);
 ?>
