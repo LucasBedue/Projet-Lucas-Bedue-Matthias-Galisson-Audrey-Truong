@@ -2,15 +2,29 @@
 header('Content-Type: text/html; charset=utf-8');
 session_start();
 
+if(isset($_POST['mailjeune'])){
+    $mail = $_POST['mailjeune'];
+    $admin=1;
+}
+else{
+    $mail = $_SESSION['mail'];
+    $admin=0;
+}
 
-$mail = $_SESSION['mail'];
 $indice=$_POST['indice2'];
 
 $index=0;
 
 if(!is_readable('./../InformationsJeunes/'.$mail)){
-    header("Location: profiljeune.php");
-    exit();
+    if($admin==0){
+        header("Location: profiljeune.php");
+        exit();
+    }
+    else{
+        header("Location: Adminpage.php?fichier=".$mail);
+        exit();
+    }
+   
 }
 
 $filetext=file('./../InformationsJeunes/'.$mail);
@@ -19,8 +33,14 @@ $txt=stream_get_line($f,0,"\n");
 
 if(feof($f)){
     fclose($f);
-    header("Location: profiljeune.php");
-    exit();
+    if($admin==0){
+        header("Location: profiljeune.php");
+        exit();
+    }
+    else{
+        header("Location: Adminpage.php?fichier=".$mail);
+        exit();
+    }
 }
 rewind($f);
 
@@ -59,7 +79,13 @@ foreach($filetext as $ligne){
     fwrite($f,$ligne);
 }
 fclose($f);
-header("Location: profiljeune.php");
-exit();
+if($admin==0){
+    header("Location: profiljeune.php");
+    exit();
+}
+else{
+    header("Location: Adminpage.php?fichier=".$mail);
+    exit();
+}
 
 ?>
