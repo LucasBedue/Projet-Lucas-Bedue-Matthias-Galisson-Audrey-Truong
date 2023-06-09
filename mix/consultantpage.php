@@ -269,10 +269,11 @@
 
 						$count = 0;
                         for($j = 0;$j<10;$j++){//for the "savoir-etre"
+							$txt=stream_get_line($f,0,"\n");
                             if($count>3){}
                             else{
-                                $txt=stream_get_line($f,0,"\n");
-                                if($txt==''){}
+                                
+                                if(($txt=='')||($txt="\n")){}
                                 else{
                                     array_splice($tabvar,(8+$count),1,$txt);
                                     $count++;
@@ -297,9 +298,10 @@
 
 						$countu = 0;
                         for($b = 0;$b<8;$b++){//for the "savoir-etre"
+							$txt=stream_get_line($f,0,"\n");
                             if($countu>3){}
                             else{
-                                $txt=stream_get_line($f,0,"\n");
+                                
                                 if($txt==''){}
                                 else{
                                     array_splice($tabvar,(19+$countu),1,$txt);
