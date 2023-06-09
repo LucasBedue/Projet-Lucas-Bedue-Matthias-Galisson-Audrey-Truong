@@ -1,0 +1,109 @@
+/*   CSS of the login page   */
+
+/*   Background of the website   */
+.whole{
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    overflow: auto;
+    background: radial-gradient(
+        farthest-corner at 50% 10%,
+        white 80%,
+        rgb(149, 149, 149)
+    );
+}
+
+/********************************/
+
+/********************************/
+
+/*   Header   */
+
+.head {         /*   Header background   */
+    height: 20%;
+    position: relative;
+    background: radial-gradient(
+        farthest-corner at 20% 100%,
+        white 2%,
+        rgb(170, 170, 170) 60%
+    );
+}
+
+.headtext {     /*   Text   */
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    color: white;
+    font-family: "Lucida Sans", "Lucida Sans Regular",
+        "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana,
+        sans-serif;
+    font-size: 200%;
+    margin-right: 2%;
+}
+
+.headtext2{     /*   Title   */
+	position: absolute;
+    top: 0;
+    right: 0;
+    color: rgb(39, 39, 39);
+    font-family: "Lucida Sans", "Lucida Sans Regular",
+        "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana,
+        sans-serif;
+    font-size: 600%;
+    margin-right: 4%;
+	margin-top: 1%;
+}
+
+.fitimg {       /*  Icon  */
+    max-width: 95%;
+    max-height: 95%;
+    margin-left: 2%;
+}
+
+/********************************/
+
+/*   Body   */
+
+.bodybg {
+    height: 80%;
+    
+    font-family: "Lucida Sans", "Lucida Sans Regular",
+        "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana,
+        sans-serif;
+
+}
+
+/*------------------------------*/
+
+/*   Main body   */
+
+.texttop{       /*   Upper text   */
+    text-align: center;
+    font-size: 140%;
+    line-height: 110%;
+    padding: 1%;
+    color: rgb(39, 39, 39);
+}
+
+.login{         /*   Container for the login information   */
+    text-align: center;
+    font-size: 120%;
+}
+
+
+.login2{         /*   Container for the mail and password fields   */
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+
+}
+
+.textbot{       /*   Bottom text   */
+    text-align: center;
+    font-size: 100%;
+    line-height: 110%;
+    padding: 1%;
+    color: rgb(39, 39, 39);
+}

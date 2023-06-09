@@ -1,0 +1,255 @@
+/*   CSS of the Jeune profile page   */
+
+/*   Background of the website   */
+.whole{
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    overflow: auto;
+    background: radial-gradient(
+        farthest-corner at 50% 10%,
+        white 80%,
+        rgb(149, 149, 149)
+    );
+}
+
+/********************************/
+
+/********************************/
+
+/*   Header   */
+
+.head {         /*   Header background   */
+    height: 20%;
+    position: relative;
+    background: radial-gradient(
+        farthest-corner at 20% 100%,
+        white 2%,
+        rgb(170, 170, 170) 60%
+    );
+    font-family: "Lucida Sans", "Lucida Sans Regular",
+    "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana,
+    sans-serif;
+}
+
+.headtext {     /*   Text   */
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    color: white;
+
+    font-size: 200%;
+    margin-right: 2%;
+    margin-bottom: 1%;
+}
+
+.headtext2{     /*   Title   */
+	position: absolute;
+    top: 0;
+    right: 0;
+    color: rgb(255, 40, 201);
+    font-size: 600%;
+    margin-right: 2%;
+	margin-top: 0%;
+}
+.fitimg {       /*  Icon  */
+    max-width: 95%;
+    max-height: 95%;
+    margin-left: 2%;
+}
+
+/********************************/
+
+/*   Body   */
+
+.bodybg {
+    height: 80%;
+    font-family: "Lucida Sans", "Lucida Sans Regular",
+        "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana,
+        sans-serif;
+}
+
+a{          /*  Color of links  */
+    color: rgb(21, 9, 80);
+}
+
+/*------------------------------*/
+
+/*   Menu   */
+
+.tab {      /*   Background of the menu   */
+    width: 50%;
+    height: 50px;
+    margin: auto;
+    background: linear-gradient(
+        to right,
+        rgb(190, 190, 190),
+        rgb(246, 246, 246) 15%,
+        rgb(190, 190, 190)
+    );
+}
+
+.tabb {     /*   Container for the tabs of the menu   */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.link{      /*   To remove the underline of the links   */
+    text-decoration: none;
+}
+.tabbox1 {  /*   CSS of the individual tabs   */
+    display: table-cell;
+    width: 25%;
+    text-align: center;
+    color: rgb(21, 9, 80);
+    
+}
+.tabbox1:hover {    /*   To change the background color on hover   */
+    background-color: rgb(21, 9, 80);
+}
+.link:hover{        /*   To change the link color on hover   */
+    background-color: rgb(21, 9, 80);
+    color: white;
+    margin: 1%;
+}
+
+/*------------------------------*/
+
+/*   Main body   */
+
+.texttop{       /*   Upper text   */
+    text-align: center;
+    font-size: 140%;
+    line-height: 110%;
+    padding: 1%;
+    color: rgb(255, 40, 201);
+}
+
+.wrapper{       /*   To contain all the created divs for each experience   */
+    display: flex;
+    padding-bottom: 2%;
+}
+
+/*----------*/
+
+.leftbox{       /*   Left box container   */
+    display: flex;
+    padding-left: 3%;
+    width: 76%;
+    margin: 0px;
+}
+
+/*-----*/
+
+.box{       /*   Box with the main information from the experience   */
+    border: 5px;
+    border-color:rgb(255, 40, 201);
+    color: rgb(255, 40, 201);
+    padding: 1%;
+    border-style: solid;
+    font-size: 100%;
+    width: 70%;
+}
+
+/*-----*/
+
+.box1{      /*   Container for the checkbox part   */
+    display: grid; 
+    padding-left: 2%;
+    font-size: 100%;
+    width: 30%;
+}
+
+.box11{     /*   Upper part (title) of the checkbox container   */
+    grid-row: 2;
+    background: linear-gradient(to right, white, rgb(255, 40, 201) ) ;
+    color: white ;
+    font-size: 140%;
+    line-height: 0%;
+    height: 80%;
+    text-align: right;
+    padding-right: 2%;
+    width: 100%;
+}
+.box12{     /*   Lower part of the checkbox container   */
+    padding-top: 4%;
+    grid-row: 3;
+    padding-left: 2%;
+    background-color: rgb(247, 210, 239) ;
+    width: 100%;
+}
+
+/*-----*/
+
+.box2{      /*   Container for the valid and modify/delete divs   */
+    border: 2px;
+    border-color:rgb(255, 40, 201);
+    color: rgb(255, 40, 201);
+    border-style: solid;
+    width: 100%;
+    background: linear-gradient(to right, rgb(231, 130, 206), white ) ;
+}
+
+.box21{     /*   Upper text in the valid div   */
+    color: rgb(0, 0, 0) ;
+    font-size: 110%;
+    text-align: center;
+    width: 100%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+.box22{     /*   Lower text in the valid div   */
+    color: rgb(9, 9, 121);
+    font-size: 120%;
+    text-align: center;
+    width: 100%;
+    padding-top: 2%;
+    padding-bottom: 4%;
+}
+
+.validbox{      /*   Container for the modify/remove buttons   */
+    margin: auto;
+    width: 20%;
+    padding-left: 2%;
+}
+
+.valid{     /*   Button   */
+    background-color: rgb(255, 40, 201);
+    color: white ;
+    font-size: 90%;
+    text-align: center;
+    width: 100%;
+    margin-top: 3%;
+    margin-bottom: 3%;
+    padding-top: 4%;
+    padding-bottom: 4%;
+    text-decoration: none;
+}
+
+/*-----*/
+
+.text{      /*   Text area in "box"   */
+    font: italic 90% "Fira Sans", serif;
+    border: none;
+    border-bottom: rgb(255, 40, 201) dotted 3px;
+    width: 82%;
+    color: rgb(9, 9, 121);
+    font-size: 110%;
+}
+
+input:focus{    /*   Remove outline for inputs   */
+    outline: none;
+}
+
+/*----------*/
+
+.rightbox{      /*   Right box    */
+    display: flex;
+    margin: auto;
+    padding: 2%;
+    width: 10%;
+}
+

@@ -1,0 +1,166 @@
+/*   CSS of the partners page   */
+
+/*   Background of the website   */
+.whole{
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    overflow: auto;
+    background: radial-gradient(
+        farthest-corner at 50% 10%,
+        white 80%,
+        rgb(149, 149, 149)
+    );
+}
+
+/********************************/
+
+/********************************/
+
+/*   Header   */
+
+.head {         /*   Header background   */
+    height: 20%;
+    position: relative;
+    background: radial-gradient(
+        farthest-corner at 20% 100%,
+        white 2%,
+        rgb(170, 170, 170) 60%
+    );
+}
+
+.headtext {     /*   Text   */
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: rgb(55, 55, 55);
+    font-family: "Lucida Sans", "Lucida Sans Regular",
+        "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana,
+        sans-serif;
+    font-size: 600%;
+    margin-right: 2%;
+    margin-top: 1%;
+}
+
+.fitimg {       /*  Icon  */
+    max-width: 95%;
+    max-height: 95%;
+    margin-left: 2%;
+}
+
+/********************************/
+
+/*   Body   */
+
+.bodybg {
+    height: 80%;
+    font-family: "Lucida Sans", "Lucida Sans Regular",
+        "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana,
+        sans-serif;
+}
+
+a{          /*  Color of links  */
+    color: rgb(21, 9, 80);
+}
+
+/*------------------------------*/
+
+/*   Menu   */
+
+.tab {      /*   Background of the menu   */
+    width: 50%;
+    height: 50px;
+    margin: auto;
+    background: linear-gradient(
+        to right,
+        rgb(190, 190, 190),
+        rgb(246, 246, 246) 15%,
+        rgb(190, 190, 190)
+    );
+}
+
+.tabb {     /*   Container for the tabs of the menu   */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Lucida Sans", "Lucida Sans Regular",
+        "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana,
+        sans-serif;
+}
+
+.link{      /*   To remove the underline of the links   */
+    text-decoration: none;
+}
+
+.tabbox1 {  /*   CSS of the individual tabs   */
+    display: table-cell;
+    width: 25%;
+    text-align: center;
+    color: rgb(21, 9, 80);
+}
+
+.tabbox1:hover {    /*   To change the background color on hover   */
+    background-color: rgb(21, 9, 80);
+}
+
+.link:hover{        /*   To change the link color on hover   */
+    background-color: rgb(21, 9, 80);
+    color: white;
+    margin: 1%;
+}
+
+/*------------------------------*/
+
+/*   Main body   */
+
+.texttop{       /*   Upper text   */
+    text-align: center;
+    font-size: 130%;
+    line-height: 110%;
+    padding-top: 1%;
+    color: rgb(150, 150, 150);
+}
+
+.toptext2{      /*   Second color of the text   */
+    color: rgb(47, 0, 128);
+}
+
+.imagesgrp{     /*   Images container   */
+    margin: auto;
+    text-align: center;
+}
+
+.images{        /*   Images   */
+    padding: 2%;
+}
+
+.textbottom{    /*   Bottom text   */
+    text-align: center;
+    font-size: 130%;
+    line-height: 110%;
+    padding-bottom: 2%;
+    color: rgb(150, 150, 150);
+}
+
+/*----------*/
+
+/*   Switch for the "Connexion" and "Deconnexion" tabs   */
+
+.tmp1{
+    text-decoration: none;
+    display: none;
+}
+
+.tmp2{
+    text-decoration: none;
+    display: block;
+}
+
+.tmp1:hover{
+    color: white;
+}
+.tmp2:hover{
+    color: white;
+}

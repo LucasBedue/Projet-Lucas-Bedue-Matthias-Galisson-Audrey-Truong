@@ -1,0 +1,245 @@
+/*   CSS of the experience creation (Jeune) page   */
+
+/*   Background of the website   */
+.whole{
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    overflow: auto;
+    background: radial-gradient(
+        farthest-corner at 50% 10%,
+        white 80%,
+        rgb(149, 149, 149)
+    );
+}
+
+/********************************/
+
+/********************************/
+
+/*   Header   */
+
+.head {         /*   Header background   */
+    height: 20%;
+    position: relative;
+    background: radial-gradient(
+        farthest-corner at 20% 100%,
+        white 2%,
+        rgb(170, 170, 170) 60%
+    );
+    font-family: "Lucida Sans", "Lucida Sans Regular",
+    "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana,
+    sans-serif;
+}
+
+.headtext {     /*   Text   */
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    color: white;
+
+    font-size: 200%;
+    margin-right: 2%;
+    margin-bottom: 1%;
+}
+
+.headtext2{     /*   Title   */
+	position: absolute;
+    top: 0;
+    right: 0;
+    color: rgb(255, 40, 201);
+    font-size: 600%;
+    margin-right: 2%;
+	margin-top: 0%;
+}
+
+.fitimg {       /*  Icon  */
+    max-width: 95%;
+    max-height: 95%;
+    margin-left: 2%;
+}
+
+/********************************/
+
+/*   Body   */
+
+.bodybg {
+    height: 80%;
+    font-family: "Lucida Sans", "Lucida Sans Regular",
+        "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana,
+        sans-serif;
+
+}
+
+a{          /*  Color of links  */
+    color: rgb(21, 9, 80);
+}
+
+/*------------------------------*/
+
+/*   Menu   */
+
+.tab {      /*   Background of the menu   */
+    width: 50%;
+    height: 50px;
+    margin: auto;
+    background: linear-gradient(
+        to right,
+        rgb(190, 190, 190),
+        rgb(246, 246, 246) 15%,
+        rgb(190, 190, 190)
+    );
+}
+
+.tabb {     /*   Container for the tabs of the menu   */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.link{      /*   To remove the underline of the links   */
+    text-decoration: none;
+
+}
+
+.tabbox1 {  /*   CSS of the individual tabs   */
+    display: table-cell;
+    width: 25%;
+    text-align: center;
+    color: rgb(21, 9, 80);
+    
+}
+
+.tabbox1:hover {    /*   To change the background color on hover   */
+    background-color: rgb(21, 9, 80);
+}
+
+.link:hover{        /*   To change the link color on hover   */
+    background-color: rgb(21, 9, 80);
+    color: white;
+    margin: 1%;
+}
+
+/*------------------------------*/
+
+/*   Main body   */
+
+.texttop{       /*   Upper text   */
+    text-align: center;
+    font-size: 140%;
+    line-height: 110%;
+    padding: 1%;
+    color: rgb(255, 40, 201);
+}
+
+.outerbox{      /*   Main container   */
+    display: flex;
+    justify-content: center;
+    padding-left: 5%;
+    padding-right: 5%;
+    align-items: center;
+}
+
+/*----------*/
+
+.box{       /*   Container for the middle part of the page  (Information fields)   */
+    border: 5px;
+    border-color:rgb(255, 40, 201);
+    color: rgb(255, 40, 201);
+    padding: 1%;
+    border-style: solid;
+    font-size: 120%;
+    width: 50%;
+    margin-left: 15% ;
+    margin-right: 15% ;
+}
+
+/*----------*/
+
+.box1{         /*   Container for the right part of the page  (Checkboxes)   */
+    display: grid; 
+    font-size: 120%;
+    width: 16%;
+}
+
+.box10{     /*   First row of the right box   */
+    grid-row: 1;
+    text-align: right;
+    margin-right: 2%;
+    font-weight: 700;
+    color: rgb(255, 40, 201) ;
+}
+
+.box11{     /*   Second row of the right box   */
+    grid-row: 2;
+    background: linear-gradient(to right, white, rgb(255, 40, 201) ) ;
+    color: white ;
+    font-size: 140%;
+    line-height: 0%;
+    text-align: right;
+    padding-right: 2%;
+}
+
+.box12{     /*   Third row of the right box   */
+    padding-top: 2%;
+    padding-bottom: 2%;
+    grid-row: 3;
+    line-height: 170%;
+    background-color: rgb(247, 210, 239) ;
+    width: 100%;
+}
+
+.box13{     /*   Fourth row of the right box   */
+    grid-row: 4;
+    bottom: 0px;
+    color: rgb(255, 40, 201) ;
+    text-align: center;
+    font-size: 80%;
+    width: 100%;
+    height: 80%;
+}
+
+.valid{     /*   Validation button   */
+    grid-row: 5;
+    background-color: rgb(255, 40, 201);
+    color: white ;
+    font-size: 130%;
+    text-align: center;
+    width: 70%;
+    margin: auto;
+    margin-bottom: 10%;
+}
+
+/*----------*/
+
+.box2{             /*   Container for the left part of the page (empty area)   */
+    display: inline-block;
+    border: 5px;
+    font-size: 120%;
+    height: 80%;
+    width: 16%;
+}
+
+/*----------*/
+
+input[type=text]{       /*   Text input area for the middle part   */
+    font: italic 90% "Fira Sans", serif;
+    border: none;
+    border-bottom: rgb(255, 40, 201) dotted 3px;
+    width: 82%;
+    color: rgb(9, 9, 121);
+}
+
+input{      /*   General inputs   */
+    font: italic 90% "Fira Sans", serif;
+    padding: 1%;
+    font-size: large;
+    border-color:rgb(255, 40, 201);
+    color: rgb(9, 9, 121);
+}
+
+input:focus{        /*   On input click   */
+    outline: none;
+}

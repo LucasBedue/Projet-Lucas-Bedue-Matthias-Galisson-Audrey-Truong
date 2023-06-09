@@ -1,0 +1,144 @@
+/*   CSS of the experience validated (Jeune) page   */
+
+/*   Background of the website   */
+.whole{
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    overflow: auto;
+    background: radial-gradient(
+        farthest-corner at 50% 10%,
+        white 80%,
+        rgb(149, 149, 149)
+    );
+}
+
+/********************************/
+
+/********************************/
+
+/*   Header   */
+
+.head {         /*   Header background   */
+    height: 20%;
+    position: relative;
+    background: radial-gradient(
+        farthest-corner at 20% 100%,
+        white 2%,
+        rgb(170, 170, 170) 60%
+    );
+    font-family: "Lucida Sans", "Lucida Sans Regular",
+    "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana,
+    sans-serif;
+}
+
+.headtext {         /*   Header text   */
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    color: white;
+    font-size: 200%;
+    margin-right: 2%;
+    margin-bottom: 1%;
+}
+
+.headtext2{     /*   Title   */
+	position: absolute;
+    top: 0;
+    right: 0;
+    color: rgb(255, 40, 201);
+    font-size: 600%;
+    margin-right: 2%;
+	margin-top: 0%;
+}
+.fitimg {       /*  Icon  */
+    max-width: 95%;
+    max-height: 95%;
+    margin-left: 2%;
+}
+
+/********************************/
+
+/*   Body   */
+
+.bodybg {
+    height: 80%;
+    font-family: "Lucida Sans", "Lucida Sans Regular",
+        "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana,
+        sans-serif;
+
+}
+
+a{          /*  Color of links  */
+    color: rgb(21, 9, 80);
+}
+
+/*------------------------------*/
+
+/*   Menu   */
+
+.tab {      /*   Background of the menu   */
+    width: 50%;
+    height: 50px;
+    margin: auto;
+    background: linear-gradient(
+        to right,
+        rgb(190, 190, 190),
+        rgb(246, 246, 246) 15%,
+        rgb(190, 190, 190)
+    );
+}
+
+.tabb {     /*   Container for the tabs of the menu   */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.link{      /*   To remove the underline of the links   */
+    text-decoration: none;
+}
+
+.tabbox1 {  /*   CSS of the individual tabs   */
+    display: table-cell;
+    width: 25%;
+    text-align: center;
+    color: rgb(21, 9, 80);
+    
+}
+.tabbox1:hover {    /*   To change the background color on hover   */
+    background-color: rgb(21, 9, 80);
+}
+.link:hover{        /*   To change the link color on hover   */
+    background-color: rgb(21, 9, 80);
+    color: white;
+    margin: 1%;
+}
+
+/*------------------------------*/
+
+/*   Main body   */
+
+.texttop{       /*   Upper text   */
+    text-align: center;
+    font-size: 140%;
+    line-height: 110%;
+    padding: 1%;
+    color: rgb(255, 40, 201);
+}
+
+.valid{         /*   Valid button   */
+    grid-row: 5;
+    background-color: rgb(255, 40, 201);
+    color: white ;
+    font-size: 110%;
+    text-align: center;
+    width: 40%;
+    margin: auto;
+    margin-bottom: 10%;
+    font-family: "Lucida Sans", "Lucida Sans Regular",
+        "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana,
+        sans-serif;
+}
