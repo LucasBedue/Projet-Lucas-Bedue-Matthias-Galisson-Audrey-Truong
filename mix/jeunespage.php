@@ -5,39 +5,38 @@
 		<!--	Page for the "Jeune" to create the profile of his experience		-->
 		<script>
 			
-			<?php
-// Démarre ou restaure la session
-session_start();
+			<?php // To start or restore the session
+			session_start();
 
-// Vérifie si le dernier temps d'activité existe dans la session
-if (isset($_SESSION['last_activity'])) {
-    // Durée d'inactivité en secondes (15 minutes = 900 secondes)
-    $inactive_duration = 900;
+			// To check if the last activity timestamp exists in the session
+			if (isset($_SESSION['last_activity'])) {
+				// Inactivity time in seconds (15 minutes = 900 seconds)
+				$inactive_duration = 900;
 
-    // Calcul du temps écoulé depuis le dernier temps d'activité
-    $elapsed_time = time() - $_SESSION['last_activity'];
+				// Time count since last activity
+				$elapsed_time = time() - $_SESSION['last_activity'];
 
-    // Vérifie si l'utilisateur est resté inactif pendant plus de 15 minutes
-    if ($elapsed_time > $inactive_duration) {
-        // Détruit la session
-        session_destroy();
-        
-        // Redirige l'utilisateur vers la page de déconnexion
-        header("Location: logout.php");
-        exit;
-    }
-}
+				// Check if user has been inactive for more than 15 minutes
+				if ($elapsed_time > $inactive_duration) {
+					// Destroys the session
+					session_destroy();
+					
+					// Redirects the user to the logout page
+					header("Location: logout.php");
+					exit;
+				}
+			}
 
-// Enregistre le timestamp actuel dans la session
-$_SESSION['last_activity'] = time();
+			// Records the current amount of time in the session
+			$_SESSION['last_activity'] = time();
 
 
-if (!isset($_SESSION['role']) || $_SESSION['role'] !== "Jeune") {
-    echo '<script>alert("Veuillez vous connecter en tant que compte Jeune pour accéder à cette page.");</script>';
-    echo '<script>window.location.href = "login.php";</script>';
-    exit();
-}
-?>
+			if (!isset($_SESSION['role']) || $_SESSION['role'] !== "Jeune") {
+				echo '<script>alert("Veuillez vous connecter en tant que compte Jeune pour accéder à cette page.");</script>';
+				echo '<script>window.location.href = "login.php";</script>';
+				exit();
+			}
+			?>
 		</script>
 		
 	

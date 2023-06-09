@@ -3,28 +3,28 @@
 	<head>
 		<title>Référent - Jeunes 6.4</title>
 		<!--	Page for the "Référent"		-->
-		<?php // Démarre ou restaure la session
-session_start();
+		<?php // To start or restore the session
+			session_start();
 
-// Vérifie si le dernier temps d'activité existe dans la session
-if (isset($_SESSION['last_activity'])) {
-    // Durée d'inactivité en secondes (15 minutes = 900 secondes)
-    $inactive_duration = 900;
+			// To check if the last activity timestamp exists in the session
+			if (isset($_SESSION['last_activity'])) {
+				// Inactivity time in seconds (15 minutes = 900 seconds)
+				$inactive_duration = 900;
 
-    // Calcul du temps écoulé depuis le dernier temps d'activité
-    $elapsed_time = time() - $_SESSION['last_activity'];
+				// Time count since last activity
+				$elapsed_time = time() - $_SESSION['last_activity'];
 
-    // Vérifie si l'utilisateur est resté inactif pendant plus de 15 minutes
-    if ($elapsed_time > $inactive_duration) {
-        // Détruit la session
-        session_destroy();
-        
-        // Redirige l'utilisateur vers la page de déconnexion
-        header("Location: logout.php");
-        exit;
-    }
-}
- ?>
+				// Check if user has been inactive for more than 15 minutes
+				if ($elapsed_time > $inactive_duration) {
+					// Destroys the session
+					session_destroy();
+					
+					// Redirects the user to the logout page
+					header("Location: logout.php");
+					exit;
+				}
+			}
+ 		?>
 		<script type="text/javascript">
 			function checkLesBox(macheckBox) {
 				var listeInput = document.querySelectorAll('.ch'); // Sélectionne tous les éléments avec la classe "ch"
