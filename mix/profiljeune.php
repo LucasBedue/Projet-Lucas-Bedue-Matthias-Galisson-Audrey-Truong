@@ -256,14 +256,7 @@
 
                             
 
-                            if(!document.getElementById('CVsend')){//create only one rightbox
-                                CVsend = document.createElement("div"); 
-                                CVsend.className='valid';
-                                CVsend.id='CVsend';
-                                CVsend.innerHTML +='<a class="valid" href="./envoiCV.php">Envoyer son CV a un consultant</a>';
-                                
-                                validbox.appendChild(CVsend);
-                            }
+                            
 
                             leftbox.appendChild(validbox);
 
@@ -277,7 +270,19 @@
                                 rightbox.innerHTML +='<a class="valid" href="./jeunespage.php">Ajouter une expérience</a>';
                                 
                                 wrapper.appendChild(rightbox);
+
+                           
+
+                                CVsend = document.createElement("div"); 
+                                CVsend.className='rightbox';
+                                CVsend.id='CVsend';
+                                CVsend.innerHTML +='<a class="valid" href="./envoiCV.php">Envoyer son CV a un consultant</a>';
+                                
+                                container.appendChild(CVsend);
+
+
                             }
+                            
                             
                             
                             container.appendChild(wrapper);
@@ -302,6 +307,8 @@
 
                 
             };
+
+          
 
             <?php  
                 //We search the number of experiences
