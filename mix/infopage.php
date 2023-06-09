@@ -46,8 +46,6 @@
                         </p>
 						<p class="tabbox1">
 						<?php						
-							session_start();
-
 							if (!isset($_SESSION['role'])) {						
 								echo '<a class="tmp1" href="logout.php">Déconnexion</a>';
 								echo '<a class="tmp2" href="login.php">Connexion</a>';
