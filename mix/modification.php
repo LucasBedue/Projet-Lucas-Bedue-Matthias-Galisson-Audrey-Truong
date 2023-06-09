@@ -60,7 +60,7 @@ $filetext[$index+2]=$_POST['dob']."\n";
 $filetext[$index+3]=$_POST['mail']."\n";
 $filetext[$index+4]=$_POST['social']."\n";
 
-$filetext[$index+5]=$_POST['presentation']."\n";
+$filetext[$index+5]=$_POST['engagement']."\n";
 $filetext[$index+6]=$_POST['duree']."\n";
 
 $filetext[$index+7]=isset($_POST['autonome']) ? $_POST['autonome']."\n" : "\n";
