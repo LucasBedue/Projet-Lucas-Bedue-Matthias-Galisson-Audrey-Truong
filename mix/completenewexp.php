@@ -21,13 +21,30 @@ if(feof($f)){
 }
 rewind($f);
 
-for($i=1;$i<$numexp;$i++){
-    for($j=0;$j<34;$j++){
-        $index++;
+
+
+$bool=0;
+while((!feof($f))&&($bool==0)){
+    
+    $txt=stream_get_line($f,0,"\n");
+    if($txt!=$numexp){
+        
+        
+        for($j=0;$j<34;$j++){
+            $index++;
+        }
+        for($k=0;$k<33;$k++){
+            $txt=stream_get_line($f,0,"\n");
+        }
+        
+    }
+    else{
+        $bool=1;
+        
     }
 }
 
-if(count($filetext)<=($index+1)){
+if($bool==0){
     fclose($f);
     header("Location: Experiencefromrefinvalide.php");
     exit();
@@ -53,17 +70,20 @@ $filetext[$index+2]=$_POST['dob']."\n";
 $filetext[$index+3]=$_POST['social']."\n";
 $filetext[$index+4]=$_POST['presentation']."\n";
 $filetext[$index+5]=$_POST['duree']."\n";
-$filetext[$index+6]=$_POST['comms']."\n";
-$filetext[$index+7]=$_POST['confiance']."\n";
-$filetext[$index+8]=$_POST['bienveillance']."\n";
-$filetext[$index+9]=$_POST['respect']."\n";
-$filetext[$index+10]=$_POST['honnetete']."\n";
-$filetext[$index+11]=$_POST['tolerance']."\n";
-$filetext[$index+12]=$_POST['juste']."\n";
-$filetext[$index+13]=$_POST['impartial']."\n";
-$filetext[$index+14]=$_POST['travail']."\n";
+$filetext[$index+6]=isset($_POST['comms']) ? $_POST['comms']."\n" : "\n";
+$filetext[$index+7]=isset($_POST['confiance']) ? $_POST['confiance']."\n" : "\n";
+$filetext[$index+8]=isset($_POST['bienveillance']) ? $_POST['bienveillance']."\n" : "\n";
+$filetext[$index+9]=isset($_POST['respect']) ? $_POST['respect']."\n" : "\n";
+$filetext[$index+10]=isset($_POST['honnetete']) ? $_POST['honnetete']."\n" : "\n";
+$filetext[$index+11]=isset($_POST['tolerance']) ? $_POST['tolerance']."\n" : "\n";
+$filetext[$index+12]=isset($_POST['juste']) ? $_POST['juste']."\n" : "\n";
+$filetext[$index+13]=isset($_POST['impartial']) ? $_POST['impartial']."\n" : "\n";
+$filetext[$index+14]=isset($_POST['travail']) ? $_POST['travail']."\n" : "\n";
 
-
+rewind($f);
+fclose($f);
+$f = fopen('./../InformationsJeunes/'.$mail,'w+');
+rewind($f);
 foreach($filetext as $ligne){
     fwrite($f,$ligne);
 }
