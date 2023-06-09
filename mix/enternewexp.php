@@ -13,6 +13,7 @@ if(feof($f)){
 rewind($f);
 $txt = "1\n"; 
 fwrite($f, $txt);// index of the experience
+$txt = "0\n"; 
 fwrite($f, $txt);// 0=no verification, 1=referent verification, 2=consultant verification
 fwrite($f, $_POST['nom']."\n");
 fwrite($f, $_POST['prenom']."\n");
