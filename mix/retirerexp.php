@@ -23,7 +23,7 @@ if(feof($f)){
     exit();
 }
 rewind($f);
-echo('lol');
+
 
 $bool=0;
 while((!feof($f))&&($bool==0)){
