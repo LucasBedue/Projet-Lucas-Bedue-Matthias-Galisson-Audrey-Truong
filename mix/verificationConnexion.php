@@ -32,7 +32,7 @@
                 header("Location: jeunespage.php");
                 exit();
             } else {
-                header("Location: admin.php");
+                header("Location: Adminpage.php");
                 exit();
             }
         } 
