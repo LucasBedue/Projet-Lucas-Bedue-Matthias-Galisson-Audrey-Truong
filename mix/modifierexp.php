@@ -2,13 +2,12 @@
 header('Content-Type: text/html; charset=utf-8');
 session_start();
 if(!isset($_POST['indice1'])){ECHO('marchepas');}
-echo($_POST['indice1']);
 
-/*
 $mail = $_SESSION['mail'];
-$indice=$_POST['indice'];
+$indice=$_POST['indice1'];
 $index=0;
 
+/*
 if(!is_readable('./../InformationsJeunes/'.$mail)){
     header("Location: profiljeune.php");
     exit();
@@ -44,7 +43,7 @@ while((!feof($f))||($bool=0)){
     }
 }
 */
-ECHO('modifier'.$indice1);
+ECHO('modifier'.$indice);
 
 //header("Location: profiljeune.php");
 //exit();
