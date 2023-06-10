@@ -36,15 +36,15 @@
 		}
 		?>
 
-		// Script JavaScript pour la redirection
+		// Script JavaScript for the redirection
 		function redirectToProfile(event) {
-			event.preventDefault(); // Empêche la soumission du formulaire par défaut
+			event.preventDefault(); // Prevent the sending of the default form
 
-			// Obtient la valeur sélectionnée du menu déroulant
+			// Get the value for the option button
 			var selectElement = document.getElementsByName('term')[0];
 			var selectedTerm = selectElement.value;
 
-			// Redirige vers la page profil.php avec le nom de fichier en tant que paramètre dans l'URL
+			// Sen back the user on the same page with the new parameter in the URL
 			window.location.href = "Adminpage.php?fichier=" + selectedTerm;
 		}
 	</script>
@@ -76,37 +76,37 @@
 			</div>
 		</div>
 		<div class="texttop">
-			<form onsubmit="redirectToProfile(event)"> <!-- Appelle la fonction JavaScript lors de la soumission du formulaire -->
+			<form onsubmit="redirectToProfile(event)"> <!-- Call the JS when the button is hit -->
 				<p>
 					Choisissez un jeune et vérifiez son compte<br>
 					<?php
-					$folder = './../InformationsJeunes'; // Dossier à explorer
+					$folder = './../InformationsJeunes'; // Folder to explore
 
-					// Obtenir la liste des fichiers dans le dossier
+					// Get the list of all the files names 
 					$files = array_diff(scandir($folder), array('.', '..'));
 
-					// Tableau pour stocker les termes extraits des fichiers
+					// a tab to stock them all
 					$terms = array();
 
-					// Parcourir les fichiers et extraire les termes
+					// Get termes out of the files
 					foreach ($files as $file) {
-						$content = file($folder . '/' . $file); // Lire le contenu du fichier ligne par ligne
+						$content = file($folder . '/' . $file); // read the contenu line per line
 
 						$term = '';
 						$lineNumber = 0;
 						$fileEnded = false;
 						$tmp = 0;
 
-						// Parcourir les lignes du fichier
+						// Go through line of the files
 						foreach ($content as $line) {
 							$line = trim($line);
 
-							// Ignorer les fichiers terminés
+							// Ignor ended files
 							if ($fileEnded) {
 								continue;
 							}
 
-							// Vérifier les différentes conditions de ligne
+							// Verifie conditions of the line
 							if ($lineNumber == 2 + $tmp * 34) {
 								if ($line != '') {
 									$nextLine = isset($content[$lineNumber + 1]) ? trim($content[$lineNumber + 1]) : '';
@@ -115,15 +115,15 @@
 								$tmp = $tmp + 1;
 							}
 
-							// Vérifier si la fin du fichier est atteinte
+							// Verifie if the EOF is reached
 							if ($lineNumber == count($content) - 1) {
 								$fileEnded = true;
 							}
 
-							// Vérifier si les termes sont récupérés
+							// Verifie if terms are got
 							if (!empty($term)) {
 								$terms[] = $term;
-								break; // Sortir de la boucle dès que les termes sont récupérés
+								break; 
 							}
 
 							$lineNumber++;
@@ -131,14 +131,14 @@
 					}
 					?>
 
-					<!-- Création du menu déroulant HTML -->
+					<!-- Creation of the menu -->
 					<select name="term">
 						<?php foreach ($files as $file): ?>
 							<option value="<?php echo $file; ?>"><?php echo $file; ?></option>
 						<?php endforeach; ?>
 					</select>
 
-					<input type="submit" value="Vérifier"> <!-- Bouton de soumission du formulaire -->
+					<input type="submit" value="Vérifier"> <!-- Button to send the form -->
 				</p>
 			</form>
 		</div>
@@ -152,32 +152,31 @@
 </div>
 <script type="text/javascript">
 
-	function createthesupprbutton(){
-		
-		var thediv = document.getElementById("divwrapper");
-		
+	function createthesupprbutton(){//Function that create the "Supprimer un compte" button
+							//All the variable
+							var thediv = document.getElementById("divwrapper");
 							var nomurl=window.location.href;
 							var url=new URL(nomurl);
 							var mailjeune=url.searchParams.get("fichier");
 
-							var formsupprescompte=document.createElement('form');
+							var formsupprescompte=document.createElement('form');//The form
 								formsupprescompte.action="supprimercompte.php";
 								formsupprescompte.method="POST";
 								formsupprescompte.name="formsupprescompte";
 								thediv.appendChild(formsupprescompte);
 
-								divcachsuppr=document.createElement('div'); 
+								divcachsuppr=document.createElement('div'); //To hide the text
                             	divcachsuppr.style="display:none";
                             	formsupprescompte.appendChild(divcachsuppr);
 
-								textcachsuppr=document.createElement('input'); 
+								textcachsuppr=document.createElement('input'); //Text to send via POST the mail of the young
                             	textcachsuppr.type="text";
                             	textcachsuppr.name="textcachsuppr";
                             	textcachsuppr.value=mailjeune;
                             	divcachsuppr.appendChild(textcachsuppr);
 
 
-								var supresscomptebutton=document.createElement('input');
+								var supresscomptebutton=document.createElement('input');//The button
 								supresscomptebutton.type="submit";
 								supresscomptebutton.value="Supprimer Ce compte";
 								formsupprescompte.appendChild(supresscomptebutton);
@@ -189,7 +188,7 @@
             
             function createthebox(index,stateexp,nomj,prenomj,datej,reseauj,expj,dureej,iam1,iam2,iam3,iam4,nomref,prenomref,dateref,reseauref,expref,dureeref,commref,is1,is2,is3,is4){//function that create a box
                             
-							var thediv = document.getElementById("divwrapper");
+							var thediv = document.getElementById("divwrapper");//Variables
 							var nomurl=window.location.href;
 							var url=new URL(nomurl);
 							var mailjeune=url.searchParams.get("fichier");
@@ -226,7 +225,7 @@
 
 							var box521=document.createElement('div');
                             box521.className='box521';
-							if((iam1!='iam1')&&(iam1!='')){
+							if((iam1!='iam1')&&(iam1!='')){//All the "Mes Savoirs etre"
 								box521.innerHTML +='<input style="pointer-events:none" type="checkbox" id="'+iam1+'" name="'+iam1+'" value="'+iam1+'" checked>';
 								box521.innerHTML +='<label for="autonome"> '+iam1+'</label>';
 								box521.innerHTML +='</br>';
@@ -248,7 +247,7 @@
                             }
 							box5.appendChild(box521);
 
-							var box4=document.createElement('div');
+							var box4=document.createElement('div');//All the Youg's information
                             box4.className='box4';
 							box4.innerHTML+='<p>NOM :</p>';
 							box4.innerHTML+='<p class="text1" id="nom1" name="nom">'+nomj+'</p>';
@@ -290,7 +289,7 @@
 
 							var box522=document.createElement('div');
                             box522.className='box522';
-							if((is1!='is1')&&(is1!='')){
+							if((is1!='is1')&&(is1!='')){//All the "Ses Savoirs etre"
 								box522.innerHTML +='<input style="pointer-events:none" type="checkbox" id="'+is1+'" name="'+is1+'" value="'+is1+'" checked>';
 								box522.innerHTML +='<label for="autonome"> '+is1+'</label>';
 								box522.innerHTML +='</br>';
@@ -324,7 +323,7 @@
 							box55.appendChild(box542);
 
 							
-							var box44=document.createElement('div');
+							var box44=document.createElement('div');//All the Ref's informations
                             box44.className='box4';
 							box44.innerHTML+='<p>NOM :</p>';
 							
@@ -342,12 +341,10 @@
 							box2.appendChild(box44);
 
 							
-
+							//For the button "Retirer une expérience"////////
 							midbox=document.createElement('div');
 							midbox.style.margin="auto";
 							thediv.appendChild(midbox);
-
-							
 
 							form2=document.createElement('form'); 
                             form2.name="form2";
@@ -366,7 +363,6 @@
                             divcach2.appendChild(textcach2);
 
 							
-
 							textcach1=document.createElement('input'); 
                             textcach1.type="text";
                             textcach1.name="mailjeune";
@@ -378,7 +374,7 @@
                             submit2.name="retirer";
                             submit2.value="Retirer cette expérience";
                             form2.appendChild(submit2);
-
+							/////////////////////////////////////////////////////
 							
 							
             };
@@ -403,15 +399,16 @@
 				
                 $txt =stream_get_line($f,0,"\n");
 
-                if(feof($f)){
+                if(feof($f)){//If the file is empty
                     ECHO utf8_encode("thereisnothing();");
 					echo utf8_encode("createthesupprbutton();");
                 }
-                else{
+                else{//Else :
                   rewind($f);
 				  echo utf8_encode("createthesupprbutton();");
                     while(!feof($f)){
-                        $tabvar=array(0,0,"nomj","prenomj","datej","reseauj","expj","dureej","iam1","iam2","iam3","iam4","nomref","prenomref","dateref","reseauref","expref","dureeref","commref","is1","is2","is3","is4");
+						//the tab get all the experience's information and create a box by calling createthebox()
+                        $tabvar=array(0,0,"nomj","prenomj","datej","reseauj","expj","dureej","iam1","iam2","iam3","iam4","nomref","prenomref","dateref","reseauref","expref","dureeref","commref","is1","is2","is3","is4");//The tab that get all informations
 						$txt =stream_get_line($f,0,"\n");
 						if(feof($f)){}
 						else{
@@ -433,7 +430,7 @@
 						array_splice($tabvar,7,1,$txt);
 
 						$count = 0;
-                        for($j = 0;$j<10;$j++){//for the "savoir-etre"
+                        for($j = 0;$j<10;$j++){//for the "mes savoirs-etre"
 							$txt=stream_get_line($f,0,"\n");
                             if($count>3){}
                             else{
@@ -462,7 +459,7 @@
 						array_splice($tabvar,18,1,$txt);
 
 						$countu = 0;
-                        for($b = 0;$b<8;$b++){//for the "savoir-etre"
+                        for($b = 0;$b<8;$b++){//for the "Ses savoirs-etre"
 							$txt=stream_get_line($f,0,"\n");
                             if($countu>3){}
                             else{
@@ -475,7 +472,7 @@
                             }
                         }
 
-
+						//Call to create a box
                         ECHO utf8_encode("createthebox('".$tabvar[0]."','".$tabvar[1]."','".$tabvar[2]."','".$tabvar[3]."','".$tabvar[4]."','".$tabvar[5]."','".$tabvar[6]."','".$tabvar[7]."','".$tabvar[8]."','".$tabvar[9]."','".$tabvar[10]."','".$tabvar[11]."','".$tabvar[12]."','".$tabvar[13]."','".$tabvar[14]."','".$tabvar[15]."','".$tabvar[16]."','".$tabvar[17]."','".$tabvar[18]."','".$tabvar[19]."','".$tabvar[20]."','".$tabvar[21]."','".$tabvar[22]."');");//We create the box
                     }
 				}

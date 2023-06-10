@@ -27,7 +27,7 @@
  		?>
 		<script type="text/javascript">
 			function checkLesBox(macheckBox) {
-				var listeInput = document.querySelectorAll('.ch'); // Sélectionne tous les éléments avec la classe "ch"
+				var listeInput = document.querySelectorAll('.ch'); // Get all elements with the 'ch' class
 				var nbCheckBoxChecked = 0;
 				for (var i = 0; i < listeInput.length; i++) {
 					if (listeInput[i].type === "checkbox" && listeInput[i].checked) {
@@ -148,7 +148,7 @@
 				</div>
 			</div>
 		</div>
-		<script type="text/javascript"> 
+		<script type="text/javascript"> //To fill the secret form
 		
 		var nomurl=window.location.href;
 		var url=new URL(nomurl);

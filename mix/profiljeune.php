@@ -83,12 +83,12 @@
         <script type="text/javascript">
             
             function downloadPDF() {
-            // Récupérer le contenu de tous les éléments avec les classes "box" et "box1"
+            // Get all the content of box, bo1 and box2
             var boxContents = document.getElementsByClassName('box');
             var box1Contents = document.getElementsByClassName('box1');
             var box22Contents = document.getElementsByClassName('box22');
 
-            //on rassemble tout
+            // We gather them all
             var pdfContent = '';
 
             var maxLength = Math.max(boxContents.length, box1Contents.length);
@@ -103,12 +103,12 @@
                 }
             }
 
-            // on crée un formulaire pour le transfert
+            // We create the form for the transfert
             var form = document.createElement('form');
             form.action = 'dl_pdf.php';
             form.method = 'POST';
 
-            // Ajouter un champ caché pour contenir le contenu du PDF
+            // add an hidden field for the PDF's content
             var pdfContentField = document.createElement('input');
             pdfContentField.type = 'hidden';
             pdfContentField.name = 'pdfContent';
@@ -130,7 +130,7 @@
                             leftbox = document.createElement("div"); 
                             leftbox.className='leftbox';
 
-                            box = document.createElement("div"); 
+                            box = document.createElement("div"); // informations by the young
                             box.className='box';
 
                             box.innerHTML +='<p>Mail du référent:</p>';
@@ -154,7 +154,7 @@
                             box12 = document.createElement("div"); 
                             box12.className='box12';
                     
-                            if((iam1!='iam1')&&(iam1!='')){
+                            if((iam1!='iam1')&&(iam1!='')){//for the "mes savoirs etre"
                             box12.innerHTML +='<input style="pointer-events:none" type="checkbox" id="'+iam1+'" name="'+iam1+'" value="'+iam1+'" checked>';
                             box12.innerHTML +='<label for="autonome"> '+iam1+'</label>';
                             box12.innerHTML +='</br>';
@@ -192,7 +192,7 @@
                             box22.className='box22';
 
                             box21.innerHTML+='Cette expérience :';
-                            if(status==0){
+                            if(status==0){//Show if it was validate or not
                                 box22.innerHTML+='n&apos;a pas été validée';
                             }
                             else if(status==1){
@@ -205,13 +205,13 @@
                             box2.appendChild(box22);
                             validbox.appendChild(box2);
 
-                            form1=document.createElement("form"); 
+                            form1=document.createElement("form"); //a secret form for modifie the experience
                             form1.name="form1";
                             form1.action="modifierexp.php";
                             form1.method="POST";
                             validbox.appendChild(form1);
 
-                            form2=document.createElement("form"); 
+                            form2=document.createElement("form"); //a secret form for erase the experience
                             form2.name="form2";
                             form2.action="retirerexp.php";
                             form2.method="POST";
@@ -273,7 +273,7 @@
 
                            
 
-                                CVsend = document.createElement("div"); 
+                                CVsend = document.createElement("div"); //create the button to send the CV
                                 CVsend.className='rightbox';
                                 CVsend.id='CVsend';
                                 CVsend.innerHTML +='<a class="valid" href="./envoiCV.php">Envoyer son CV a un consultant</a>';

@@ -47,7 +47,7 @@ if (!isset($_SESSION['role']) || $_SESSION['role'] !== "Jeune") {
                 </div>
                 
                 <div class="texttop">
-					<p>
+					<p><!-- Just to show that there was a problem-->
 						Problème avec l'envoi du mail.
 					</p>
                    

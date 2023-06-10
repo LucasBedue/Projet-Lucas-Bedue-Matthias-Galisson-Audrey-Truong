@@ -51,7 +51,7 @@ if (!isset($_SESSION['role']) || $_SESSION['role'] !== "Jeune") {
 						Ecrivez l'adresse mail du consultant pour qu'il recoive votre CV.
 					</p>
                     <div>
-                    <form name="form1" method="post" action="envoiCVtraitement.php">
+                    <form name="form1" method="post" action="envoiCVtraitement.php"><!-- The space that the Young can fill-->
                             
 							<input type="text" id="mail" name="mail" required/>
                             <input type="submit"  name="send" value="Valider">

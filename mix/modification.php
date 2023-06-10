@@ -24,7 +24,7 @@ rewind($f);
 
 
 $bool=0;
-while((!feof($f))&&($bool==0)){
+while((!feof($f))&&($bool==0)){//Find the good experience to change
     
     $txt=stream_get_line($f,0,"\n");
     if($txt!=$numexp){
@@ -74,7 +74,7 @@ $filetext[$index+14]=isset($_POST['responsable']) ? $_POST['responsable']."\n" :
 $filetext[$index+15]=isset($_POST['sociable']) ? $_POST['sociable']."\n" : "\n";
 $filetext[$index+16]=isset($_POST['optimiste']) ? $_POST['optimiste']."\n" : "\n";
 
-for($g=0;$g<15;$g++){
+for($g=0;$g<15;$g++){//we erase the precedent's ref informations
     $index2=$index+17+$g;
     $filetext[$index2]="\n";
 }
@@ -94,7 +94,7 @@ fclose($f);
 $nomdumail=$_POST['nom'];
 $prenomdumail=$_POST['prenom'];
 
-//On envoi le message au référent
+//We send the mail to the ref
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 

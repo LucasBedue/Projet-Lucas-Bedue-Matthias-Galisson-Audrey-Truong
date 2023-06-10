@@ -24,7 +24,7 @@ rewind($f);
 
 
 $bool=0;
-while((!feof($f))&&($bool==0)){
+while((!feof($f))&&($bool==0)){//We search the good experience to complete
     
     $txt=stream_get_line($f,0,"\n");
     if($txt!=$numexp){
@@ -44,7 +44,7 @@ while((!feof($f))&&($bool==0)){
     }
 }
 
-if($bool==0){
+if($bool==0){//If not found, there is an error
     fclose($f);
     header("Location: Experiencefromrefinvalide.php");
     exit();
@@ -52,7 +52,7 @@ if($bool==0){
 
 $index++;
 
-if($filetext[$index]!=0){
+if($filetext[$index]!=0){//If already completed by an other ref
     fclose($f);
     header("Location: Experiencefromrefinvalide.php");
     exit();
@@ -64,6 +64,7 @@ $filetext[$index]='1'."\n";
 for($k=0;$k<18;$k++){//go to the right field
     $index++;
 }
+//We print all the informations
 $filetext[$index]=$_POST['nom']."\n";
 $filetext[$index+1]=$_POST['prenom']."\n";
 $filetext[$index+2]=$_POST['dob']."\n";
@@ -84,7 +85,7 @@ rewind($f);
 fclose($f);
 $f = fopen('./../InformationsJeunes/'.$mail,'w+');
 rewind($f);
-foreach($filetext as $ligne){
+foreach($filetext as $ligne){//To write in the file
     fwrite($f,$ligne);
 }
 
@@ -95,7 +96,7 @@ fclose($f);
 $nomdumail=$_POST['nom'];
 $prenomdumail=$_POST['prenom'];
 
-//On envoi le message au référent
+//We send the message to the ref
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 

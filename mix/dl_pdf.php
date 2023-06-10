@@ -4,10 +4,10 @@ require_once('TCPDF-main/tcpdf.php');
 if (isset($_POST['pdfContent'])) {
     ob_end_clean();
     session_start();
-    // Récupérer l'adresse email
+    // Get the mail
     $mail = $_SESSION['mail'];
 
-    // Rechercher la ligne correspondant à l'adresse email dans le fichier infopers.txt
+    // Find the good line in infopers.txt
     $file = fopen("infopers.txt", "r");
 
     while (!feof($file)) {
@@ -26,13 +26,13 @@ if (isset($_POST['pdfContent'])) {
     fclose($file);
 
     
-        // Créer une instance de TCPDF et fixer les paramètres du PDF
+        // Create an instance of TCPDF and fix the PDF's parameters
         $pdf = new TCPDF('P', 'mm', 'A4', true, 'UTF-8');
         $pdf->SetMargins(10, 10, 10);
         $pdf->SetAutoPageBreak(true, 10);
         $pdf->AddPage();
 
-        // Convertir le contenu du PDF en HTML
+        // Convert what is in the PDF in HTML
         $html = '<html><body>';
 
         $html .= '<div>' . $nom . ' ' . $prenom . '</div>';
@@ -40,12 +40,12 @@ if (isset($_POST['pdfContent'])) {
         $html .= '<div>' . $mail . '</div>';
         $html .= '</div>';
 
-        // Ajouter le contenu HTML avec les mêmes classes et styles CSS
+        // add the HTML content with same classes and CSS style
         $boxContents = explode("\n", $_POST['pdfContent']);
         $boxCount = count($boxContents);
         foreach ($boxContents as $index => $boxContent) {
             if ($boxContent != '') {
-                // Afficher "Experience $i+1" uniquement pour les indices pairs
+                // show "Experience $i+1" for even indices 
                 if ($index % 2 == 0) {
                     $html .= '<div class="box"><u>Experience ' . (($index / 2) + 1) . ':</u> ' . $boxContent . '</div>';
                 } else {
@@ -56,14 +56,14 @@ if (isset($_POST['pdfContent'])) {
 
         $html .= '</body></html>';
 
-        // Convertir le HTML en PDF
+        // Convert HTML in PDF
         $pdf->writeHTML($html, true, false, true, false, '');
 
-        // Créer le fichier PDF et le télécharger
+        // Create the PDF and download it
         $pdf->Output('fichier.pdf', 'D');
         exit;
     } else {
-        // L'adresse email n'a pas été trouvée dans le fichier
+        // If the mail wasn't found
         echo "Adresse email introuvable.";
     }
 

@@ -26,7 +26,7 @@
                 </div>
             </div>
             <div class="texttop">
-                <p>
+                <p><!-- Just to show that there was a problem-->
                     L'éxperience n'a pas été validée, il y a une erreur quelque part.
                 </p>
             </div>

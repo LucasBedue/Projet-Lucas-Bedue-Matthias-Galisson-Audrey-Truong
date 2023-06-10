@@ -65,7 +65,7 @@
 		</div>
 
 		<script type="text/javascript">
-            
+            //function that create a box
             function createthebox(index,stateexp,nomj,prenomj,datej,reseauj,expj,dureej,iam1,iam2,iam3,iam4,nomref,prenomref,dateref,reseauref,expref,dureeref,commref,is1,is2,is3,is4){//function that create a box
                             if(stateexp!=1){}
 							else{
@@ -100,7 +100,7 @@
 
 							var box521=document.createElement('div');
                             box521.className='box521';
-							if((iam1!='iam1')&&(iam1!='')){
+							if((iam1!='iam1')&&(iam1!='')){//for the "Mes savoirs etre"
 								box521.innerHTML +='<input style="pointer-events:none" type="checkbox" id="'+iam1+'" name="'+iam1+'" value="'+iam1+'" checked>';
 								box521.innerHTML +='<label for="autonome"> '+iam1+'</label>';
 								box521.innerHTML +='</br>';
@@ -122,7 +122,7 @@
                             }
 							box5.appendChild(box521);
 
-							var box4=document.createElement('div');
+							var box4=document.createElement('div');//Young's info
                             box4.className='box4';
 							box4.innerHTML+='<p>NOM :</p>';
 							box4.innerHTML+='<p class="text1" id="nom1" name="nom">'+nomj+'</p>';
@@ -164,7 +164,7 @@
 
 							var box522=document.createElement('div');
                             box522.className='box522';
-							if((is1!='is1')&&(is1!='')){
+							if((is1!='is1')&&(is1!='')){//for the "Ses savoirs etre"
 								box522.innerHTML +='<input style="pointer-events:none" type="checkbox" id="'+is1+'" name="'+is1+'" value="'+is1+'" checked>';
 								box522.innerHTML +='<label for="autonome"> '+is1+'</label>';
 								box522.innerHTML +='</br>';
@@ -198,7 +198,7 @@
 							box55.appendChild(box542);
 
 							
-							var box44=document.createElement('div');
+							var box44=document.createElement('div');//Ref's info
                             box44.className='box4';
 							box44.innerHTML+='<p>NOM :</p>';
 							
@@ -240,12 +240,12 @@
 				
                 $txt =stream_get_line($f,0,"\n");
 
-                if(feof($f)){
+                if(feof($f)){//If empty
                     ECHO utf8_encode("thereisnothing();");
                 }
-                else{
+                else{//Else :
                   rewind($f);
-                    while(!feof($f)){
+                    while(!feof($f)){//the tab get all the experience's information and create a box by calling createthebox()
                         $tabvar=array(0,0,"nomj","prenomj","datej","reseauj","expj","dureej","iam1","iam2","iam3","iam4","nomref","prenomref","dateref","reseauref","expref","dureeref","commref","is1","is2","is3","is4");
 						$txt =stream_get_line($f,0,"\n");
 						if(feof($f)){}
@@ -268,7 +268,7 @@
 						array_splice($tabvar,7,1,$txt);
 
 						$count = 0;
-                        for($j = 0;$j<10;$j++){//for the "savoir-etre"
+                        for($j = 0;$j<10;$j++){//for the "mes savoir-etre"
 							$txt=stream_get_line($f,0,"\n");
                             if($count>3){}
                             else{
@@ -297,7 +297,7 @@
 						array_splice($tabvar,18,1,$txt);
 
 						$countu = 0;
-                        for($b = 0;$b<8;$b++){//for the "savoir-etre"
+                        for($b = 0;$b<8;$b++){//for the "mes savoir-etre"
 							$txt=stream_get_line($f,0,"\n");
                             if($countu>3){}
                             else{
@@ -310,7 +310,7 @@
                             }
                         }
 
-
+						//to create box
                         ECHO utf8_encode("createthebox('".$tabvar[0]."','".$tabvar[1]."','".$tabvar[2]."','".$tabvar[3]."','".$tabvar[4]."','".$tabvar[5]."','".$tabvar[6]."','".$tabvar[7]."','".$tabvar[8]."','".$tabvar[9]."','".$tabvar[10]."','".$tabvar[11]."','".$tabvar[12]."','".$tabvar[13]."','".$tabvar[14]."','".$tabvar[15]."','".$tabvar[16]."','".$tabvar[17]."','".$tabvar[18]."','".$tabvar[19]."','".$tabvar[20]."','".$tabvar[21]."','".$tabvar[22]."');");//We create the box
                     }
 				}

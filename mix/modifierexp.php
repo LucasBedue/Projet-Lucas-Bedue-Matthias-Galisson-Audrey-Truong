@@ -44,7 +44,7 @@
 
 <script type="text/javascript">
 	function checkLesBox(macheckBox) {
-		var listeInput = document.querySelectorAll('.ch'); // Sélectionne tous les éléments avec la classe "ch"
+		var listeInput = document.querySelectorAll('.ch'); // Get all the class 'ch' elements
 		var nbCheckBoxChecked = 0;
 		for (var i = 0; i < listeInput.length; i++) {
 			if (listeInput[i].type === "checkbox" && listeInput[i].checked) {
@@ -56,7 +56,7 @@
 			macheckBox.checked = false;
 		}
 	};
-    function changethechk(texte,indexchk){
+    function changethechk(texte,indexchk){//To check the needed checkboxs 
     var listeInput = document.querySelectorAll('.ch');
     listeInput[indexchk].checked=1;
 
@@ -223,7 +223,7 @@ if($bool==0){
     header("Location: profiljeune.php");
     exit();
 }
-
+//we change the value by what is actually in the file
 $txt=stream_get_line($f,0,"\n");
 $txt=stream_get_line($f,0,"\n");
 echo('document.getElementById("nom").value="'."$txt".'";');
@@ -239,7 +239,7 @@ $txt=stream_get_line($f,0,"\n");
 echo('document.getElementById("engagement").value="'."$txt".'";');
 $txt=stream_get_line($f,0,"\n");
 echo('document.getElementById("duree").value="'."$txt".'";');
-
+//same for the checkboxs
 for($i=0;$i<10;$i++){
     $txt=stream_get_line($f,0,"\n");
     if(($txt!='')&&($txt!="\n")){
