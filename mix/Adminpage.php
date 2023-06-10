@@ -151,10 +151,50 @@
 	</div>
 </div>
 <script type="text/javascript">
+
+	function createthesupprbutton(){
+		
+		var thediv = document.getElementById("divwrapper");
+		
+							var nomurl=window.location.href;
+							var url=new URL(nomurl);
+							var mailjeune=url.searchParams.get("fichier");
+
+							var formsupprescompte=document.createElement('form');
+								formsupprescompte.action="supprimercompte.php";
+								formsupprescompte.method="POST";
+								formsupprescompte.name="formsupprescompte";
+								thediv.appendChild(formsupprescompte);
+
+								divcachsuppr=document.createElement('div'); 
+                            	divcachsuppr.style="display:none";
+                            	formsupprescompte.appendChild(divcachsuppr);
+
+								textcachsuppr=document.createElement('input'); 
+                            	textcachsuppr.type="text";
+                            	textcachsuppr.name="textcachsuppr";
+                            	textcachsuppr.value=mailjeune;
+                            	divcachsuppr.appendChild(textcachsuppr);
+
+
+								var supresscomptebutton=document.createElement('input');
+								supresscomptebutton.type="submit";
+								supresscomptebutton.value="Supprimer Ce compte";
+								formsupprescompte.appendChild(supresscomptebutton);
+	
+	
+	
+	
+							};
             
             function createthebox(index,stateexp,nomj,prenomj,datej,reseauj,expj,dureej,iam1,iam2,iam3,iam4,nomref,prenomref,dateref,reseauref,expref,dureeref,commref,is1,is2,is3,is4){//function that create a box
                             
 							var thediv = document.getElementById("divwrapper");
+							var nomurl=window.location.href;
+							var url=new URL(nomurl);
+							var mailjeune=url.searchParams.get("fichier");
+
+							
                 			var outerbox=document.createElement('div');
                             outerbox.className='outerbox';
 							outerbox.id=index;
@@ -162,6 +202,7 @@
 
 							var box1=document.createElement('div');
                             box1.className='box1';
+							box1.id='box1';
 							outerbox.appendChild(box1);
 
 							var box3=document.createElement('div');
@@ -324,9 +365,7 @@
                             textcach2.value=index;
                             divcach2.appendChild(textcach2);
 
-							var nomurl=window.location.href;
-							var url=new URL(nomurl);
-							var mailjeune=url.searchParams.get("fichier");
+							
 
 							textcach1=document.createElement('input'); 
                             textcach1.type="text";
@@ -369,6 +408,7 @@
                 }
                 else{
                   rewind($f);
+				  echo utf8_encode("createthesupprbutton();");
                     while(!feof($f)){
                         $tabvar=array(0,0,"nomj","prenomj","datej","reseauj","expj","dureej","iam1","iam2","iam3","iam4","nomref","prenomref","dateref","reseauref","expref","dureeref","commref","is1","is2","is3","is4");
 						$txt =stream_get_line($f,0,"\n");
