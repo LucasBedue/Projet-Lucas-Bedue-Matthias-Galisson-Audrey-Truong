@@ -405,6 +405,7 @@
 
                 if(feof($f)){
                     ECHO utf8_encode("thereisnothing();");
+					echo utf8_encode("createthesupprbutton();");
                 }
                 else{
                   rewind($f);
